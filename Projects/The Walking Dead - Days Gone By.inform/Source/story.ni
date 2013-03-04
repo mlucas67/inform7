@@ -69,7 +69,16 @@ Section 3 - Walkers
 
 Include Patrollers by Michael Callaghan
 
-A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.
+A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.  Reporting is Collective.  The StartTurn of a walker is 1.
+
+After Patrolling something (called the Bod):
+	if the Bod is Off Patrol:
+		now the Bod is Aimless;
+		now the Bod is On Patrol.
+		
+After Patrolling something (called the Bod):
+	if the location of the Bod is the location of the Player:
+		now the Bod is Following.
 
 Part 2 - The World
 
@@ -79,8 +88,12 @@ The Hospital Room is a room.  A Hospital Bed is a bed in the Hospital Room.
 
 The player is on the Hospital Bed.
 
-The Hospital Room Door is a door.  It is west of the Hospital Room and east of the Hallway.
+The Hospital Room Door is a door.  It is west of the Hospital Room and east of Hallway1.
 
-The Hallway is a Room.
+Hallway1 is a room.
 
-The Walker1 is a walker in the Hallway.  The Walker2 is a walker in the Hallway.
+The Walker1 is a walker in Hallway1.  The Walker2 is a walker in Hallway1.
+
+Hallway2 is a room. Hallway2 is north of Hallway1.
+
+Hallway3 is a room. Hallway3 is north of Hallway2.

@@ -4309,7 +4309,7 @@ Global lightflag = false;
 ];
 
 
-Constant REQUISITION_STACK_SIZE = 3*19;
+Constant REQUISITION_STACK_SIZE = 3*21;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -9659,7 +9659,9 @@ Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
  0 0 0 0 0 0 0 I128_hospital_room_door 0 0 0 0 ! Exits from: I126_hospital_room
- 0 0 0 0 0 0 I128_hospital_room_door 0 0 0 0 0 ! Exits from: I129_hallway
+ I132_hallway2 0 0 0 0 0 I128_hospital_room_door 0 0 0 0 0 ! Exits from: I129_hallway1
+ I133_hallway3 0 0 I129_hallway1 0 0 0 0 0 0 0 0 ! Exits from: I132_hallway2
+ 0 0 0 I132_hallway2 0 0 0 0 0 0 0 0 ! Exits from: I133_hallway3
 ;
 
 Class VPH_Class;
@@ -9796,6 +9798,7 @@ Class K20_patroller
 Class K21_walker 
     class K20_patroller
     with plural "walkers"
+    with p20_startturn 1
     with p73_status I98_on_patrol
     with p74_movementtype I104_aimless
 ;
@@ -10076,7 +10079,7 @@ Object I126_hospital_room ""
     with list_together 0
     has mark_as_room
     with IK1_Count 0
-    with IK1_Link I129_hallway
+    with IK1_Link I129_hallway1
     with KD_Count 1
     with name 'hospital' 'room' 
 ;
@@ -10129,8 +10132,8 @@ Object I128_hospital_room_door ""
             if (loc == I126_hospital_room) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I126_hospital_room) return I129_hallway; return I126_hospital_room; ],
-    with found_in I126_hospital_room I129_hallway
+            if (loc == I126_hospital_room) return I129_hallway1; return I126_hospital_room; ],
+    with found_in I126_hospital_room I129_hallway1
     with list_together 0
     has mark_as_thing
     with IK2_Count 2
@@ -10142,17 +10145,19 @@ Object I128_hospital_room_door ""
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I129_hallway ""
+Object I129_hallway1 ""
     class K1_room
-    with short_name "Hallway"
+    with short_name "Hallway1"
+    has proper
     with vector 0
     with room_index -1
     with list_together 0
+    with cap_short_name "Hallway1"
     has mark_as_room
     with IK1_Count 1
-    with IK1_Link nothing
+    with IK1_Link I132_hallway2
     with KD_Count 1
-    with name 'hallway' 
+    with name 'hallway1' 
 ;
 
 Object -> I130_walker1 ""
@@ -10191,6 +10196,36 @@ Object -> I131_walker2 ""
     with KD_Count 21
     with name 'walker2' 
     with action_bitmap 0 0 0 0 0 0 
+;
+
+Object I132_hallway2 ""
+    class K1_room
+    with short_name "Hallway2"
+    has proper
+    with vector 0
+    with room_index -1
+    with list_together 0
+    with cap_short_name "Hallway2"
+    has mark_as_room
+    with IK1_Count 2
+    with IK1_Link I133_hallway3
+    with KD_Count 1
+    with name 'hallway2' 
+;
+
+Object I133_hallway3 ""
+    class K1_room
+    with short_name "Hallway3"
+    has proper
+    with vector 0
+    with room_index -1
+    with list_together 0
+    with cap_short_name "Hallway3"
+    has mark_as_room
+    with IK1_Count 3
+    with IK1_Link nothing
+    with KD_Count 1
+    with name 'hallway3' 
 ;
 
 Constant I65_figure_of_cover = 1;
@@ -10250,7 +10285,7 @@ Array Global_Vars -->
   (2013) ! 34
   (0) ! 43
   (selfobj) ! 51
-  (I123_individual) ! 52
+  (I124_collective) ! 52
   (0) ! 53
   (0) ! 54
   (false) ! 55
@@ -19820,11 +19855,15 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: after Patrolling (B400_after_patrolling)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/3 ! After Patrolling something ( called the Bod ) ( this is the update route for patrollers rule ):
+! Rule 1/5 ! After Patrolling something ( called the Bod ) ( this is the update route for patrollers rule ):
 !   === which is equally specific with ===
-! Rule 2/3 ! After Patrolling something ( called the Bod ) ( this is the reclose doors for patrollers rule ):
+! Rule 2/5 ! After Patrolling something ( called the Bod ) ( this is the reclose doors for patrollers rule ):
 !   === which is equally specific with ===
-! Rule 3/3 ! After Patrolling something ( called the Bod ) ( this is the reached destination for targeted patrollers rule ):
+! Rule 3/5 ! After Patrolling something ( called the Bod ) ( this is the reached destination for targeted patrollers rule ):
+!   === which is equally specific with ===
+! Rule 4/5 ! After Patrolling something ( called the Bod ):
+!   === which is equally specific with ===
+! Rule 5/5 ! After Patrolling something ( called the Bod ):
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Patrollers" by Michael Callaghan
@@ -20089,6 +20128,51 @@ self = noun;
 
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_898, 898, true);
+   rfalse;
+];
+! No specific request
+! After Patrolling something ( called the Bod ):
+[ R_919 
+    t_0 ! Local variable e.g. 'Bod' = thing
+    ;
+   if ((t_0 = parameter_object, (((t_0=(parameter_object), true) && (parameter_object ofclass K2_thing))))) { ! Runs only when pattern matches
+   if (debug_rules) DB_Rule(R_919, 919);
+      ! phrase 1
+      ! [1: if the bod is off patrol begin]
+       if (((t_0.p73_status == I99_off_patrol)))  {
+         ! phrase 2
+         ! [2: now the bod is aimless]
+          t_0.p74_movementtype = I104_aimless; 
+         ! phrase 3
+         ! [3: now the bod is on patrol]
+          t_0.p73_status = I98_on_patrol; 
+         ! phrase 4
+         ! [4: end if]
+         }
+
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_919, 919, true);
+   rfalse;
+];
+! No specific request
+! After Patrolling something ( called the Bod ):
+[ R_920 
+    t_0 ! Local variable e.g. 'Bod' = thing
+    ;
+   if ((t_0 = parameter_object, (((t_0=(parameter_object), true) && (parameter_object ofclass K2_thing))))) { ! Runs only when pattern matches
+   if (debug_rules) DB_Rule(R_920, 920);
+      ! phrase 1
+      ! [1: if the location of the bod is the location of the player begin]
+       if ((( LocationOf(t_0)  ==  LocationOf(player) )))  {
+         ! phrase 2
+         ! [2: now the bod is following]
+          t_0.p74_movementtype = I103_following; 
+         ! phrase 3
+         ! [3: end if]
+         }
+
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_920, 920, true);
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -23486,7 +23570,7 @@ Array B396_carry_out_taking_positi --> R_874 NULL; ! 1 rule(s)
 Array B397_report_taking_position --> R_875 R_876 NULL; ! 2 rule(s)
 Array B398_before_patrolling --> R_887 R_888 R_889 R_890 R_891 R_892 R_893 R_894 NULL; ! 8 rule(s)
 Array B399_for_patrolling --> R_895 NULL; ! 1 rule(s)
-Array B400_after_patrolling --> R_896 R_897 R_898 NULL; ! 3 rule(s)
+Array B400_after_patrolling --> R_896 R_897 R_898 R_919 R_920 NULL; ! 5 rule(s)
 
 Constant BR_0 = R_8;
 Constant BR_1 = R_9;
@@ -23832,37 +23916,37 @@ Constant BR_340 = R_897;
 Constant BR_341 = R_898;
 Constant BR_342 = R_905;
 Constant BR_343 = R_918;
-Constant BR_814 = R_8;
-Constant BR_820 = R_9;
-Constant BR_821 = R_10;
-Constant BR_822 = R_11;
-Constant BR_823 = R_12;
-Constant BR_831 = R_16;
-Constant BR_832 = R_17;
-Constant BR_834 = R_18;
-Constant BR_837 = R_21;
-Constant BR_838 = R_19;
-Constant BR_839 = R_20;
-Constant BR_843 = R_22;
-Constant BR_847 = R_23;
-Constant BR_853 = R_35;
-Constant BR_855 = R_59;
-Constant BR_856 = R_60;
-Constant BR_858 = R_61;
-Constant BR_863 = R_69;
-Constant BR_864 = R_68;
-Constant BR_866 = R_70;
-Constant BR_867 = R_91;
-Constant BR_868 = R_148;
-Constant BR_889 = R_753;
-Constant BR_890 = R_753;
-Constant BR_891 = R_771;
-Constant BR_892 = R_772;
-Constant BR_893 = R_847;
-Constant BR_894 = R_878;
-Constant BR_895 = R_878;
-Constant BR_896 = R_879;
-Constant BR_897 = R_905;
+Constant BR_816 = R_8;
+Constant BR_822 = R_9;
+Constant BR_823 = R_10;
+Constant BR_824 = R_11;
+Constant BR_825 = R_12;
+Constant BR_833 = R_16;
+Constant BR_834 = R_17;
+Constant BR_836 = R_18;
+Constant BR_839 = R_21;
+Constant BR_840 = R_19;
+Constant BR_841 = R_20;
+Constant BR_845 = R_22;
+Constant BR_849 = R_23;
+Constant BR_855 = R_35;
+Constant BR_857 = R_59;
+Constant BR_858 = R_60;
+Constant BR_860 = R_61;
+Constant BR_865 = R_69;
+Constant BR_866 = R_68;
+Constant BR_868 = R_70;
+Constant BR_869 = R_91;
+Constant BR_870 = R_148;
+Constant BR_891 = R_753;
+Constant BR_892 = R_753;
+Constant BR_893 = R_771;
+Constant BR_894 = R_772;
+Constant BR_895 = R_847;
+Constant BR_896 = R_878;
+Constant BR_897 = R_878;
+Constant BR_898 = R_879;
+Constant BR_899 = R_905;
 
 
 
@@ -26116,7 +26200,7 @@ Constant SLOW_ROUTE_FINDING;
 #endif;
 
 Constant NUM_DOORS = 1;
-Constant NUM_ROOMS = 2;
+Constant NUM_ROOMS = 4;
 
 Array DoorRoutingViable -> NUM_DOORS+1;
 
@@ -26303,7 +26387,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ];
 #ENDIF;
 
-Constant MAX_ROUTE_LENGTH = 19 + 32;
+Constant MAX_ROUTE_LENGTH = 21 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -27905,90 +27989,92 @@ Array RulebookNames -->
 		if (R == R_856) { print "Instead of looking under something which is worn by the player"; return; } ! 811, case 2
 		if (R == R_857) { print "Instead of looking under a door"; return; } ! 812, case 2
 		if (R == R_882) { print "Instead of climbing a staircase"; return; } ! 813, case 2
-		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 814, case 1
-		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 815, case 1
-		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 816, case 1
-		if (R == SEED_RANDOM_NUMBER_GENERATOR_R) { print "seed random number generator rule"; return; } ! 817, case 1
-		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 818, case 1
-		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 819, case 1
-		if (R == R_9) { print "when play begins stage rule"; return; } ! 820, case 1
-		if (R == R_10) { print "fix baseline scoring rule"; return; } ! 821, case 1
-		if (R == R_11) { print "display banner rule"; return; } ! 822, case 1
-		if (R == R_12) { print "initial room description rule"; return; } ! 823, case 1
-		if (R == GENERATE_ACTION_R) { print "generate action rule"; return; } ! 824, case 1
-		if (R == PARSE_COMMAND_R) { print "parse command rule"; return; } ! 825, case 1
-		if (R == TIMED_EVENTS_R) { print "timed events rule"; return; } ! 826, case 1
-		if (R == ADVANCE_TIME_R) { print "advance time rule"; return; } ! 827, case 1
-		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 828, case 1
-		if (R == ADJUST_LIGHT_R) { print "adjust light rule"; return; } ! 829, case 1
-		if (R == NOTE_OBJECT_ACQUISITIONS_R) { print "note object acquisitions rule"; return; } ! 830, case 1
-		if (R == R_16) { print "notify score changes rule"; return; } ! 831, case 1
-		if (R == R_17) { print "when play ends stage rule"; return; } ! 832, case 1
-		if (R == RESURRECT_PLAYER_IF_ASKED_R) { print "resurrect player if asked rule"; return; } ! 833, case 1
-		if (R == R_18) { print "print player's obituary rule"; return; } ! 834, case 1
-		if (R == ASK_FINAL_QUESTION_R) { print "ask the final question rule"; return; } ! 835, case 1
-		if (R == DetectSceneChange) { print "scene change machinery rule"; return; } ! 836, case 1
-		if (R == R_21) { print "before stage rule"; return; } ! 837, case 1
-		if (R == R_19) { print "set pronouns from items from multiple object lists rule"; return; } ! 838, case 1
-		if (R == R_20) { print "announce items from multiple object lists rule"; return; } ! 839, case 1
-		if (R == BASIC_VISIBILITY_R) { print "basic visibility rule"; return; } ! 840, case 1
-		if (R == BASIC_ACCESSIBILITY_R) { print "basic accessibility rule"; return; } ! 841, case 1
-		if (R == CARRYING_REQUIREMENTS_R) { print "carrying requirements rule"; return; } ! 842, case 1
-		if (R == R_22) { print "instead stage rule"; return; } ! 843, case 1
-		if (R == REQUESTED_ACTIONS_REQUIRE_R) { print "requested actions require persuasion rule"; return; } ! 844, case 1
-		if (R == CARRY_OUT_REQUESTED_ACTIONS_R) { print "carry out requested actions rule"; return; } ! 845, case 1
-		if (R == DESCEND_TO_SPECIFIC_ACTION_R) { print "descend to specific action-processing rule"; return; } ! 846, case 1
-		if (R == R_23) { print "end action-processing in success rule"; return; } ! 847, case 1
-		if (R == WORK_OUT_DETAILS_OF_SPECIFIC_R) { print "work out details of specific action rule"; return; } ! 848, case 1
-		if (R == ACCESS_THROUGH_BARRIERS_R) { print "access through barriers rule"; return; } ! 849, case 1
-		if (R == CANT_REACH_INSIDE_ROOMS_R) { print "can't reach inside rooms rule"; return; } ! 850, case 1
-		if (R == CANT_REACH_INSIDE_CLOSED_R) { print "can't reach inside closed containers rule"; return; } ! 851, case 1
-		if (R == CANT_REACH_OUTSIDE_CLOSED_R) { print "can't reach outside closed containers rule"; return; } ! 852, case 1
-		if (R == R_35) { print "can't act in the dark rule"; return; } ! 853, case 1
-		if (R == STANDARD_NAME_PRINTING_R) { print "standard name printing rule"; return; } ! 854, case 1
-		if (R == R_59) { print "standard printing the plural name rule"; return; } ! 855, case 1
-		if (R == R_60) { print "standard printing a number of something rule"; return; } ! 856, case 1
-		if (R == STANDARD_CONTENTS_LISTING_R) { print "standard contents listing rule"; return; } ! 857, case 1
-		if (R == R_61) { print "look around once light available rule"; return; } ! 858, case 1
-		if (R == ENABLE_GLULX_ACCEL_R) { print "enable Glulx acceleration rule"; return; } ! 859, case 1
-		if (R == PRINT_OBITUARY_HEADLINE_R) { print "print obituary headline rule"; return; } ! 860, case 1
-		if (R == PRINT_FINAL_SCORE_R) { print "print final score rule"; return; } ! 861, case 1
-		if (R == DISPLAY_FINAL_STATUS_LINE_R) { print "display final status line rule"; return; } ! 862, case 1
-		if (R == R_69) { print "print the final question rule"; return; } ! 863, case 1
-		if (R == R_68) { print "print the final prompt rule"; return; } ! 864, case 1
-		if (R == READ_FINAL_ANSWER_R) { print "read the final answer rule"; return; } ! 865, case 1
-		if (R == R_70) { print "standard respond to final question rule"; return; } ! 866, case 1
-		if (R == R_91) { print "can't take component parts rule"; return; } ! 867, case 1
-		if (R == R_148) { print "find what to enter rule"; return; } ! 868, case 1
-		if (R == QUIT_THE_GAME_R) { print "quit the game rule"; return; } ! 869, case 1
-		if (R == SAVE_THE_GAME_R) { print "save the game rule"; return; } ! 870, case 1
-		if (R == RESTORE_THE_GAME_R) { print "restore the game rule"; return; } ! 871, case 1
-		if (R == RESTART_THE_GAME_R) { print "restart the game rule"; return; } ! 872, case 1
-		if (R == VERIFY_THE_STORY_FILE_R) { print "verify the story file rule"; return; } ! 873, case 1
-		if (R == SWITCH_TRANSCRIPT_ON_R) { print "switch the story transcript on rule"; return; } ! 874, case 1
-		if (R == SWITCH_TRANSCRIPT_OFF_R) { print "switch the story transcript off rule"; return; } ! 875, case 1
-		if (R == ANNOUNCE_STORY_FILE_VERSION_R) { print "announce the story file version rule"; return; } ! 876, case 1
-		if (R == ANNOUNCE_SCORE_R) { print "announce the score rule"; return; } ! 877, case 1
-		if (R == PREFER_ABBREVIATED_R) { print "prefer abbreviated room descriptions rule"; return; } ! 878, case 1
-		if (R == REP_PREFER_ABBREVIATED_R) { print "standard report preferring abbreviated room descriptions rule"; return; } ! 879, case 1
-		if (R == PREFER_UNABBREVIATED_R) { print "prefer unabbreviated room descriptions rule"; return; } ! 880, case 1
-		if (R == REP_PREFER_UNABBREVIATED_R) { print "standard report preferring unabbreviated room descriptions rule"; return; } ! 881, case 1
-		if (R == PREFER_SOMETIMES_ABBREVIATED_R) { print "prefer sometimes abbreviated room descriptions rule"; return; } ! 882, case 1
-		if (R == REP_PREFER_SOMETIMES_ABBR_R) { print "standard report preferring sometimes abbreviated room descriptions rule"; return; } ! 883, case 1
-		if (R == SWITCH_SCORE_NOTIFY_ON_R) { print "switch score notification on rule"; return; } ! 884, case 1
-		if (R == REP_SWITCH_NOTIFY_ON_R) { print "standard report switching score notification on rule"; return; } ! 885, case 1
-		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 886, case 1
-		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 887, case 1
-		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 888, case 1
-		if (R == R_753) { print "right second rule"; return; } ! 889, case 1
-		if (R == R_753) { print "right second rule"; return; } ! 890, case 1
-		if (R == R_771) { print "can't put onto something being carried except keychains rule"; return; } ! 891, case 1
-		if (R == R_772) { print "keychain-aware carrying requirements rule"; return; } ! 892, case 1
-		if (R == R_847) { print "update ambiguous pronouns for actions rule"; return; } ! 893, case 1
-		if (R == R_878) { print "departure-posture rule"; return; } ! 894, case 1
-		if (R == R_878) { print "departure-posture rule"; return; } ! 895, case 1
-		if (R == R_879) { print "arrival-posture rule"; return; } ! 896, case 1
-		if (R == R_905) { print "new describe room gone into rule"; return; } ! 897, case 1
+		if (R == R_919) { print "After Patrolling something ( called the Bod )"; return; } ! 814, case 2
+		if (R == R_920) { print "After Patrolling something ( called the Bod )"; return; } ! 815, case 2
+		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 816, case 1
+		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 817, case 1
+		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 818, case 1
+		if (R == SEED_RANDOM_NUMBER_GENERATOR_R) { print "seed random number generator rule"; return; } ! 819, case 1
+		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 820, case 1
+		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 821, case 1
+		if (R == R_9) { print "when play begins stage rule"; return; } ! 822, case 1
+		if (R == R_10) { print "fix baseline scoring rule"; return; } ! 823, case 1
+		if (R == R_11) { print "display banner rule"; return; } ! 824, case 1
+		if (R == R_12) { print "initial room description rule"; return; } ! 825, case 1
+		if (R == GENERATE_ACTION_R) { print "generate action rule"; return; } ! 826, case 1
+		if (R == PARSE_COMMAND_R) { print "parse command rule"; return; } ! 827, case 1
+		if (R == TIMED_EVENTS_R) { print "timed events rule"; return; } ! 828, case 1
+		if (R == ADVANCE_TIME_R) { print "advance time rule"; return; } ! 829, case 1
+		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 830, case 1
+		if (R == ADJUST_LIGHT_R) { print "adjust light rule"; return; } ! 831, case 1
+		if (R == NOTE_OBJECT_ACQUISITIONS_R) { print "note object acquisitions rule"; return; } ! 832, case 1
+		if (R == R_16) { print "notify score changes rule"; return; } ! 833, case 1
+		if (R == R_17) { print "when play ends stage rule"; return; } ! 834, case 1
+		if (R == RESURRECT_PLAYER_IF_ASKED_R) { print "resurrect player if asked rule"; return; } ! 835, case 1
+		if (R == R_18) { print "print player's obituary rule"; return; } ! 836, case 1
+		if (R == ASK_FINAL_QUESTION_R) { print "ask the final question rule"; return; } ! 837, case 1
+		if (R == DetectSceneChange) { print "scene change machinery rule"; return; } ! 838, case 1
+		if (R == R_21) { print "before stage rule"; return; } ! 839, case 1
+		if (R == R_19) { print "set pronouns from items from multiple object lists rule"; return; } ! 840, case 1
+		if (R == R_20) { print "announce items from multiple object lists rule"; return; } ! 841, case 1
+		if (R == BASIC_VISIBILITY_R) { print "basic visibility rule"; return; } ! 842, case 1
+		if (R == BASIC_ACCESSIBILITY_R) { print "basic accessibility rule"; return; } ! 843, case 1
+		if (R == CARRYING_REQUIREMENTS_R) { print "carrying requirements rule"; return; } ! 844, case 1
+		if (R == R_22) { print "instead stage rule"; return; } ! 845, case 1
+		if (R == REQUESTED_ACTIONS_REQUIRE_R) { print "requested actions require persuasion rule"; return; } ! 846, case 1
+		if (R == CARRY_OUT_REQUESTED_ACTIONS_R) { print "carry out requested actions rule"; return; } ! 847, case 1
+		if (R == DESCEND_TO_SPECIFIC_ACTION_R) { print "descend to specific action-processing rule"; return; } ! 848, case 1
+		if (R == R_23) { print "end action-processing in success rule"; return; } ! 849, case 1
+		if (R == WORK_OUT_DETAILS_OF_SPECIFIC_R) { print "work out details of specific action rule"; return; } ! 850, case 1
+		if (R == ACCESS_THROUGH_BARRIERS_R) { print "access through barriers rule"; return; } ! 851, case 1
+		if (R == CANT_REACH_INSIDE_ROOMS_R) { print "can't reach inside rooms rule"; return; } ! 852, case 1
+		if (R == CANT_REACH_INSIDE_CLOSED_R) { print "can't reach inside closed containers rule"; return; } ! 853, case 1
+		if (R == CANT_REACH_OUTSIDE_CLOSED_R) { print "can't reach outside closed containers rule"; return; } ! 854, case 1
+		if (R == R_35) { print "can't act in the dark rule"; return; } ! 855, case 1
+		if (R == STANDARD_NAME_PRINTING_R) { print "standard name printing rule"; return; } ! 856, case 1
+		if (R == R_59) { print "standard printing the plural name rule"; return; } ! 857, case 1
+		if (R == R_60) { print "standard printing a number of something rule"; return; } ! 858, case 1
+		if (R == STANDARD_CONTENTS_LISTING_R) { print "standard contents listing rule"; return; } ! 859, case 1
+		if (R == R_61) { print "look around once light available rule"; return; } ! 860, case 1
+		if (R == ENABLE_GLULX_ACCEL_R) { print "enable Glulx acceleration rule"; return; } ! 861, case 1
+		if (R == PRINT_OBITUARY_HEADLINE_R) { print "print obituary headline rule"; return; } ! 862, case 1
+		if (R == PRINT_FINAL_SCORE_R) { print "print final score rule"; return; } ! 863, case 1
+		if (R == DISPLAY_FINAL_STATUS_LINE_R) { print "display final status line rule"; return; } ! 864, case 1
+		if (R == R_69) { print "print the final question rule"; return; } ! 865, case 1
+		if (R == R_68) { print "print the final prompt rule"; return; } ! 866, case 1
+		if (R == READ_FINAL_ANSWER_R) { print "read the final answer rule"; return; } ! 867, case 1
+		if (R == R_70) { print "standard respond to final question rule"; return; } ! 868, case 1
+		if (R == R_91) { print "can't take component parts rule"; return; } ! 869, case 1
+		if (R == R_148) { print "find what to enter rule"; return; } ! 870, case 1
+		if (R == QUIT_THE_GAME_R) { print "quit the game rule"; return; } ! 871, case 1
+		if (R == SAVE_THE_GAME_R) { print "save the game rule"; return; } ! 872, case 1
+		if (R == RESTORE_THE_GAME_R) { print "restore the game rule"; return; } ! 873, case 1
+		if (R == RESTART_THE_GAME_R) { print "restart the game rule"; return; } ! 874, case 1
+		if (R == VERIFY_THE_STORY_FILE_R) { print "verify the story file rule"; return; } ! 875, case 1
+		if (R == SWITCH_TRANSCRIPT_ON_R) { print "switch the story transcript on rule"; return; } ! 876, case 1
+		if (R == SWITCH_TRANSCRIPT_OFF_R) { print "switch the story transcript off rule"; return; } ! 877, case 1
+		if (R == ANNOUNCE_STORY_FILE_VERSION_R) { print "announce the story file version rule"; return; } ! 878, case 1
+		if (R == ANNOUNCE_SCORE_R) { print "announce the score rule"; return; } ! 879, case 1
+		if (R == PREFER_ABBREVIATED_R) { print "prefer abbreviated room descriptions rule"; return; } ! 880, case 1
+		if (R == REP_PREFER_ABBREVIATED_R) { print "standard report preferring abbreviated room descriptions rule"; return; } ! 881, case 1
+		if (R == PREFER_UNABBREVIATED_R) { print "prefer unabbreviated room descriptions rule"; return; } ! 882, case 1
+		if (R == REP_PREFER_UNABBREVIATED_R) { print "standard report preferring unabbreviated room descriptions rule"; return; } ! 883, case 1
+		if (R == PREFER_SOMETIMES_ABBREVIATED_R) { print "prefer sometimes abbreviated room descriptions rule"; return; } ! 884, case 1
+		if (R == REP_PREFER_SOMETIMES_ABBR_R) { print "standard report preferring sometimes abbreviated room descriptions rule"; return; } ! 885, case 1
+		if (R == SWITCH_SCORE_NOTIFY_ON_R) { print "switch score notification on rule"; return; } ! 886, case 1
+		if (R == REP_SWITCH_NOTIFY_ON_R) { print "standard report switching score notification on rule"; return; } ! 887, case 1
+		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 888, case 1
+		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 889, case 1
+		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 890, case 1
+		if (R == R_753) { print "right second rule"; return; } ! 891, case 1
+		if (R == R_753) { print "right second rule"; return; } ! 892, case 1
+		if (R == R_771) { print "can't put onto something being carried except keychains rule"; return; } ! 893, case 1
+		if (R == R_772) { print "keychain-aware carrying requirements rule"; return; } ! 894, case 1
+		if (R == R_847) { print "update ambiguous pronouns for actions rule"; return; } ! 895, case 1
+		if (R == R_878) { print "departure-posture rule"; return; } ! 896, case 1
+		if (R == R_878) { print "departure-posture rule"; return; } ! 897, case 1
+		if (R == R_879) { print "arrival-posture rule"; return; } ! 898, case 1
+		if (R == R_905) { print "new describe room gone into rule"; return; } ! 899, case 1
 
 		print "(nameless rule at address ", R, ")";
 	}
