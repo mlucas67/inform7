@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2454(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Plurality by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2454()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Plurality<font color="#404040"> by </font>Emily Short</b><p><small><p>Version 9 built in to Inform</small><p>Adds tokens to help with sentences about nouns with plural names; provides handling for pronouns of objects like 'a pair of shoes'; offers additional control over Inform's default pronoun handling.<p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: Output tokens for pronouns</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: Inflections</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: Ambiguously plural</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 4: Internal pronouns</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Plurality-eg1.html#eg1"><font color="#000000">A: Floral Greetings</font></a><br><p><hr><p>Values that vary: <b>prior named noun</b><p>Adjectives: <b>ambiguously plural</b>, <b>ordinarily enumerated</b><p>Properties: <b>ambiguously plural</b>, <b>ordinarily enumerated</b><p>Use options: <b>Manual Pronouns</b><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: Output tokens for pronouns</b></font>
+<p>
+ This extension adds to say phrases for
+<p>
+<blockquote><font color="#000080"> that-those<br> That-those<br> it-they<br> It-they<br> it-them<br> It-them<br> its-their<br> Its-their<br> its-theirs<br> Its-theirs<br> possessive<br> Possessive</font></blockquote>
+<p>
+<blockquote><font color="#000080"> which refer to the last noun whose name has been printed. (For simplicity the token names do not reflect this fact, but if the last noun is a person, these tokens will produce &quot;him&quot; or &quot;her&quot; as appropriate, or &quot;you&quot; for the player.) The possessive is &quot;your&quot; for the player, and otherwise &quot;[the item]'s&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> that-those of item<br> That-those of item<br> it-they of item<br> It-they of item<br> it-them of item<br> It-them of item<br> its-their of item<br> Its-their of item<br> its-theirs of item<br> Its-theirs of item<br> possessive of item<br> Possessive of item</font></blockquote>
+<p>
+ accept an object and also reset the prior named thing appropriately.
+<p>
+ (Note: older versions of Plurality used &quot;Cap&quot; to indicate phrases that capitalized, as in Cap that-those. The original set of phrases is still supported for the sake of legacy code, but is now deprecated. In all cases, capitalizing the start of the phrase will produce capitalized output in response.)
+<p>
+ is-are of item<blockquote><font color="#000080"> Is-are of item</font></blockquote>
+<p>
+ prints &quot;is&quot; or &quot;are&quot; appropriately for the item, though this will likely not be necessary very often, given that is-are already picks up whatever thing was last named by the game.
+<p>
+ In addition, there are demonstrative adjectives:
+<p>
+<blockquote><font color="#000080"> that-those item<br> That-those item</font></blockquote>
+<p>
+ print things like &quot;those shoes&quot; and &quot;That hat&quot;.
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: Inflections</b></font>
+<p>
+ Also included are
+<p>
+<blockquote><font color="#000080"> is-are<br> has-have</font></blockquote>
+<p>
+ and
+<p>
+<blockquote><font color="#000080"> is-are of item<br> has-have of item</font></blockquote>
+<p>
+ which produce the correct forms as needed.
+<p>
+ After we have printed a number to the screen, we may use &quot;numerical is-are&quot; and &quot;numerical has-have&quot; to get the correct inflection; so for instance
+<p>
+<blockquote><font color="#000080"> say &quot;The [the number of things carried by the player in words] thing[s] in your arms [numerical is-are] heavy.&quot;;</font></blockquote>
+<p>
+ will produce is or are as appropriate. A
+<p>
+ Plurality also extends the behavior of the default token so that if it is used after a noun rather than after a number, it will correctly inflect the verb to which it is attached, like so:
+<p>
+<blockquote><font color="#000080"> say &quot;[The item] stab[s] the griffin in the flank.&quot;</font></blockquote>
+<p>
+ and adds and, thus:
+<p>
+<blockquote><font color="#000080"> say &quot;[The viewer] sp[ies] the castle at a distance.&quot;<br> say &quot;You see [the number of flies] fl[ies] buzzing around the trash can.&quot;<br> say &quot;[The inspector group] fax[es] the document to HQ.&quot;</font></blockquote>
+<p>
+ These substitutions can even be used mid-word, as in
+<p>
+<blockquote><font color="#000080"> say &quot;[The noun] do[es]n't fit in [the second noun].&quot;<br> say &quot;[The noun] [is-are]n't large enough.&quot;</font></blockquote>
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: Ambiguously plural</b></font>
+<p>
+ We also create the term &quot;ambiguously plural&quot; to refer to items such as &quot;pair of socks&quot;, &quot;set of chessmen&quot;, &quot;crew of pirates&quot;, etc., which the player might reasonably refer to as either &quot;it&quot; or &quot;them&quot;. These items will then respond equally well to &quot;it&quot; or &quot;them&quot; in input.
+<p>
+ The default Inform way of finding out whether something has a plural name is to say
+<p>
+<blockquote><font color="#000080"> if the noun is plural-named</font></blockquote>
+<p>
+ But if we also wish to test for things that are ambiguously plural, we have a new phrase
+<p>
+<blockquote><font color="#000080"> if the noun acts plural</font></blockquote>
+<p>
+ which looks for both plural-named and ambiguously plural items.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 4: Internal pronouns</b></font>
+<p>
+ Finally, Plurality adds some control over how Inform sets its internal pronouns. The phrase &quot;have the parser notice&quot;, which we can call when we want to manually set a pronoun. For instance
+<p>
+<blockquote><font color="#000080"> Instead of searching the bedclothes:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Among the sheets you find a broken locket.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; have the parser notice the locket.</font></blockquote>
+<p>
+... will mean that the player who types &gt;X IT in the next move will be referring to the locket rather than to something else.
+<p>
+ By default, Inform also notices the pronouns of items listed in room descriptions and inventory, so that for instance the last inventory item mentioned will usually wind up being considered &quot;it&quot;. If we would like to turn off this behavior, we may say
+<p>
+<blockquote><font color="#000080"> Use Manual Pronouns.</font></blockquote>
+<p>
+ It may then be useful to set the pronoun ourselves sometimes, with &quot;have the parser notice...&quot;. Otherwise, the parser will assign pronouns only for nouns the player uses in commands.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Plurality.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Plurality.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Floral Greetings</font></b></a><br>An example bouquet of flowers.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2455(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Floral Greetings[=0x0022=][=0x000A=][=0x000A=]Include Plurality by Emily Short.[=0x000A=][=0x000A=]The Doghouse is a room. [=0x0022=]Not so much a place as a state of being.[=0x0022=][=0x000A=][=0x000A=]The player carries a ticket to the opera, some papers, and a bouquet of flowers. The bouquet is ambiguously plural.[=0x000A=][=0x000A=]Instead of eating something inedible, say [=0x0022=][The noun] do[es]n[=0x0027=]t seem likely to agree with you at all. You[=0x0027=]d be wiser to leave [it-them] alone.[=0x0022=][=0x000A=][=0x000A=]Instead of touching something: say [=0x0022=][That-those of noun] [is-are] all prickly.[=0x0022=][=0x000A=][=0x000A=]Instead of smelling something: say [=0x0022=]Your nose is too weak to get much smell from [that-those of noun].[=0x0022=][=0x000A=][=0x000A=]Instead of smelling the bouquet: say [=0x0022=][It-they of the noun][[=0x0027=]s-[=0x0027=]re] lovely.[=0x0022=][=0x000A=][=0x000A=]Instead of tasting something: say [=0x0022=]Whew! [Is-are of the noun] [that-those] ever nasty![=0x0022=][=0x000A=][=0x000A=]Test me with [=0x0022=]x ticket / eat it / eat them / touch it / touch them / smell it / smell them / taste it / taste them / x papers / eat it / eat them / touch them / smell them / taste them / x bouquet / eat it / eat them / touch them / smell them / taste them[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2455()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Floral Greetings&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Plurality by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Doghouse is a room. &quot;Not so much a place as a state of being.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The player carries a ticket to the opera, some papers, and a bouquet of flowers. The bouquet is ambiguously plural.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of eating something inedible, say &quot;[The noun] do[es]n't seem likely to agree with you at all. You'd be wiser to leave [it-them] alone.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of touching something: say &quot;[That-those of noun] [is-are] all prickly.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of smelling something: say &quot;Your nose is too weak to get much smell from [that-those of noun].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of smelling the bouquet: say &quot;[It-they of the noun]['s-'re] lovely.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of tasting something: say &quot;Whew! [Is-are of the noun] [that-those] ever nasty!&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;x ticket / eat it / eat them / touch it / touch them / smell it / smell them / taste it / taste them / x papers / eat it / eat them / touch them / smell them / taste them / x bouquet / eat it / eat them / touch them / smell them / taste them&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

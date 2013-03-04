@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1004(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Simple Graphical Window by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1004()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Simple Graphical Window<font color="#404040"> by </font>Emily Short</b><p><small></small><p><p><hr><p>
+<p>
+ Simple Graphical Window creates one graphics window, and provides some different methods of drawing images in that window. The window may be placed above, below, or beside the main text window (left or right), and may be sized or proportioned as we like, but there may be only one; this extension does not allow for drawing multiple graphics windows or creating a more complex window layout.
+<p>
+ **** Rules for drawing in windows ****
+<p>
+ Whenever Inform needs to re-fill the window -- at the start of the game, or when a saved game is restored, or when the player resizes the window manually -- Simple Graphical Window will follow a rule that varies, the &quot;current graphics drawing rule&quot;. The author may set this to any of the following:
+<p>
+<blockquote><font color="#000080"> (1) (The default.) The standard placement rule. The standard placement rule fills the window with a background color, then draws the currently shown picture (a figure-name that varies, and which the author can reset during the game). The picture is centered in the available screen space, unless it is too large, in which case it is scaled down proportionally to fit. A picture is never scaled up, on the grounds that upscaling images usually produces unattractively fuzzy results. Note that this and rules 2-4 will all behave incorrectly if we don't have at least one figure defined in our game source. In that case, see rule 5.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> (2) The fully scaled image rule. Fills the window completely with the currently shown picture, regardless of proportion. This is unlikely to look good with images of any complexity, but is included for completeness.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> (3) The tiled drawing rule. Tiles the currently shown picture to fill the available space horizontally and vertically.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> (4) The centered scaled drawing rule. Same as the standard placement rule, except that it does not fill the window with a background color first. This means that if there is something previously printed in the graphics window, this may overlap it.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> (5) The bland graphics drawing rule. Blanks the window to the background color and does nothing else.</font></blockquote>
+<p>
+ To set this rule at the outset of play, we would write, for instance
+<p>
+<blockquote><font color="#000080"> Rule for starting the virtual machine:<br>&nbsp;&nbsp;&nbsp;&nbsp; now the current graphics drawing rule is the bland graphics drawing rule.</font></blockquote>
+<p>
+ It is important to use the &quot;starting the virtual machine&quot; activity because this occurs before the first window-drawing happens; where as &quot;when play begins&quot; happens after the windows have already been set in place, when it is too late to give instructions about constructing them.
+<p>
+ If we need to redraw the image in the window, we write
+<p>
+<blockquote><font color="#000080"> follow the current graphics drawing rule.</font></blockquote>
+<p>
+ For instance if we were adding an image to the screen every time the player moved, we might write something like
+<p>
+<blockquote><font color="#000080"> Carry out looking:<br>&nbsp;&nbsp;&nbsp;&nbsp; change currently shown picture to the room illustration of the location;<br>&nbsp;&nbsp;&nbsp;&nbsp; follow the current graphics drawing rule.</font></blockquote>
+<p>
+... where the room illustration is defined for each room in the game. (The extension &quot;Location Images&quot; implements this idea in full.)
+<p>
+ The author may also create other drawing rules of his own devising and make any of these the current graphics drawing rule, as needed. It will probably be necessary to specify graphics drawing rules in Inform 6 unless the author intends a fairly simple combination of the rules already provided here; for more information about graphics drawing in Glulx, see
+<p>
+<blockquote><font color="#000080"> http://adamcadre.ac/gull/<br> http://members.aol.com/doepage/glkdunces.htm</font></blockquote>
+<p>
+ In writing these rules, it's worth bearing in mind that the rule should be able to reconstruct the entire contents of the graphics window every time it is called, rather than relying on things drawn there during previous moves; otherwise, the graphics window will not redraw properly when the game is reloaded or a turn is undone.
+<p>
+ **** Window alignment ****
+<p>
+ By default, the graphics window is drawn above the main text window and below the status line. There are three other options, however: left of the main text window, right of the main text window, and below the main text window. The alignment depends on &quot;graphics window position&quot;, which can have any of the values g-left, g-above, g-right, and g-below. So for instance we might write
+<p>
+<blockquote><font color="#000080"> Graphics window position is g-right.</font></blockquote>
+<p>
+ to produce a window along the right side of the screen.
+<p>
+ Note that window alignment and dimensions should be set at the outset; changing them after the start of play will not redraw the window in a new size.
+<p>
+ **** Window dimensions ****
+<p>
+ Graphics windows in Glulx can be of two kinds: fixed and proportional. A fixed window has a height (or width, if drawn left/right rather than above/below) of a set number of pixels regardless of the total screen area devoted to the game; a proportional window has a height (or width) relative to that of the main window, which may be between 1 and 99 percent.
+<p>
+ If we prefer a proportional window, we set the &quot;graphics window proportion&quot; to some number between 1 and 99, thus:
+<p>
+<blockquote><font color="#000080"> The graphics window proportion is 25.</font></blockquote>
+<p>
+ If we prefer a fixed window, we set &quot;graphics window pixel count&quot;, which should be a number reflecting the desired height of our graphics window in pixels. We can set this by adding a line to our source such as
+<p>
+<blockquote><font color="#000080"> The graphics window pixel count is 150.</font></blockquote>
+<p>
+ If both a graphics window pixel count and a graphics window proportion are given and the graphics window proportion is a valid number between 1 and 99, the proportion is obeyed and graphics window pixel count is simply ignored.
+<p>
+ If no information is provided, the graphics window defaults to a fixed-count window of 240 pixels.
+<p>
+ **** Glulx colors ****
+<p>
+ The background color used by the standard placement rule depends on the &quot;graphics background color&quot;. The graphics background color can be set to any value of the kind &quot;glulx color value&quot;. This extension, relying on Glulx Text Effects, provides a table of glulx color values to start from, as follows:
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-black</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-dark-grey</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 4473924</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-medium-grey</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 8947848</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-light-grey</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 14540253</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-white</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16777215</font></font></td></tr></table></blockquote>
+<p>
+ where the assigned number of each value is the decimal representation of a hex color code. To use any of the preset values, we might write
+<p>
+<blockquote><font color="#000080"> The graphics background color is g-black.</font></blockquote>
+<p>
+ Moreover, the phrase &quot;blank window to...&quot; allows us to fill the graphics window with one of these preset colors, as in
+<p>
+<blockquote><font color="#000080"> blank window to g-white;<br> blank window to g-black;<br> blank window to graphics background color;</font></blockquote>
+<p>
+ It is likely that we'll want to use other colors besides those provided by this extension. We may do this by continuing the table thus:
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-yellow-orange</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 39423</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-ice-blue</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 15645627</font></font></td></tr></table></blockquote>
+<p>
+ These numbers are conversions of hex color numbers. The principle is that the hex number represents the amount of blue in the first two digits (from 00 to FF); the amount of green in the next two digits; and the amount of red in the last two digits. Thus $0000FF has no blue or green in it, but the maximum possible amount of red. Where each pair of digits is equal (as in $444444 or $A0A0A0), we will have equal components of each color and the result will be some shade of grey. The number for g-ice-blue was selected by formulating a hex color number with a large amount of blue and a moderate amount of red and green ($EEBBBB). Similarly, the number for g-yellow-orange is the conversion of ($0099FF), with the maximum amount of red, a fair amount of green, and no blue.
+<p>
+ Converting a hex number to a decimal one can be performed with a scientific calculator or with a hexadecimal conversion application found online; if we're at a loss, googling &quot;hexadecimal conversion calculator&quot; will likely turn up an appropriate application.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Simple Graphical Window.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Simple Graphical Window.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Mondrian</font></b></a><br>A strip of randomly varying color along the left edge of the screen<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1005(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Mondrian[=0x0022=][=0x000A=][=0x000A=]Include Simple Graphical Window by Emily Short.[=0x000A=][=0x000A=]Stark Room is a room.[=0x000A=][=0x000A=]The graphics window proportion is 10. The graphics window position is g-left.[=0x000A=][=0x000A=]Rule for starting the virtual machine:[=0x000A=][=0x0009=]now the current graphics drawing rule is the bland graphics drawing rule.[=0x000A=][=0x000A=]Table of Common Color Values (continued)[=0x000A=]glulx color value[=0x0009=]assigned number[=0x000A=]g-pure-red[=0x0009=]255[=0x000A=]g-pure-green[=0x0009=]65280[=0x000A=]g-pure-yellow[=0x0009=]65535[=0x000A=]g-pure-cyan[=0x0009=]16776960[=0x000A=]g-pure-magenta[=0x0009=]16711935[=0x000A=]g-pure-blue[=0x0009=]16711680[=0x000A=]g-royal-blue[=0x0009=]11141120[=0x000A=][=0x000A=]Every turn:[=0x000A=][=0x0009=]change graphics background color to a random glulx color value;[=0x000A=][=0x0009=]follow the current graphics drawing rule.[=0x000A=][=0x000A=]Test me with [=0x0022=]z / z / z / z / z / z[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1005()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Mondrian&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Simple Graphical Window by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Stark Room is a room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The graphics window proportion is 10. The graphics window position is g-left.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Rule for starting the virtual machine:<br>&nbsp;&nbsp;&nbsp;&nbsp; now the current graphics drawing rule is the bland graphics drawing rule.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-red</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 255</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-green</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 65280</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-yellow</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 65535</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-cyan</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16776960</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-magenta</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16711935</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-blue</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16711680</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-royal-blue</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 11141120</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Every turn:<br>&nbsp;&nbsp;&nbsp;&nbsp; change graphics background color to a random glulx color value;<br>&nbsp;&nbsp;&nbsp;&nbsp; follow the current graphics drawing rule.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;z / z / z / z / z / z&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

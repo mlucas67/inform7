@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1037(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Glulx Text Effects by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1037()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Glulx Text Effects<font color="#404040"> by </font>Emily Short</b><p><small><p>Extension built in to Inform</small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Styles in Glulx</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: Built-in Styles</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 1.2: Custom styles</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 1.3: Features of styles</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 1.4: Setting style instructions</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 1.5: Color</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 1.6: Technical note</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Glulx Text Effects-eg1.html#eg1"><font color="#000000">A: Gaudy</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Glulx Text Effects-eg2.html#eg2"><font color="#000000">B: The Gallic War</font></a><br><p><hr><p><p><hr><p>
+<p>
+ Glulx Text Effects provides an easy way to set up special text effects for Glulx.
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Styles in Glulx</b></font>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: Built-in Styles</b></font>
+<p>
+ Unlike the z-machine, which allows arbitrary combinations of features (such as color and boldness) to be applied to text, Glulx requires the author to define and then use text styles.
+<p>
+ A number of styles are predefined by Glulx. These are named as follow here:
+<p>
+<blockquote><font color="#000080"> italic-style<br> fixed-letter-spacing-style<br> header-style<br> bold-style<br> alert-style<br> note-style<br> blockquote-style<br> input-style</font></blockquote>
+<p>
+ &quot;italic-style&quot; is the style used to produce italic text, which means that if you change this style, it will change the way the &quot;italic type&quot; instruction works. (You could even make the output not be italic, if you're feeling perverse.)
+<p>
+ &quot;bold-style&quot; is, along the same lines, the style used to produce bold text, which means that if you change this style, it will change the way the &quot;bold type&quot; instruction works.
+<p>
+ &quot;fixed-letter-spacing-style&quot; is the style invoked by &quot;fixed letter spacing&quot;.
+<p>
+ The other styles occur less often:
+<p>
+ -- &quot;header-style&quot; is the style used when printing the title of the game;
+<p>
+ -- &quot;alert-style&quot; when printing an end of game message such as &quot;*** You have died. ***&quot;;
+<p>
+ -- &quot;note-style&quot; when printing messages such as &quot;[Your score has increased by one point.]&quot;;
+<p>
+ -- &quot;blockquote-style&quot; when printing quotations; and
+<p>
+ -- &quot;input-style&quot; for formatting the player's own input.
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 1.2: Custom styles</b></font>
+<p>
+ The author is also allowed to define two text styles of his own, which we will call special-style-1 and special-style-2.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 1.3: Features of styles</b></font>
+<p>
+ A text style in Glulx can have the following features:
+<p>
+<blockquote><font color="#000080"> indentation: the number of units of indentation for the whole block of text, where units are defined by interpreter, but are often equivalent to spaces<br> first-line indentation: additional indentation of the first line of the text block<br> justification: can be left-justified, right-justified, justified on both the left and the right, or centered<br> obliqueness: whether the font is italic or not<br> weight: may be light, regular, or bold<br> relative size: increase (or decrease) from the regular font size being used</font></blockquote>
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 1.4: Setting style instructions</b></font>
+<p>
+ To set up style instructions with Glulx Text Effects, we create a table, like this:
+<p>
+<blockquote><font color="#000080"> Table of User Styles (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> style name</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> justification</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> obliquity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> indentation</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> first-line indentation</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> boldness</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> fixed width</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> relative size</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> glulx color</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> special-style-1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> center-justified</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> no-obliquity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> regular-weight</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> proportional-font</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> g-black</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> special-style-2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> right-justified</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> italic-obliquity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 4</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> regular-weight</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> proportional-font</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> g-black</font></font></td></tr></table></blockquote>
+<p>
+ Note that we *may* have multiple lines in this table referring to the same style. In that case, the last such line is the one that will take effect. This means that if the author is using an extension that includes a table of user styles, he may further continue the table in order to edit the styles defined by that extension.
+<p>
+ The names of the style names (special-style-1 and special-style-2) may not be changed. However, we may set the justification to any of these:
+<p>
+<blockquote><font color="#000080"> left-justified<br> right-justified<br> left-right-justified<br> center-justified</font></blockquote>
+<p>
+ We may set the obliquity to
+<p>
+<blockquote><font color="#000080"> no-obliquity<br> italic-obliquity</font></blockquote>
+<p>
+ We may set the indentation and first-line indentation to numbers.
+<p>
+ We may set the boldness to
+<p>
+<blockquote><font color="#000080"> light-weight<br> regular-weight<br> bold-weight</font></blockquote>
+<p>
+ We may set fixed width to
+<p>
+<blockquote><font color="#000080"> proportional-font<br> fixed-width-font</font></blockquote>
+<p>
+ We set relative size to a number. This indicates by how many points the font size should be changed from the baseline size: a positive number if this text style should be larger than normal, a negative one if smaller.
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 1.5: Color</b></font>
+<p>
+ Color is the most complicated thing to affect: color can be set to any value of the kind &quot;glulx color value&quot;. This extension provides a table of glulx color values to start from, as follows:
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-black</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-dark-grey</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 4473924</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-medium-grey</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 8947848</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-light-grey</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 14540253</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-white</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16777215</font></font></td></tr></table></blockquote>
+<p>
+ where the assigned number of each value is the decimal representation of a hex color code. It is likely that we'll want to use other colors besides those provided by this extension. We may do this by continuing the table thus:
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-bright-cyan</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 39423</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-peach</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 15645627</font></font></td></tr></table></blockquote>
+<p>
+ These numbers are conversions of hex color numbers. The principle is that the hex number represents the amount of red in the first two digits (from 00 to FF); the amount of green in the next two digits; and the amount of blue in the last two digits. Thus $0000FF has no red or green in it, but the maximum possible amount of blue. Where each pair of digits is equal (as in $444444 or $A0A0A0), we will have equal components of each color and the result will be some shade of grey. The number for g-peach was selected by formulating a hex color number with a large amount of red and a moderate amount of green and blue ($EEBBBB). Similarly, the number for g-bright-cyan is the conversion of ($0099FF), with the maximum amount of blue, a fair amount of green, and no red.
+<p>
+ Converting a hex number to a decimal one can be performed with a scientific calculator or with a hexadecimal conversion application found online; if we're at a loss, googling &quot;hexadecimal conversion calculator&quot; will likely turn up an appropriate application.
+<p>
+ For reference, other common colors one might want to add might include
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-blue</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 255</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-green</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 65280</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-cyan</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 65535</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-yellow</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16776960</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-magenta</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16711935</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-pure-red</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 16711680</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-dark-red</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 11141120</font></font></td></tr></table></blockquote>
+<p>
+ Once we have defined custom text styles, we may invoke them ourselves with
+<p>
+<blockquote><font color="#000080"> say first custom style<br> say second custom style</font></blockquote>
+<p>
+ We may also use lines of the table to change the behavior of the built-in styles. For instance, the following would make bold text also appear larger and medium grey:
+<p>
+<blockquote><font color="#000080"> Table of User Styles (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> style name</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> justification</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> obliquity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> indentation</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> first-line indentation</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> boldness</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> fixed width</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> relative size</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> glulx color</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> bold-style</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> g-medium-grey</font></font></td></tr></table></blockquote>
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 1.6: Technical note</b></font>
+<p>
+ A technical note for people familiar with Glk:
+<p>
+ In Glk's internal parlance, &quot;italic-style&quot; is equivalent to style_Emphasized; &quot;bold-style&quot; is style_Subheader; &quot;fixed-width-style&quot; is style_Preformatted. Other styles are named after their manifestations in the Glk specification.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Glulx Text Effects-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Glulx Text Effects-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Gaudy</font></b></a><br>A visually overpowering exercise in modifying all the built-in text styles.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Glulx Text Effects-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Glulx Text Effects-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Gallic War</font></b></a><br>An excuse to print a large, fancily-formatted bit of text using custom styles.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

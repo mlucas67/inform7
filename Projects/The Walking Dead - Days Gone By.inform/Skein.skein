@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02D3F170" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x05830520"/>
+  <item nodeId="node-0x02D3F170">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">The Walking Dead - Days Gone By&#x000A;An Interactive Fiction by Marshall Lucas&#x000A;Release 1 / Serial number 130304 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02D3F1E0"/>
+      <child nodeId="node-0x02D3F250"/>
+      <child nodeId="node-0x02D3F4F0"/>
+      <child nodeId="node-0x02D3F870"/>
+      <child nodeId="node-0x02D3F950"/>
+      <child nodeId="node-0x02D3F330"/>
+      <child nodeId="node-0x057B2918"/>
+      <child nodeId="node-0x05830440"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F1E0">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Hospital Room Door)&#x000A;&#x000A;Hallway&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3F250">
+    <command xml:space="preserve">get in bed</command>
+    <result xml:space="preserve">You get onto the Hospital Bed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F2C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F2C0">
+    <command xml:space="preserve">stand</command>
+    <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3F4F0">
+    <command xml:space="preserve">where</command>
+    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F480"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F480">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F410"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F410">
+    <command xml:space="preserve">l self</command>
+    <result xml:space="preserve">As good-looking as ever.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F560"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F560">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Hospital Room Door)&#x000A;(first getting off the Hospital Bed)&#x000A;&#x000A;Hallway&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F5D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F5D0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F640"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F640">
+    <command xml:space="preserve">sit on bed</command>
+    <result xml:space="preserve">You are now seated on the Hospital Bed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F720"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F720">
+    <command xml:space="preserve">lie down</command>
+    <result xml:space="preserve">You are now reclining on the Hospital Bed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F790"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F790">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first getting off the Hospital Bed)&#x000A;&#x000A;Hallway&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3F870">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&#x000A;[** Programming error: tried to "move" Walker1 to nothing **]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F800"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F800">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">You open the Hospital Room Door.&#x000A;&#x000A;&#x000A;[** Programming error: tried to "move" Walker1 to nothing **]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F8E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F8E0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&#x000A;[** Programming error: tried to "move" Walker1 to nothing **]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3F950">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F9C0"/>
+      <child nodeId="node-0x02D3FB10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F9C0">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">The Walker1 arrives from the west.&#x000A;&#x000A;The Walker2 arrives from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FA30"/>
+      <child nodeId="node-0x05830360"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FA30">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&#x000A;[** Programming error: tried to "move" Walker1 to nothing **]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FAA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FAA0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&#x000A;[** Programming error: tried to "move" Walker1 to nothing **]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x05830360">
+    <command xml:space="preserve">showme walker1</command>
+    <result xml:space="preserve">Walker1 - walker&#x000A;location: in the Hospital Room&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: Off Patrol&#x000A;MovementType: Targeted&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x058303D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x058303D0">
+    <command xml:space="preserve">showme walker2</command>
+    <result xml:space="preserve">Walker2 - walker&#x000A;location: in the Hospital Room&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker2"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 0&#x000A;Status: Off Patrol&#x000A;MovementType: Targeted&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3FB10">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FB80"/>
+      <child nodeId="node-0x02D3FE90"/>
+      <child nodeId="node-0x057B2B48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FB80">
+    <command xml:space="preserve">stand</command>
+    <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FBF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FBF0">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">You open the Hospital Room Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FC60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FC60">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FCD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FCD0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FD40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FD40">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FDB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FDB0">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Hallway&#x000A;You can see an open Hospital Room Door and a Walker1 here.&#x000A;&#x000A;The Walker1 goes east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3FE20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3FE20">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door, a Walker1, and a Hospital Bed here.&#x000A;&#x000A;The Walker1 goes west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3FE90">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE4E8"/>
+      <child nodeId="node-0x057B27C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE4E8">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">You open the Hospital Room Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE558"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE558">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE5C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE5C8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE638"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE638">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE6A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE6A8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE718"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE718">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE788"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE788">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE7F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE7F8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE868"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE868">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE8D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE8D8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE948"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE948">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AE9B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AE9B8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AEA28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AEA28">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AEA98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AEA98">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AEB08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AEB08">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AEB78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AEB78">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AEBE8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AEBE8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057AEC58"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057AEC58">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2598"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2598">
+    <command xml:space="preserve">stand</command>
+    <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2608"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2608">
+    <command xml:space="preserve">lie down</command>
+    <result xml:space="preserve">You are now reclining.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2678"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2678">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room&#x000A;You can see an open Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B26E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B26E8">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">You are now standing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2758"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2758">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Hallway&#x000A;You can see an open Hospital Room Door and a Walker1 here.&#x000A;&#x000A;The Walker1 goes east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x057B27C8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2838"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2838">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x057B2B48">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">The Walker1 arrives from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2BB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2BB8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2C28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2C28">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2C98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2C98">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2D08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2D08">
+    <command xml:space="preserve">showme walker2</command>
+    <result xml:space="preserve">Walker2 - walker&#x000A;location: in the Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker2"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 0&#x000A;Status: Off Patrol&#x000A;MovementType: Targeted&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x058300C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x058300C0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x05830130"/>
+    </children>
+  </item>
+  <item nodeId="node-0x05830130">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x058301A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x058301A0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x05830210"/>
+    </children>
+  </item>
+  <item nodeId="node-0x05830210">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x05830280"/>
+    </children>
+  </item>
+  <item nodeId="node-0x05830280">
+    <command xml:space="preserve">l west</command>
+    <result xml:space="preserve">You see nothing unexpected in that direction.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x058302F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x058302F0">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first getting off the Hospital Bed)&#x000A;&#x000A;Hallway&#x000A;You can see an open Hospital Room Door and a Walker2 here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02D3F330">
+    <command xml:space="preserve">showme Walker1</command>
+    <result xml:space="preserve">Walker1 - walker&#x000A;location: in the Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02D3F100"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02D3F100">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2988"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2988">
+    <command xml:space="preserve">showme Walker1</command>
+    <result xml:space="preserve">Walker1 - walker&#x000A;location: in the Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x057B2918">
+    <command xml:space="preserve">show me Walker1</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B29F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B29F8">
+    <command xml:space="preserve">showme Walker1</command>
+    <result xml:space="preserve">Walker1 - walker&#x000A;location: in the Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2A68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2A68">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">The Walker1 arrives from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x057B2AD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x057B2AD8">
+    <command xml:space="preserve">showme Walker1</command>
+    <result xml:space="preserve">Walker1 - walker&#x000A;location: in the Hospital Room&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: Off Patrol&#x000A;MovementType: Targeted&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x05830440">
+    <command xml:space="preserve">showme walker1</command>
+    <result xml:space="preserve">Walker1 - walker&#x000A;location: in the Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 0&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x058304B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x058304B0">
+    <command xml:space="preserve">showme walker2</command>
+    <result xml:space="preserve">Walker2 - walker&#x000A;location: in the Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker2"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 0&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x05830520"/>
+    </children>
+  </item>
+  <item nodeId="node-0x05830520">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">The Walker1 arrives from the west.&#x000A;&#x000A;The Walker2 arrives from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

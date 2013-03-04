@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1064(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Epistemology by Eric Eve.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1064()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Epistemology<font color="#404040"> by </font>Eric Eve</b><p><small><p>Extension built in to Inform</small><p><p><hr><p>
+<p>
+ The purpose of this extension is to keep track of what objects the player character knows about, either because s/he has seen them, or because they are already familiar for some other reason. It is not intended as a way to track NPC knowledge, which might be better implemented using a system of relations.
+<p>
+ When the Epistemology extension is used all game objects are either seen or unseen, either familiar or unfamiliar, and either known or unknown. By default, all objects start unseen and unfamiliar, and hence unknown (although we can of course change this for indivdual objects, groups of objects or kinds). The seen/unseen and familiar/unfamiliar pairs can be tested or set as requires. The known/unknown status may be tested but not directly changed in code, since it derives from the other two: a thing is considered to be known if it is either seen or familiar; otherwise it is unknown.
+<p>
+ These distinctions are maintained since the player character may well know about things he or she is yet to see (such as the Magical Golden Golf Ball of Destiny that she has been sent to recover) or are which are in any case unseeable (such as love, freedom, democracy and inflation) which may nevertheless be the subject of conversation or thoughts. Such abstract or known about but as yet unseen or abstract entities can be marked as familiar, either from the outset, or when the player learns about them during the course of the game. Also, there may be cases where it's important to distinguish whether the player character has actually seen the Golden Golf Ball (say) or merely knows about it.
+<p>
+ The new kind called subject is provided for more abstract objects such as love and atomic physics. Unlike other things, subjects are considered familiar by default.
+<p>
+ As far as possible, the extension tries to keep track of what the player character has seen, first by marking as seen everything that's in plain view in the location when a LOOK command is executed, and secondly eveything in plain view within a container when that container is opened. The algorithm for doing this may be less than perfect (in the interests of acceptable speed), and there will be cases that it does not cover (for example when an object is moved into the location to simulate its being found under the rug); in such cases it will be necessary explicitly to change the newly-arrived object to seen in our code (if we need to keep track of it).
+<p>
+ This extension also marks an object is also marked as both seen and familiar when it is examined (which should catch most, if not all, the cases not already covered).
+<p>
+ Finally, the testing command EPISTAT X (not for release) is provided to aid testing and debugging games using this extension. For example the command EPISTAT GOLD BALL will show whether the gold ball is seen, familiar or known. This may be useful to help track whether the epistemic status of various objects in our game is actually what we think it should be. EPISTAT (derived from EPIstemic STAtus) is indeed a nasty non-word, but it has the merits of being (a) reasonably brief, (b) acceptably memorable and (c) unlikely to clash with any verbs defined in-game.
+<p>
+ (With thanks to Aaron Reed for suggesting some optimization, which also led me to spot a bug.)
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Epistemology.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Epistemology.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Contemplation</font></b></a><br>Thinking about things that are known<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1065(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Contemplation[=0x0022=][=0x000A=][=0x000A=]Include Epistemology by Eric Eve.[=0x000A=][=0x000A=]Part 1 - Thought Mechanics[=0x000A=][=0x000A=]Thinking about is an action applying to one visible thing.[=0x000A=][=0x000A=]Understand [=0x0022=]think about [any thing][=0x0022=] as thinking about.[=0x000A=]Understand [=0x0022=]think about [any known thing][=0x0022=] as thinking about.[=0x000A=][=0x000A=]Report thinking about something unknown:[=0x000A=]say [=0x0022=][no thoughts][=0x0022=][=0x000A=][=0x000A=]Report thinking about something known:[=0x000A=]say [=0x0022=][the thought of the noun][paragraph break][=0x0022=][=0x000A=][=0x000A=]A thing has a text called thought.[=0x000A=][=0x000A=]Pondering is an action applying to one topic.[=0x000A=][=0x000A=]Understand [=0x0022=]think about [text][=0x0022=] as pondering.[=0x000A=][=0x000A=]Report pondering:[=0x000A=]say [=0x0022=][no thoughts][=0x0022=][=0x000A=][=0x000A=]To say no thoughts:[=0x000A=]say [=0x0022=]You have no thoughts on that subject right now.[=0x0022=][=0x000A=][=0x000A=]Part 2 - Scenario[=0x000A=][=0x000A=]The Study is a Room. [=0x0022=]You deliberately keep this room as bare as possible, to prevent material objects distracting you from your thoughts. The two essential objects that remain are a comfortable armchair and the door out into the hall to the west.[=0x0022=][=0x000A=][=0x000A=]The comfortable armchair is an enterable scenery supporter in the Study. The description is [=0x0022=]It[=0x0027=]s nothing special, but it looks comfortable enough.[=0x0022=] The thought is [=0x0022=]You think it[=0x0027=]s a good place to sit and think.[=0x0022=][=0x000A=]Understand [=0x0022=]arm[=0x0022=] or [=0x0022=]chair[=0x0022=] as the comfortable armchair.[=0x000A=][=0x000A=]The hall door is an open openable scenery door. The hall door is west of the Study and east of the Main Hall. The thought is [=0x0022=]Useful things, doors, you muse: without them it would be so much harder to get from room to room.[=0x0022=][=0x000A=][=0x000A=]The Main Hall is a Room. [=0x0022=]This place is almost as sparsely furnished as the Study which lies to the east.[=0x0022=][=0x000A=][=0x000A=]The large oak table is a supporter in the Main Hall. [=0x0022=]A large oak table abuts one wall.[=0x0022=] The thought is [=0x0022=]You[=0x0027=]ve never given this table much thought, to be honest -- it[=0x0027=]s just a table, after all.[=0x0022=][=0x000A=][=0x000A=]A note is on the large oak table. The description of the note is [=0x0022=]The note reads: [=0x0027=]To find fame, love, and everlasting happiness, you need to go on the quest of the Great Golden Golf Ball of Destiny.[=0x0027=][=0x0022=][=0x000A=]The thought of the note is [=0x0022=]You [if we have examined the note]think it contains an interesting proposition[otherwise]wonder what it says[end if]. [=0x0022=][=0x000A=][=0x000A=]Carry out examining the note: now the Great Golden Golf Ball of Destiny is familiar.[=0x000A=][=0x000A=]Life is a subject. The thought is [=0x0022=]You think [if the golden golf ball is familiar]it has just become a whole lot more interesting[otherwise]it[=0x0027=]s preferable to the alternative[end if]. [=0x0022=][=0x000A=][=0x000A=]Liberty is a subject. The thought is [=0x0022=]It[=0x0027=]s a fine word -- but a slippery concept.[=0x0022=][=0x000A=]Understand [=0x0022=]freedom[=0x0022=] as liberty.[=0x000A=][=0x000A=]Love is a subject. The thought is [=0x0022=]You [if we have examined the note]think it might be worth questing to find it[otherwise]wonder where it is to be found[end if]. [=0x0022=][=0x000A=][=0x000A=]Understand [=0x0022=]fame[=0x0022=] or [=0x0022=]everlasting[=0x0022=] or [=0x0022=]happiness[=0x0022=] as love.[=0x000A=][=0x000A=]The Great Golden Golf Ball of Destiny is a thing. The thought is [=0x0022=]You wonder what kind of object it can be to offer so much.[=0x0022=][=0x000A=][=0x000A=]There is an open container called the red box on the large oak table.[=0x000A=]The red ball is in the red box.[=0x000A=][=0x000A=]There is a closed openable container called the green box on the large oak table.[=0x000A=]The green ball is in the green box.[=0x000A=][=0x000A=]Test me with [=0x0022=]think about love/think about door/think about golden ball/think about note/think about table/think about life/epistat red ball/epistat green ball/w/think about table/think about note/read note/think about note/think about love/think about golden ball/think about life/epistat golden ball/epistat red ball/epistat green ball/open green box/epistat green ball[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1065()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Contemplation&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Epistemology by Eric Eve.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Part 1 - Thought Mechanics</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Thinking about is an action applying to one visible thing.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;think about [any thing]&quot; as thinking about.<br> Understand &quot;think about [any known thing]&quot; as thinking about.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Report thinking about something unknown:<br> say &quot;[no thoughts]&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Report thinking about something known:<br> say &quot;[the thought of the noun][paragraph break]&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A thing has a text called thought.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Pondering is an action applying to one topic.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;think about [text]&quot; as pondering.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Report pondering:<br> say &quot;[no thoughts]&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To say no thoughts:<br> say &quot;You have no thoughts on that subject right now.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Part 2 - Scenario</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Study is a Room. &quot;You deliberately keep this room as bare as possible, to prevent material objects distracting you from your thoughts. The two essential objects that remain are a comfortable armchair and the door out into the hall to the west.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The comfortable armchair is an enterable scenery supporter in the Study. The description is &quot;It's nothing special, but it looks comfortable enough.&quot; The thought is &quot;You think it's a good place to sit and think.&quot;<br> Understand &quot;arm&quot; or &quot;chair&quot; as the comfortable armchair.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The hall door is an open openable scenery door. The hall door is west of the Study and east of the Main Hall. The thought is &quot;Useful things, doors, you muse: without them it would be so much harder to get from room to room.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Main Hall is a Room. &quot;This place is almost as sparsely furnished as the Study which lies to the east.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The large oak table is a supporter in the Main Hall. &quot;A large oak table abuts one wall.&quot; The thought is &quot;You've never given this table much thought, to be honest -- it's just a table, after all.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A note is on the large oak table. The description of the note is &quot;The note reads: 'To find fame, love, and everlasting happiness, you need to go on the quest of the Great Golden Golf Ball of Destiny.'&quot;<br> The thought of the note is &quot;You [if we have examined the note]think it contains an interesting proposition[otherwise]wonder what it says[end if]. &quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out examining the note: now the Great Golden Golf Ball of Destiny is familiar.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Life is a subject. The thought is &quot;You think [if the golden golf ball is familiar]it has just become a whole lot more interesting[otherwise]it's preferable to the alternative[end if]. &quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Liberty is a subject. The thought is &quot;It's a fine word -- but a slippery concept.&quot;<br> Understand &quot;freedom&quot; as liberty.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Love is a subject. The thought is &quot;You [if we have examined the note]think it might be worth questing to find it[otherwise]wonder where it is to be found[end if]. &quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;fame&quot; or &quot;everlasting&quot; or &quot;happiness&quot; as love.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Great Golden Golf Ball of Destiny is a thing. The thought is &quot;You wonder what kind of object it can be to offer so much.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> There is an open container called the red box on the large oak table.<br> The red ball is in the red box.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> There is a closed openable container called the green box on the large oak table.<br> The green ball is in the green box.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;think about love/think about door/think about golden ball/think about note/think about table/think about life/epistat red ball/epistat green ball/w/think about table/think about note/read note/think about note/think about love/think about golden ball/think about life/epistat golden ball/epistat red ball/epistat green ball/open green box/epistat green ball&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

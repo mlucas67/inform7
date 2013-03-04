@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2457(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Postures by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2457()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Postures<font color="#404040"> by </font>Emily Short</b><p><small></small><p>Postures defines three postures -- seated, standing, and reclining -- and allows pieces of furniture to specify which postures are possible and preferred when the player is on those furnishings.<p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Postures and Furniture</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: Possible Postures</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 1.2: Preferred Postures</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 1.3: Entering and Leaving Furniture</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 1.4: Defining New Furniture</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 1.5: Rooms and Postures</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Postures-eg1.html#eg1"><font color="#000000">A: Muddy Lawn</font></a><br><p><hr><p>Kinds: <b>posture</b><p>Values: <b>seated</b>, <b>standing</b>, <b>reclining</b><p>Actions: <b>Sitting on</b>, <b>Lying on</b>, <b>Standing up on</b>, <b>Lying down</b>, <b>Sitting down</b>, <b>Standing up</b>, <b>Taking position</b><p>Verbs: to <b>allow</b><p>Adjectives: <b>seated</b>, <b>standing</b>, <b>reclining</b>, <b>posture-friendly</b>, <b>posture-unfriendly</b><p>Properties: <b>posture</b>, <b>posture-friendly</b>, <b>posture-unfriendly</b><p><p><hr><p>
+<p>
+ Postures defines three postures -- seated, standing, and reclining -- and allows pieces of furniture to specify which postures are possible and preferred when the player is on those furnishings.
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Postures and Furniture</b></font>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: Possible Postures</b></font>
+<p>
+ Each piece of furniture comes with a range of possible postures, which can be expressed with the posture-permission relation: as in
+<p>
+<blockquote><font color="#000080"> The bunk bed allows seated and reclining.</font></blockquote>
+<p>
+ This definition would say that we're allowed to sit or lie down on the bunk bed, but not to stand up on it. Player attempts to
+<p>
+<blockquote><font color="#000080"> &gt;STAND ON BUNK BED</font></blockquote>
+<p>
+ will be rejected with
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 1.2: Preferred Postures</b></font>
+<p>
+ In addition to permitted postures, furniture can have a &quot;preferred&quot; posture: it's possible to stand on a chair, but we're more likely to sit on it. Preferred postures are used to guess what the player means if he types
+<p>
+<blockquote><font color="#000080"> &gt;GET ON BUNK BED</font></blockquote>
+<p>
+ without naming a posture.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 1.3: Entering and Leaving Furniture</b></font>
+<p>
+ If an actor attempts to leave an enterable object, his posture is automatically returned to &quot;standing&quot;; if he enters something without setting a posture explicitly, as in
+<p>
+<blockquote><font color="#000080"> &gt;GET ON SOFA</font></blockquote>
+<p>
+ the actor's posture will automatically be set to the default posture for that piece of furniture (sitting, in this case).
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 1.4: Defining New Furniture</b></font>
+<p>
+ To make use of the features of Postures, we may define pieces of furniture like so:
+<p>
+<blockquote><font color="#000080"> A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. A chair is usually seated.</font></blockquote>
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 1.5: Rooms and Postures</b></font>
+<p>
+ Rooms cannot enter into the posture-allowing relation. However, rooms can be set as &quot;posture-friendly&quot; (you can lie or sit down on the ground in those rooms) and &quot;posture-unfriendly&quot; (no lying down or sitting allowed). By default, they are posture-friendly.
+<p>
+ This feature determines whether a player can take postures other than standing while in a room (that is, not on a piece of furniture). Suppose the player types
+<p>
+<blockquote><font color="#000080"> &gt;LIE DOWN</font></blockquote>
+<p>
+ without naming where he wants to lie down. If the room is posture-friendly, he will lie down in the location. If it's posture-unfriendly, the game will look for an available piece of furniture that allows reclining (ideally one whose preferred posture is reclining) and try to lie on that, instead.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Postures.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Postures.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Muddy Lawn</font></b></a><br>A room where the player can't sit on the ground, plus a folding chair, a safer-to-sit-on driveway, and the ubiquitous guinea-pig Clark.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2458(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Muddy Lawn[=0x0022=][=0x000A=][=0x000A=]Include Postures by Emily Short.[=0x000A=][=0x000A=]A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. A chair is usually seated.[=0x000A=][=0x000A=]The Muddy Lawn is a posture-unfriendly room. West of the Muddy Lawn is the Driveway.[=0x000A=][=0x000A=]Clark is a man in the Muddy Lawn. A persuasion rule: persuasion succeeds.[=0x000A=][=0x000A=]The Muddy Lawn contains a folding chair. The description of the folding chair is [=0x0022=]Made of metal and plastic, and intended for outdoor use.[=0x0022=] The folding chair is a chair. The folding chair is portable.[=0x000A=][=0x000A=]Test me with [=0x0022=]lie on chair / sit on chair / stand on chair / stand up / exit / sit down / look / stand up / lie down / sit on chair / west / east / Clark, sit on chair / Clark, stand / Clark, sit down / Clark, stand / Clark, lie down / Clark, stand / Clark, lie on chair / Clark, stand on chair / Clark, west / west / Clark, sit / sit / Clark, east / east / get chair / west / drop chair / sit down / get up / sit on chair[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2458()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Muddy Lawn&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Postures by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. A chair is usually seated.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Muddy Lawn is a posture-unfriendly room. West of the Muddy Lawn is the Driveway.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Clark is a man in the Muddy Lawn. A persuasion rule: persuasion succeeds.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Muddy Lawn contains a folding chair. The description of the folding chair is &quot;Made of metal and plastic, and intended for outdoor use.&quot; The folding chair is a chair. The folding chair is portable.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;lie on chair / sit on chair / stand on chair / stand up / exit / sit down / look / stand up / lie down / sit on chair / west / east / Clark, sit on chair / Clark, stand / Clark, sit down / Clark, stand / Clark, lie down / Clark, stand / Clark, lie on chair / Clark, stand on chair / Clark, west / west / Clark, sit / sit / Clark, east / east / get chair / west / drop chair / sit down / get up / sit on chair&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

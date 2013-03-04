@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2464(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Patrollers by Michael Callaghan.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2464()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Patrollers<font color="#404040"> by </font>Michael Callaghan</b><p><small><p>Version 11</small><p>Allows a non player character to follow routes defined by rooms, directions, random journeys, the player's location or to a destination.<p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: What's new</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: Version 11</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 1.2: Version 10</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 1.3: Version 9</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 1.4: Version 8</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 1.5: Version 7</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 1.6: Version 6</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 1.7: Version 5</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec9><font color="#000000">Section 1.8: Version 4</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec10><font color="#000000">Section 1.9: Version 3</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec11><font color="#000000">Section 1.10: Version 2</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec12><font color="#000000">Chapter 2: Creating a Patroller</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec13><font color="#000000">Section 2.1: Using the Patroller kind</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec14><font color="#000000">Section 2.2: Starting and stopping a Patroller</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec15><font color="#000000">Section 2.3: Specifying the probability that a Patroller will move</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec16><font color="#000000">Section 2.4: Specifying the frequency of a Patroller's moves</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec17><font color="#000000">Chapter 3: Defining a Patroller's route</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec18><font color="#000000">Section 3.1: Introduction</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec19><font color="#000000">Section 3.2: RoomLed</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec20><font color="#000000">Section 3.3: DirectionLed</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec21><font color="#000000">Section 3.4: Aimless</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec22><font color="#000000">Section 3.5: Following</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec23><font color="#000000">Section 3.6: Targeted</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec24><font color="#000000">Chapter 4: Defining how may times a Patroller follows a route</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec25><font color="#000000">Section 4.1: Introduction</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec26><font color="#000000">Section 4.2: OneWay</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec27><font color="#000000">Section 4.3: TwoWay</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec28><font color="#000000">Section 4.4: TwoWayRepeated</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec29><font color="#000000">Section 4.5: Circular</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec30><font color="#000000">Chapter 5: Opening doors</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec31><font color="#000000">Section 5.1: Introduction</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec32><font color="#000000">Section 5.2: Universal</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec33><font color="#000000">Section 5.3: WithKey</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec34><font color="#000000">Section 5.4: UnlockedOnly</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec35><font color="#000000">Section 5.5: None</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec36><font color="#000000">Chapter 6: Reclosing Doors</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec37><font color="#000000">Section 6.1: Introduction</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec38><font color="#000000">Section 6.2: Leave</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec39><font color="#000000">Section 6.3: Reinstate</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec40><font color="#000000">Chapter 7: Text output</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec41><font color="#000000">Section 7.1: Reporting kinds</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec42><font color="#000000">Section 7.2: Moving the patroller - Individual Reporting</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec43><font color="#000000">Section 7.3: Moving the patroller - Collective Reporting:</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec44><font color="#000000">Section 7.4: Opening and closing of doors</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec45><font color="#000000">Chapter 8: Limiting a patroller's movement</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec46><font color="#000000">Section 8.1: Default position</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec47><font color="#000000">Section 8.2: Creating our own restrictions</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec48><font color="#000000">Section 8.3: Preventing access to specific rooms with or without conditions</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec49><font color="#000000">Section 8.4: Restrictions by reference to map regions</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Patrollers-eg1.html#eg1"><font color="#000000">A: The Chase</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Patrollers-eg2.html#eg2"><font color="#000000">B: The Butler</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Patrollers-eg3.html#eg3"><font color="#000000">C: January Sales</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Patrollers-eg4.html#eg4"><font color="#000000">D: Border Dispute</font></a><br><p><hr><p>Kinds: <b>Patroller</b> (a kind of person), <b>Status</b>, <b>MovementType</b>, <b>Route</b>, <b>RouteLeg</b>, <b>OpeningCapability</b>, <b>ReclosingCapability</b>, <b>Reporting Status</b><p>Values that vary: <b>Reporting</b>, <b>Arrival List</b>, <b>Departure List</b>, <b>RouteAvailable</b><p>Values: <b>On Patrol</b>, <b>Off Patrol</b>, <b>RoomLed</b>, <b>DirectionLed</b>, <b>Following</b>, <b>Aimless</b>, <b>Targeted</b>, <b>OneWay</b>, <b>TwoWay</b>, <b>TwoWayRepeated</b>, <b>Circular</b>, <b>OutwardBound</b>, <b>InwardBound</b>, <b>Universal</b>, <b>WithKey</b>, <b>UnlockedOnly</b>, <b>None</b>, <b>Leave</b>, <b>Reinstate</b>, <b>Individual</b>, <b>Collective</b><p>Adjectives: <b>On Patrol</b>, <b>Off Patrol</b>, <b>RoomLed</b>, <b>DirectionLed</b>, <b>Following</b>, <b>Aimless</b>, <b>Targeted</b>, <b>OneWay</b>, <b>TwoWay</b>, <b>TwoWayRepeated</b>, <b>Circular</b>, <b>OutwardBound</b>, <b>InwardBound</b>, <b>Universal</b>, <b>WithKey</b>, <b>UnlockedOnly</b>, <b>None</b>, <b>Leave</b>, <b>Reinstate</b><p>Properties: <b>RoomTable</b>, <b>DirectionTable</b>, <b>Destination</b>, <b>PathLength</b>, <b>PathStage</b>, <b>Drive</b>, <b>Turn Frequency</b>, <b>StartTurn</b>, <b>Status</b>, <b>MovementType</b>, <b>Route</b>, <b>RouteLeg</b>, <b>OpeningCapability</b>, <b>ReclosingCapability</b><p><p><hr><p>
+<p>
+ Patrollers is an extension that enables us to define routes for a non-player character to follow during the game.
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: What's new</b></font>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: Version 11</b></font>
+<p>
+ - Fixes a bug that crashed Patrollers where the best route function returned nothing as its value.
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 1.2: Version 10</b></font>
+<p>
+ - the statuses Active and Inactive have been renamed to On Patrol and Off Patrol to prevent a clash with the use of these adjectives in version 6E59 of Inform 7.
+<p>
+ - Deprecated phrases in the extension and in the examples have been removed.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 1.3: Version 9</b></font>
+<p>
+ The value 'Frequency' has been changed to 'Turn Frequency' to resolve a namespace clash with another extension.
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 1.4: Version 8</b></font>
+<p>
+ - allows us to use collective reporting for the arrival and departure of patrollers.
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 1.5: Version 7</b></font>
+<p>
+ - allows us to place rooms off-limits so that a patroller will not enter them unless and until we specify that the room is not off-limits.
+<p>
+ - changes the code structure to use the new block indentation format.
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 1.6: Version 6</b></font>
+<p>
+ - Solves a bug that caused active patrollers out of world or in rooms with no exits to crash the extension.
+<p>
+ - Updated for compatibility with version 5T13.
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 1.7: Version 5</b></font>
+<p>
+ Version 5 of the Patrollers extension:
+<p>
+ - Improves the before rule for aimless patrollers so that adjacent rooms through a door have an equal chance of being selected to those with a direct connection.
+<p>
+ - Solves a bug that prevented TwoWayRepeated patrollers retracing their routes.
+<p>
+ - Splits out those parts of the rules that print responses into separate phrases to make it easier for us to change the text outputs.
+<p>
+ - Adds a following mode so that the Patroller will attempt to follow the player.
+<p>
+ - Adds a new value, Frequency, that specifies whether the patroller tries to move every turn, every other turn, etc.
+<p>
+ - Adds two new internal commands &quot;Activate Patroller&quot; and &quot;Deactivate Patroller&quot; to set the patroller to active or inactive as required.
+<p>
+ Version 5 requires release 5J39 of Inform 7.
+<p>
+<p><a name=docsec9><b><font color="#000000">Section 1.8: Version 4</b></font>
+<p>
+ Version 4 of the Patrollers extension solves a bug that prevented aimless patrollers going through doors.
+<p>
+<p><a name=docsec10><b><font color="#000000">Section 1.9: Version 3</b></font>
+<p>
+ Version 3 of the Patrollers extension has been modified to be compatible with version 5G67 and beyond.
+<p>
+<p><a name=docsec11><b><font color="#000000">Section 1.10: Version 2</b></font>
+<p>
+ Version 2 of the Patrollers extension adds the following capabilities:
+<p>
+ - To define the probability that a patroller will move on any turn.
+<p>
+ - To define whether a patroller will be able to pass through closed doors.
+<p>
+ - To define whether a patroller will close doors once s/he has passed through them.
+<p>
+ - Some basic error checking routines for use when developing a game.
+<p>
+ - Rule names have been added to each section of the extension to enable the rules to be suspended or replaced in the game.
+<p>
+ - The documentation has been updated to take advantage of the new headings for version 4X60 and beyond.
+<p>
+<p><hr><p><a name=docsec12><b><font color="#800000">Chapter 2: Creating a Patroller</b></font>
+<p>
+<p><a name=docsec13><b><font color="#000000">Section 2.1: Using the Patroller kind</b></font>
+<p>
+ To create a patroller, we define the NPC as a Patroller.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel.</font></blockquote>
+<p>
+<p><a name=docsec14><b><font color="#000000">Section 2.2: Starting and stopping a Patroller</b></font>
+<p>
+ A patroller begins the game as an Off Patrol character. We have to specify when the patroller begins to follow its route. To do so, we use the form Activate Patroller. We can do this when play begins or when something happens in the game to trigger the character's movement:
+<p>
+<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; activate the Dog.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After opening the gate:<br>&nbsp;&nbsp;&nbsp;&nbsp; activate the Dog.</font></blockquote>
+<p>
+ Similarly, to stop a patroller, we use the form Deactivate Patroller.
+<p>
+<blockquote><font color="#000080"> After giving the bone to the dog:<br>&nbsp;&nbsp;&nbsp;&nbsp; deactivate the dog.</font></blockquote>
+<p>
+<p><a name=docsec15><b><font color="#000000">Section 2.3: Specifying the probability that a Patroller will move</b></font>
+<p>
+ We can specify how likely it is that a Patroller will move on any turn by setting the Drive of the Patroller to a value from 0 to 100. 100 means that the Patroller will always move (this is the default value) if it is possible to do so. For example, to set a 40% chance of the Patroller moving:
+<p>
+<blockquote><font color="#000080"> The Drunken Lord is a Patroller in the Bar. The Drunken Lord is Aimless.<br> The Drive of the Drunken Lord is 40.</font></blockquote>
+<p>
+<p><a name=docsec16><b><font color="#000000">Section 2.4: Specifying the frequency of a Patroller's moves</b></font>
+<p>
+ We can specify whether a patroller moves every turn, every other turn, etc, by setting the Turn Frequency of the Patroller. A Turn Frequency of 1 means that the Patroller will try to move every turn while On Patrol, a Turn Frequency of 2 means every other turn, a Turn Frequency of 3 means every third turn, and so on. The default setting is 1, which means that a Patroller will always try to move every turn unless we actively set the Turn Frequency to another value.
+<p>
+<blockquote><font color="#000080"> The Sightseer is a Patroller in the Quadrangle. The Turn Frequency of the Sightseer is 4.</font></blockquote>
+<p>
+ A patroller will always try to move on the first turn when the patroller is On Patrol.
+<p>
+ if we set the Turn Frequency to a number below 1, error checking routines will reset the Turn Frequency to 1 to prevent division by zero errors at runtime.
+<p>
+<p><hr><p><a name=docsec17><b><font color="#800000">Chapter 3: Defining a Patroller's route</b></font>
+<p>
+<p><a name=docsec18><b><font color="#000000">Section 3.1: Introduction</b></font>
+<p>
+ We can specify the type of route that the patroller will follow. The possibilities are:
+<p>
+<p><a name=docsec19><b><font color="#000000">Section 3.2: RoomLed</b></font>
+<p>
+ The patroller's route is defined by a table of rooms that the patroller visits. if we use a RoomLed patroller we have to define a RoomTable. The first room in the table must be the initial location of the patroller. The extension does not check whether the first room is the initial location of the patroller nor does it check whether a valid route can be established between each of the rooms in the table.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is RoomLed.<br> The RoomTable of the dog is the Table of Walkies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Walkies</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> TargetRoom</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dog Kennel</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Front Yard</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Main Street</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Local Butchers</font></font></td></tr></table></blockquote>
+<p>
+<p><a name=docsec20><b><font color="#000000">Section 3.3: DirectionLed</b></font>
+<p>
+ The patroller's route is defined by a table of directions that the patroller follows. if we use a DirectionLed patroller we have to define a DirectionTable. The first direction in the table should be the direction the patroller takes from the initial location of the patroller. The extension does not check whether the patroller can follow each of the directions in the table.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is DirectionLed.<br> The DirectionTable of the dog is the Table of Walkies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Walkies</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> TargetDirection</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> North</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> East</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Southwest</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Up</font></font></td></tr></table></blockquote>
+<p>
+<p><a name=docsec21><b><font color="#000000">Section 3.4: Aimless</b></font>
+<p>
+ The patroller's route is random. The patroller nevertheless follows legal routes between rooms. if we use an Aimless patroller, we do not need to define a route table for that patroller.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is Aimless.</font></blockquote>
+<p>
+<p><a name=docsec22><b><font color="#000000">Section 3.5: Following</b></font>
+<p>
+ The patroller's route tracks the player. The patroller nevertheless follows legal routes between rooms. if we use a following patroller, we do not need to define a route table for that patroller.
+<p>
+<blockquote><font color="#000080"> The sycophant is a Patroller in the Palace. The sycophant is following.</font></blockquote>
+<p>
+<p><a name=docsec23><b><font color="#000000">Section 3.6: Targeted</b></font>
+<p>
+ The patroller follows the best route to a specified destination. if we use a Targeted patroller, we do not need to define a route table for that patroller, but we must define a Destination for the patroller. Once the patroller reaches the destination, the patroller becomes Off Patrol.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is Targeted.<br> The Destination of the dog is the Local Butchers.</font></blockquote>
+<p>
+<p><hr><p><a name=docsec24><b><font color="#800000">Chapter 4: Defining how may times a Patroller follows a route</b></font>
+<p>
+<p><a name=docsec25><b><font color="#000000">Section 4.1: Introduction</b></font>
+<p>
+ if a patroller has a route table that defines the rooms the patroller visits or the directions that the patroller follows, we should also define how many times the patroller will follow the route. The possibilities are:
+<p>
+<p><a name=docsec26><b><font color="#000000">Section 4.2: OneWay</b></font>
+<p>
+ The patroller follows the route once and stops at the end of the route.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is RoomLed. The dog is OneWay.<br> The RoomTable of the dog is the Table of Walkies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Walkies</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> TargetRoom</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dog Kennel</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Front Yard</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Main Street</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Local Butchers</font></font></td></tr></table></blockquote>
+<p>
+ The dog will therefore go from the Dog Kennel to the Local Butchers and stop.
+<p>
+<p><a name=docsec27><b><font color="#000000">Section 4.3: TwoWay</b></font>
+<p>
+ The patroller follows the route once and then retraces the route back to the beginning. When the patroller arrives back at the beginning, the patroller stops.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is RoomLed. The dog is TwoWay.<br> The RoomTable of the dog is the Table of Walkies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Walkies</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> TargetRoom</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dog Kennel</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Front Yard</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Main Street</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Local Butchers</font></font></td></tr></table></blockquote>
+<p>
+ The dog will therefore go from the Dog Kennel to the Local Butchers and back via the Main Street and Front Yard to the Dog Kennel. When back at the Dog Kennel, the dog will stop.
+<p>
+<p><a name=docsec28><b><font color="#000000">Section 4.4: TwoWayRepeated</b></font>
+<p>
+ This is the same as TwoWay except that when the patroller gets back to the beginning of the route, the patroller will begin the entire journey again.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is RoomLed. The dog is TwoWayRepeated.<br> The RoomTable of the dog is the Table of Walkies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Walkies</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> TargetRoom</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dog Kennel</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Front Yard</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Main Street</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Local Butchers</font></font></td></tr></table></blockquote>
+<p>
+ The dog will therefore go from the Dog Kennel to the Local Butchers and back via the Main Street and Front Yard to the Dog Kennel. When back at the Dog Kennel, the dog go back to the Local Butchers, back to the Dog Kennel, etc., until something stops the dog patrolling.
+<p>
+<p><a name=docsec29><b><font color="#000000">Section 4.5: Circular</b></font>
+<p>
+ The patroller follows the route to its end and then starts the route again from the beginning. Note that the extension does not check that the route is truly circular so we must ensure that this is the case.
+<p>
+<blockquote><font color="#000080"> The dog is a Patroller in the Dog Kennel. The dog is RoomLed. The dog is Circular.<br> The RoomTable of the dog is the Table of Walkies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Walkies</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> TargetRoom</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dog Kennel</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Back Yard</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Greenhouse</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Side Passage</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Front Yard</font></font></td></tr></table></blockquote>
+<p>
+ The dog will therefore go from the Dog Kennel to the Front Yard, from the Front Yard to the Dog Kennel and then repeat the route until something stops the dog patrolling.
+<p>
+<p><hr><p><a name=docsec30><b><font color="#800000">Chapter 5: Opening doors</b></font>
+<p>
+<p><a name=docsec31><b><font color="#000000">Section 5.1: Introduction</b></font>
+<p>
+ The patroller may encounter doors between rooms. We can specify whether the patroller can pass through closed doors by setting the OpeningCapability of the patroller. The door opening rules are subject to the following constraints.
+<p>
+ - the patroller will always be able to pass through open doors. - if a door is locked and unlockable, the patroller will not be able to pass through it. - if the door is closed and unopenable, the patroller will not be able to pass through it.
+<p>
+ Subject to these constraints, the door opening possibilities for a patroller are:
+<p>
+<p><a name=docsec32><b><font color="#000000">Section 5.2: Universal</b></font>
+<p>
+ The patroller can unlock and open any door unless the door is unopenable. This applies even if the patroller is not carrying the matching key of a locked door.
+<p>
+<blockquote><font color="#000080"> The guard is a patroller in the guard room. The guard is targeted. The destination of the guard is the High Security Unit.<br> The OpeningCapability of the guard is universal.</font></blockquote>
+<p>
+<p><a name=docsec33><b><font color="#000000">Section 5.3: WithKey</b></font>
+<p>
+ The patroller can unlock and open any door unless the door is unopenable. The patroller must be carrying the matching key of a locked door to be able to pass through it.
+<p>
+<blockquote><font color="#000080"> The robot is a patroller in the store room. The robot is aimless.<br> The OpeningCapability of the robot is WithKey.</font></blockquote>
+<p>
+<p><a name=docsec34><b><font color="#000000">Section 5.4: UnlockedOnly</b></font>
+<p>
+ The patroller can open doors that are not locked so long as the door is openable.
+<p>
+<blockquote><font color="#000080"> The prisoner is a patroller in the exercise yard. The prisoner is targeted. The destination of the prisoner is the Gatehouse.<br> The OpeningCapability of the prisoner is UnlockedOnly.</font></blockquote>
+<p>
+<p><a name=docsec35><b><font color="#000000">Section 5.5: None</b></font>
+<p>
+ The patroller cannot pass through any closed doors.
+<p>
+<blockquote><font color="#000080"> The black mamba is a patroller in laboratory. The black mamba is aimless.<br> The OpeningCapability of the black mamba is None.</font></blockquote>
+<p>
+ This is the default OpeningCapability for a patroller.
+<p>
+<p><hr><p><a name=docsec36><b><font color="#800000">Chapter 6: Reclosing Doors</b></font>
+<p>
+<p><a name=docsec37><b><font color="#000000">Section 6.1: Introduction</b></font>
+<p>
+ After the patroller has passed through a door that s/he has opened, we can specify what action the patroller will take to close the door by setting the ReclosingCapability for the patroller. The options are:
+<p>
+<p><a name=docsec38><b><font color="#000000">Section 6.2: Leave</b></font>
+<p>
+ The patroller will not make any attempt to close any doors s/he passes through.
+<p>
+<blockquote><font color="#000080"> The naughty girl is a patroller. The naughty girl is aimless.<br> The OpeningCapability of the naughty girl is UnlockedOnly. The ReclosingCapability of the naughty girl is Leave.</font></blockquote>
+<p>
+ This is the default ReclosingCapability for a patroller.
+<p>
+<p><a name=docsec39><b><font color="#000000">Section 6.3: Reinstate</b></font>
+<p>
+ The patroller will close any doors that s/he has opened, if the Patroller unlocked the door, the Patroller will relock it.
+<p>
+<blockquote><font color="#000080"> The parent is a patroller. The parent is aimless.<br> The OpeningCapability of the parent is UnlockedOnly. The ReclosingCapability of the parent is Reinstate.</font></blockquote>
+<p>
+<p><hr><p><a name=docsec40><b><font color="#800000">Chapter 7: Text output</b></font>
+<p>
+<p><a name=docsec41><b><font color="#000000">Section 7.1: Reporting kinds</b></font>
+<p>
+ There are two forms of reporting permitted by the extension. The first (default) reporting is &quot;Individual&quot;. With this form of reporting, the arrival and departure of each patroller will be reported separately. Where there are a number of patrollers who may arrive or depart together, this can lead to a lot of lines of text reporting individual movements. If this is an issue, you can set reporting to &quot;Collective&quot;. With this mode set, a simple one line report is generated for the patrollers who arrive and another for the patrollers who depart.
+<p>
+ To set the form of reporting required, we use the phrase:
+<p>
+<blockquote><font color="#000080"> Now Reporting is Collective;<br> Now Reporting is Individual.</font></blockquote>
+<p>
+ See &quot;January Sales&quot; for an example using both reporting kinds.
+<p>
+<p><a name=docsec42><b><font color="#000000">Section 7.2: Moving the patroller - Individual Reporting</b></font>
+<p>
+ The arrival and departure of patrollers individually is handled by five reporting phrases. We can use our own phrases to replace the built in reporting rules.
+<p>
+ To report arrival of (Bod - a patroller) up from (place - a room): say &quot;[The Bod] arrives from below.[line break]&quot;
+<p>
+ To report arrival of (Bod - a patroller) down from (place - a room): say &quot;[The Bod] arrives from above.[line break]&quot;
+<p>
+ To report arrival of (Bod - a patroller) coming (way - a direction) from (place - a room): say &quot;[The Bod] arrives from [the way].[line break]&quot;
+<p>
+ To report departure of (Bod - a patroller) going (way - a direction) to (place - a room): say &quot;[The Bod] goes [way].[line break]&quot;
+<p>
+ To change any of these, we create our own &quot;To report...&quot; rule using the same syntax as the above phrases and vary the text in the say statements to suit our tastes. See &quot;January Sales&quot; for an example of varying the built in phrases.
+<p>
+<p><a name=docsec43><b><font color="#000000">Section 7.3: Moving the patroller - Collective Reporting:</b></font>
+<p>
+ The arrival and departure of patrollers collectively is handled by two reporting phrases. We can use our own phrases to replace the built in reporting rules.
+<p>
+ To report arrivals: say &quot;[Arrival List] arrive[if the number of entries in the arrival list is 1]s[end if].&quot;
+<p>
+ To report departures: say &quot;[Departure List] depart[if the number of entries in the departure list is 1]s[end if].&quot;
+<p>
+ To change any of these, we create our own &quot;To report...&quot; rule using the same syntax as the above phrases and vary the text in the say statements to suit our tastes.
+<p>
+<p><a name=docsec44><b><font color="#000000">Section 7.4: Opening and closing of doors</b></font>
+<p>
+ There are six reporting phrases within the patrollers extension that report the opening and closing of doors by patrollers. These phrases are used only where we use Individual reporting, not Collective reporting.
+<p>
+ We can use our own phrases to replace the built in reporting rules.
+<p>
+ The built in phrases are:
+<p>
+ To report seen opening of (item - a door) by (Bod - a patroller): say &quot;[The Bod] opens [the item].[line break]&quot;.
+<p>
+ To report seen unlocking and opening of (item - a door) by (Bod - a patroller): say &quot;[The Bod] unlocks and opens [the item].[line break]&quot;.
+<p>
+ To report unseen opening of (item - a door): say &quot;You hear the sound of someone opening [the item].[line break]&quot;.
+<p>
+ To report unseen unlocking and opening of (item - a door): say &quot;You hear the sound of someone unlocking and opening [the item].[line break]&quot;.
+<p>
+ To report closing of (item - a door) by (Bod - a patroller): say &quot;[The Bod] closes [the item].[line break]&quot;.
+<p>
+ To report closing and locking of (item - a door) by (Bod - a patroller): say &quot;[The Bod] closes and locks [the item].[line break]&quot;.
+<p>
+ To change any of these, we create our own &quot;To report...&quot; rule using the same syntax as the above phrases and vary the text in the say statements to suit our tastes. See &quot;The Butler&quot; for an example of varying the built in phrases.
+<p>
+<p><hr><p><a name=docsec45><b><font color="#800000">Chapter 8: Limiting a patroller's movement</b></font>
+<p>
+<p><a name=docsec46><b><font color="#000000">Section 8.1: Default position</b></font>
+<p>
+ The patrollers extension allows a patroller to enter any room unless there is a closed door that the patroller cannot open. In real life we may want to place restrictions on the patroller's freedom of movement, particularly where the patroller is aimless or following. The extension allows us to place rooms off-limits to the patroller by providing a hook to add our own restrictions.
+<p>
+ The default hook is the decision:
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+ By creating our own decision code using the same syntax, we can override the default hook.
+<p>
+<p><a name=docsec47><b><font color="#000000">Section 8.2: Creating our own restrictions</b></font>
+<p>
+ To create our own restrictions on a patroller's movement, we add the following lines:
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; conditions to bar or allow access;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes or no;<br>&nbsp;&nbsp;&nbsp;&nbsp; other conditions to bar or allow access;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes or no;<br>&nbsp;&nbsp;&nbsp;&nbsp; any further conditions to bar or allow access;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes or no;<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+ The code should always end with an unconditional &quot;decide no.&quot; to ensure that the default position for any room / patroller combinations that fall outside our conditions is to allow access to the room.
+<p>
+ If we have two or more patrollers, we must add the conditions under the one &quot;To decide&quot; heading. Similarly, if there are two or more conditions applying to the same patroller, they must also be under the one &quot;To decide&quot; heading. The net result is that our code should only contain one &quot;To decide&quot; heading to encompass all of our restrictions on patrollers movements.
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; if P is NPC1:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conditions to bar or allow access;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes or no;<br>&nbsp;&nbsp;&nbsp;&nbsp; if P is NPC2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conditions to bar or allow access;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes or no;<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+<p><a name=docsec48><b><font color="#000000">Section 8.3: Preventing access to specific rooms with or without conditions</b></font>
+<p>
+ We can prohibit access to specific rooms.
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; if R is the quagmire:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes;<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; if R is the Dog House and P is the cat:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the location of the Dog is R:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide no;<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+ Note that if we create an absolute bar on a patroller entering a specific room, the patroller will never enter that room even if the patroller is RoomLed or DirectionLed. However, creating a conditional bar on such entry may enable us to create more complex puzzles - for example, the mouse cannot enter the cheese room unless we have got rid of the cat from the room.
+<p>
+<p><a name=docsec49><b><font color="#000000">Section 8.4: Restrictions by reference to map regions</b></font>
+<p>
+ We can also confine a patroller to a specific region or exclude the patroller from specific regions. This is useful where the patroller is Aimless or Following and we want to confine the patroller's movements.
+<p>
+ To restrict a patroller to a region:
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; if P is the troubled spirit:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the map region of R is the Graveyard:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide no;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes;<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+ To prevent a patroller entering a region:
+<p>
+<blockquote><font color="#000080"> To decide if (R - a Room) is off-limits to (P - a Patroller):<br>&nbsp;&nbsp;&nbsp;&nbsp; if P is the truant:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the map region of R is the School Complex:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide yes;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decide no;<br>&nbsp;&nbsp;&nbsp;&nbsp; decide no.</font></blockquote>
+<p>
+ The example &quot;Border Dispute&quot; shows the use of the these principles.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Patrollers-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Patrollers-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Chase</font></b></a><br>A short example to show the patrolling rules.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Patrollers-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Patrollers-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Butler</font></b></a><br>A short example to show door opening by a patroller.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Patrollers.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Patrollers.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">January Sales</font></b></a><br>A short example to show patrollers moving on different turns.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2465(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]January Sales[=0x0022=] by Michael Callaghan[=0x000A=][=0x000A=]Include Patrollers by Michael Callaghan.[=0x000A=][=0x000A=]Sale Hall is a room. [=0x0022=]The season[=0x0027=]s bargains are piled high.  Even at 20p, it is unlikely that 2007 diaries will sell well but for those prepared to rummage there are bargains to be found.[if we have not opened the glass doors]  Through the glass doors you can see the crowds of people are waiting outside Tramlaw for the start of the January sales.[=0x0022=][=0x000A=][=0x000A=]The Entrance is a room.[=0x000A=][=0x000A=]Amy is a patroller in the Entrance. Amy is targeted. The destination of Amy is Cubicle One. The Turn Frequency of Amy is 1.[=0x000A=]Beth is a patroller in the Entrance. Beth is targeted. The destination of Beth is Cubicle Two. The Turn Frequency of Beth is 2.[=0x000A=]Charlie is a patroller in the Entrance. Charlie is targeted. The destination of Charlie is Cubicle Three. The Turn Frequency of Charlie is 3.[=0x000A=][=0x000A=]A door called the Glass Doors is east of the Entrance and west of the Sale Hall. The glass doors are closed and unlocked. The glass doors are scenery.[=0x000A=][=0x000A=]The Fitting Rooms is a region.[=0x000A=][=0x000A=]Cubicle One is a room in the Fitting Rooms. Cubicle One is east of the Sale Hall. [=0x0022=]A simple cubicle for trying on clothes before purchasing them.[=0x0022=][=0x000A=][=0x000A=]Cubicle Two is a room in the Fitting Rooms. Cubicle Two is southeast of the Sale Hall. [=0x0022=]A simple cubicle for trying on clothes before purchasing them.[=0x0022=][=0x000A=][=0x000A=]Cubicle Three is a room in the Fitting Rooms. Cubicle Three is south of the Sale Hall. [=0x0022=]A simple cubicle for trying on clothes before purchasing them.[=0x0022=][=0x000A=][=0x000A=]When play begins:[=0x000A=][=0x0009=]Now Reporting is Collective.[=0x000A=][=0x000A=]After opening the doors for the first time:[=0x000A=][=0x0009=]say [=0x0022=]You are nearly knocked over as the bargain hunters stampede into the store.[=0x0022=];[=0x000A=][=0x0009=]activate Amy;[=0x000A=][=0x0009=]activate Beth;[=0x000A=][=0x0009=]activate Charlie.[=0x000A=][=0x000A=]To report departure of (Bod - a patroller) going (way - a direction) to (place - a room):[=0x000A=][=0x0009=]if the map region of the place is Fitting Rooms:[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=][The Bod] goes [way] to [place] to try on [one of]a satin evening dress[or]a cashmere shawl[or]a pair of Lycra running shorts[or]a pair of high heel boots[at random].[=0x0022=];[=0x000A=][=0x0009=]otherwise:[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=][The Bod] goes [way] to [place].[=0x0022=][=0x000A=][=0x000A=]Instead of going west from the Sale Hall when the Glass Doors are open:[=0x000A=][=0x0009=]say [=0x0022=]You cannot leave the store whilst the sales are on.[=0x0022=][=0x000A=][=0x000A=]Instead of going to Cubicle One when the number of patrollers in Cubicle One is greater than 0:[=0x000A=][=0x0009=]say [=0x0022=]You cannot enter a fitting room when it is occupied.[=0x0022=][=0x000A=][=0x000A=]Instead of going to Cubicle Two when the number of patrollers in Cubicle Two is greater than 0:[=0x000A=][=0x0009=]say [=0x0022=]You cannot enter a fitting room when it is occupied.[=0x0022=][=0x000A=][=0x000A=]Instead of going to Cubicle Three when the number of patrollers in Cubicle Three is greater than 0:[=0x000A=][=0x0009=]say [=0x0022=]You cannot enter a fitting room when it is occupied.[=0x0022=][=0x000A=][=0x000A=]Every turn when the location is the Sale Hall:[=0x000A=][=0x0009=]let count be the number of patrollers in the Sale Hall;[=0x000A=][=0x0009=]if count is greater than 0:[=0x000A=][=0x0009=][=0x0009=]now Reporting is Individual;[=0x000A=][=0x0009=][=0x0009=]if count is 1, say [=0x0022=][list of patrollers in the Sale Hall] rummages for a bargain.[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]if count is greater than 1, say [=0x0022=][list of patrollers in the Sale Hall] are rummaging for bargains.[=0x0022=].[=0x000A=][=0x000A=]Test me with [=0x0022=]open doors / wait / wait / wait / w / e[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2465()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;January Sales&quot; by Michael Callaghan</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Patrollers by Michael Callaghan.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Sale Hall is a room. &quot;The season's bargains are piled high.  Even at 20p, it is unlikely that 2007 diaries will sell well but for those prepared to rummage there are bargains to be found.[if we have not opened the glass doors]  Through the glass doors you can see the crowds of people are waiting outside Tramlaw for the start of the January sales.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Entrance is a room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Amy is a patroller in the Entrance. Amy is targeted. The destination of Amy is Cubicle One. The Turn Frequency of Amy is 1.<br> Beth is a patroller in the Entrance. Beth is targeted. The destination of Beth is Cubicle Two. The Turn Frequency of Beth is 2.<br> Charlie is a patroller in the Entrance. Charlie is targeted. The destination of Charlie is Cubicle Three. The Turn Frequency of Charlie is 3.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A door called the Glass Doors is east of the Entrance and west of the Sale Hall. The glass doors are closed and unlocked. The glass doors are scenery.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Fitting Rooms is a region.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Cubicle One is a room in the Fitting Rooms. Cubicle One is east of the Sale Hall. &quot;A simple cubicle for trying on clothes before purchasing them.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Cubicle Two is a room in the Fitting Rooms. Cubicle Two is southeast of the Sale Hall. &quot;A simple cubicle for trying on clothes before purchasing them.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Cubicle Three is a room in the Fitting Rooms. Cubicle Three is south of the Sale Hall. &quot;A simple cubicle for trying on clothes before purchasing them.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; Now Reporting is Collective.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After opening the doors for the first time:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You are nearly knocked over as the bargain hunters stampede into the store.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; activate Amy;<br>&nbsp;&nbsp;&nbsp;&nbsp; activate Beth;<br>&nbsp;&nbsp;&nbsp;&nbsp; activate Charlie.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To report departure of (Bod - a patroller) going (way - a direction) to (place - a room):<br>&nbsp;&nbsp;&nbsp;&nbsp; if the map region of the place is Fitting Rooms:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[The Bod] goes [way] to [place] to try on [one of]a satin evening dress[or]a cashmere shawl[or]a pair of Lycra running shorts[or]a pair of high heel boots[at random].&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[The Bod] goes [way] to [place].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of going west from the Sale Hall when the Glass Doors are open:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You cannot leave the store whilst the sales are on.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of going to Cubicle One when the number of patrollers in Cubicle One is greater than 0:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You cannot enter a fitting room when it is occupied.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of going to Cubicle Two when the number of patrollers in Cubicle Two is greater than 0:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You cannot enter a fitting room when it is occupied.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of going to Cubicle Three when the number of patrollers in Cubicle Three is greater than 0:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You cannot enter a fitting room when it is occupied.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Every turn when the location is the Sale Hall:<br>&nbsp;&nbsp;&nbsp;&nbsp; let count be the number of patrollers in the Sale Hall;<br>&nbsp;&nbsp;&nbsp;&nbsp; if count is greater than 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now Reporting is Individual;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if count is 1, say &quot;[list of patrollers in the Sale Hall] rummages for a bargain.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if count is greater than 1, say &quot;[list of patrollers in the Sale Hall] are rummaging for bargains.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;open doors / wait / wait / wait / w / e&quot;</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Patrollers-eg4.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Patrollers-eg4.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Border Dispute</font></b></a><br>A short example to show setting regions off-limits to patrollers<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

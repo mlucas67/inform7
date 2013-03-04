@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1050(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Menus by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1050()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Menus<font color="#404040"> by </font>Emily Short</b><p><small><p>Extension built in to Inform</small><p><p><hr><p>
+<p>
+ &quot;Menus&quot; provides a table-based way to display menus to the player. The menu takes over the main screen of the game and prevents parser input while it is active.
+<p>
+ &quot;Menus&quot; is not suitable for contexts where we want the player to be able to choose a numbered option during regular play (such as a menu of conversation choices when talking to another character). It is intended rather for situations where we wish to give the player optional instructions or hints separated from the main game.
+<p>
+ Any given menu option may do one (and only one) of the following three things:
+<p>
+ 1) display some text to the player, after which he can press a key to return to the menu. This tends to be useful for such menu options as &quot;About this Game&quot; and &quot;Credits&quot;, where we have a few paragraphs of information that we would like to share.
+<p>
+ 2) trigger a secondary menu with additional options. The player may navigate this submenu, then return to the main menu. Submenus may be nested.
+<p>
+ 3) carry out a rule. This might perform any action, including making changes to the game state.
+<p>
+ Menus are specified by tables, in which each row contains one of the menu options, together with instructions to Inform about how to behave when that option is selected.
+<p>
+ Each menu table should have columns called &quot;title&quot;, &quot;subtable&quot;, &quot;description&quot;, and &quot;toggle&quot;.
+<p>
+ &quot;Title&quot; should be the name of the option we want the player to see: &quot;Credits&quot;, &quot;Hints&quot;, &quot;About This Game&quot;, and so on.
+<p>
+ &quot;Description&quot; is the text that will be printed when the option is selected. We can fill it in with as much information as we like.
+<p>
+ &quot;Subtable&quot; is used to create a submenu; this column holds the name of the table that specifies the menu. For instance:
+<p>
+<blockquote><font color="#000080"> Table of Options</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> subtable</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> description</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> toggle</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080">...</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Settings&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table of Setting Options</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font></font></td></tr></table></blockquote>
+<p>
+ would create an option entitled &quot;Settings&quot;, which the player could select to view a submenu of setting options. That submenu would in turn need its own table, thus
+<p>
+<blockquote><font color="#000080"> Table of Setting Options</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> subtable</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> description</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> toggle</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080">...</font></font></td></tr></table></blockquote>
+<p>
+ If we do not want a given option to trigger a new submenu, we should leave it as &quot;--&quot;, unless this is the first row of a new menu table. In that case, we should fill it in with &quot;a table-name&quot;.
+<p>
+ The &quot;toggle&quot; column contains the rule carried out when this option is chosen. In theory, this rule could be absolutely anything. In practice, the feature is mostly useful for giving the player a table of setting options which he can toggle on and off: for instance, we might provide the option &quot;use verbose room descriptions&quot;, and then have the toggle rule change the game's internal settings about how room descriptions are displayed. (See the example attached for further guidance.)
+<p>
+ It is only useful for a given option to have one of these three features -- a description or a subtable or a toggle element. In the event that more than one column is filled out, the game will obey the toggle rule in preference to creating a submenu, and create a submenu in preference to displaying description text.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Menus-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Menus-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Tabulation</font></b></a><br>A simple table of hints and help (see also Basic Help Menu).<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

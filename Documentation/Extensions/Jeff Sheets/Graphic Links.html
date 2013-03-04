@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1006(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Graphic Links by Jeff Sheets.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1006()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Graphic Links<font color="#404040"> by </font>Jeff Sheets</b><p><small></small><p><p><hr><p>
+<p>
+ Graphic Links allows us to apply actions to rectangular regions of the graphical window provided by Emily Short's Simple Graphical Window. Two phrases can be used to maintain the list of graphlinks.
+<p>
+<blockquote><font color="#000080"> set a graphlink identified as &quot;myLink&quot; from 0 by 0 to 10 by 10 as &quot;wait&quot;;<br> clear the graphlink identified as &quot;myLink&quot;.</font></blockquote>
+<p>
+ The first line adds a graphlink called &quot;myLink&quot; to the table of graphlinks. This link will reproduce the wait command, and is active in the square area from 0,0 (the top left corner) to 10,10 (implying a size of 11 pixels by 11 pixels). The order of the coordinates is Top by Left to Bottom by Right.
+<p>
+ One can create much more complex graphlink rules by adding custom rules to the clicking graphlink rulebook. The default, however, allows us to use the previously mentioned phrases to set up simpler graphlinks. As an example of how to construct such a rule, the following is provided:
+<p>
+<blockquote><font color="#000080"> The first clicking graphlink rule (this is the up graphlink rule):<br>&nbsp;&nbsp;&nbsp;&nbsp; choose row with arrowcode of &quot;U&quot; in the Table of arrow offsets;<br>&nbsp;&nbsp;&nbsp;&nbsp; if current graphlink x &gt;= xoffset entry and current graphlink x &lt;= xmax entry and current graphlink y &gt;= yoffset entry and current graphlink y &lt;= ymax entry<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the room up from the location is not nothing<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the glulx replacement command is &quot;up&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; now the glulx replacement command is &quot;&quot;.</font></blockquote>
+<p>
+ The system assumes that space for 25 graphlinks is sufficeint for most purposes, but one can always use something like the following to increase the number of graphlinks available:
+<p>
+<blockquote><font color="#000080"> Table of Graphlink Glulx Replacement Commands (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> linkid</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> p-top</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> p-bottom</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> p-left</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> p-right</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> replacement</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> with 25 blank rows</font></font></td></tr></table></blockquote>
+<p>
+ This example would increase the number of available graphlinks to 50. Note that this table has nothing to do with any custom rules added to the clicking graphlink rulebook.
+<p>
+
+<p>
+<p></body></html>

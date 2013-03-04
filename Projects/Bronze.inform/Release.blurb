@@ -1,0 +1,47 @@
+! Blurb file created by Inform build 6G60
+
+status "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze.inform\Build\StatusCblorb.html"
+
+
+! Identification
+
+project folder "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze.inform"
+release to "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\Release"
+
+! Blorb instructions
+
+storyfile leafname "Bronze.zblorb"
+storyfile "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze.inform\Build\output.z8" include
+ifiction "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze.inform\Metadata.iFiction" include
+cover "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\Cover.jpg"
+picture 1 "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\Cover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "29FE1691-41B4-4FFC-A170-69755086CF79"
+placeholder [RELEASE] = "12"
+placeholder [YEAR] = "2006"
+placeholder [TITLE] = "Bronze"
+placeholder [AUTHOR] = "Emily Short"
+placeholder [BLURB] = "When the seventh day comes and it is time for you to return to the castle in the forest, your sisters cling to your sleeves.<br/>'Don't go back,' they say, and 'When will we ever see you again?' But you imagine they will find consolation somewhere.<br/>Your father hangs back, silent and moody. He has spent the week as far from you as possible, working until late at night. Now he speaks only to ask whether the Beast treated you 'properly.' Since he obviously has his own ideas about what must have taken place over the past few years, you do not reply beyond a shrug.<br/>You breathe more easily once you're back in the forest, alone.<br/>Bronze is a puzzle-oriented adaptation of Beauty and the Beast with an expansive geography for the inveterate explorer.<br/>Features help for novice players, a detailed adaptive hint system to assist players who get lost, and a number of features to make navigating a large space more pleasant."
+
+! Other material to release
+
+source public
+solution
+auxiliary "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\Bronze Manual.pdf" "Manual"
+auxiliary "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\map.pdf" "Complete (Spoilerful) Map"
+auxiliary "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\solution.txt" "Walkthrough"
+auxiliary "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\Overview.html" "Making of..."
+
+! Website instructions
+
+template path "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\Bronze Materials\Templates"
+template path "C:\Users\Marshall CTR Lucas\Documents\Inform\Templates"
+template path "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line15"><img border=0 src=inform:/Reveal.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc394.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc392.html><img border=0 src=inform:/help.png></a>||

@@ -1,0 +1,44 @@
+! Blurb file created by Inform build 6G60
+
+status "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph.inform\Build\StatusCblorb.html"
+
+
+! Identification
+
+project folder "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph.inform"
+release to "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph Materials\Release"
+
+! Blorb instructions
+
+storyfile leafname "The Reliques of Tolti-Aph.zblorb"
+storyfile "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph.inform\Build\output.z5" include
+ifiction "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph.inform\Metadata.iFiction" include
+cover "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph Materials\Cover.jpg"
+picture 1 "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph Materials\Cover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "1355C3FE-D67B-4987-9655-DBD5F3F0070C"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2005"
+placeholder [TITLE] = "The Reliques of Tolti-Aph"
+placeholder [AUTHOR] = "Graham Nelson"
+placeholder [BLURB] = "It used to be said that there are two kinds of magic-user: those who have been to Tolti-Aph, and charlatans. It used to be generally understood that the attempt to prove oneself in the unforgiving society of Tolti-Aph was a bid for rapid level advancement or else romantic, thin-young-mage-in-midnight-black-robes death. The closer you get to the wilderness island vaguely marked 'Tholtaff' on the agate globe in your great-great-grandfather's study, the better the alternative sounds: settling down in some coastal village, perhaps, a little weathermongering, some polymancy, and helping out with the nets after a bad storm. Retire at maybe level 3, with most of your experience points gained from observing rare fish-based poisons carry off those villagers careless about gutting. Publish an awesomely tedious monograph on the correct usage of the 'untangle rigging' spell. You know, the good life."
+
+! Other material to release
+
+source public
+auxiliary "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph Materials\Collegio.pdf" "Collegio magazine"
+
+! Website instructions
+
+template path "C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Reliques of Tolti-Aph Materials\Templates"
+template path "C:\Users\Marshall CTR Lucas\Documents\Inform\Templates"
+template path "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line10"><img border=0 src=inform:/Reveal.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc394.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc398.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc392.html><img border=0 src=inform:/help.png></a>||

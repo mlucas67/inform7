@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1057(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Punctuation Removal by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1057()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Punctuation Removal<font color="#404040"> by </font>Emily Short</b><p><small><p>Extension built in to Inform</small><p><p><hr><p>
+<p>
+ Punctuation Removal provides phrases for removing unwanted punctuation marks from the player's command before attempting to interpret it. These are
+<p>
+<blockquote><font color="#000080"> remove exclamation points<br> remove question marks<br> remove quotes</font></blockquote>
+<p>
+ and, to do all three of these things at once,
+<p>
+<blockquote><font color="#000080"> remove stray punctuation.</font></blockquote>
+<p>
+ Also provided, but not included in &quot;remove stray punctuation&quot;, is
+<p>
+<blockquote><font color="#000080"> remove periods</font></blockquote>
+<p>
+ which we should use sparingly, since the player's command might reasonably include multiple actions separated by full stops. Similarly dangerous is
+<p>
+<blockquote><font color="#000080"> remove apostrophes</font></blockquote>
+<p>
+ A more common need is to be able to parse titles such as &quot;mr.&quot; and &quot;mrs.&quot; sensibly. Inform reads any full stop as the end of the sentence, which leads to such exchanges as
+<p>
+<blockquote><font color="#000080"> &gt;x mr. sinister.<br> You see nothing special about Mr. Sinister.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> That's not a verb I recognise.</font></blockquote>
+<p>
+ because Inform has interpreted as though the player had typed
+<p>
+<blockquote><font color="#000080"> &gt;x mr.<br> You see nothing special about Mr. Sinister.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> &gt;sinister<br> That's not a verb I recognise.</font></blockquote>
+<p>
+ To get around this, we want to remove full stops only when they appear as parts of standard titles. &quot;Punctuation Removal&quot; provides the phrase
+<p>
+<blockquote><font color="#000080"> resolve punctuated titles</font></blockquote>
+<p>
+ which turns all instances in the player's command of &quot;mr.&quot;, &quot;mrs.&quot;, &quot;prof.&quot;, &quot;st.&quot;, &quot;dr.&quot;, and &quot;rev.&quot; into &quot;mr&quot;, &quot;mrs&quot;, &quot;prof&quot;, &quot;st&quot;, &quot;dr&quot;, and &quot;rev&quot; respectively. Now (assuming Inform understands &quot;mr&quot; as referring to the correct character) we get such output as
+<p>
+<blockquote><font color="#000080"> &gt;x me. x mr. sinister.<br> As good-looking as ever.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> You see nothing special about Mr. Sinister.</font></blockquote>
+<p>
+ These phrases should be used during the After reading a command activity, so for instance in a game designed to be very patient with the player's quirks:
+<p>
+<blockquote><font color="#000080"> After reading a command:<br>&nbsp;&nbsp;&nbsp;&nbsp; remove stray punctuation.</font></blockquote>
+<p>
+ Or, if we have titled characters,
+<p>
+<blockquote><font color="#000080"> After reading a command:<br>&nbsp;&nbsp;&nbsp;&nbsp; resolve punctuated titles.</font></blockquote>
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Punctuation Removal.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Punctuation Removal.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Patience</font></b></a><br>In which question and exclamation marks are pulled from the player's input.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1058(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Patience[=0x0022=][=0x000A=][=0x000A=]Include Punctuation Removal by Emily Short.[=0x000A=][=0x000A=]The Overpunctuation Arena is a room. [=0x0022=]It[=0x0027=]s madness in here!! Fortunately, you have a lot of patience, right???[=0x0022=][=0x000A=][=0x000A=]Understand [=0x0022=]who is/are [text][=0x0022=] as inquiring about. Inquiring about is an action applying to one topic. Carry out inquiring about a topic listed in the Table of Answers: say [=0x0022=][reply entry][paragraph break][=0x0022=]. Understand the command [=0x0022=]what[=0x0022=] as [=0x0022=]who[=0x0022=].[=0x000A=][=0x000A=]Table of Answers[=0x000A=]topic[=0x0009=]reply[=0x000A=][=0x0022=]patience[=0x0022=][=0x0009=][=0x0022=]A virtue.[=0x0022=][=0x000A=][=0x0022=]virtue[=0x0022=] or [=0x0022=]a virtue[=0x0022=][=0x0009=][=0x0022=]A grace.[=0x0022=][=0x000A=][=0x0022=]Grace[=0x0022=] or [=0x0022=]a grace[=0x0022=][=0x0009=][=0x0022=]A little girl who doesn[=0x0027=]t wash her face.[=0x0022=][=0x000A=][=0x000A=]After reading a command:[=0x000A=][=0x0009=]remove stray punctuation;[=0x000A=][=0x0009=]if the player[=0x0027=]s command includes [=0x0022=][=0x0026=][=0x0022=], replace the matched text with [=0x0022=]and[=0x0022=].[=0x000A=][=0x000A=]Test me with [=0x0022=]what is patience? / what is a virtue?! / what is grace???[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1058()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Patience&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Punctuation Removal by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Overpunctuation Arena is a room. &quot;It's madness in here!! Fortunately, you have a lot of patience, right???&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;who is/are [text]&quot; as inquiring about. Inquiring about is an action applying to one topic. Carry out inquiring about a topic listed in the Table of Answers: say &quot;[reply entry][paragraph break]&quot;. Understand the command &quot;what&quot; as &quot;who&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Answers</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> reply</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;patience&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;A virtue.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;virtue&quot; or &quot;a virtue&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;A grace.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Grace&quot; or &quot;a grace&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;A little girl who doesn't wash her face.&quot;</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> After reading a command:<br>&nbsp;&nbsp;&nbsp;&nbsp; remove stray punctuation;<br>&nbsp;&nbsp;&nbsp;&nbsp; if the player's command includes &quot;&amp;&quot;, replace the matched text with &quot;and&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;what is patience? / what is a virtue?! / what is grace???&quot;</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Punctuation Removal-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Punctuation Removal-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Abbreviation</font></b></a><br>In which titles such as Mr. and Dr. are correctly parsed.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Punctuation Removal-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Punctuation Removal-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Ownership</font></b></a><br>In which commands like EXAMINE JACK'S TIE are understood if Jack is wearing a tie, and otherwise not.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

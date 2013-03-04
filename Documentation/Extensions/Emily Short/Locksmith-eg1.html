@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2444(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Locksmith by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2444()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Locksmith<font color="#404040"> by </font>Emily Short</b><p><small><p>Version 11 built in to Inform</small><p>Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.<p>Kinds: <b>passkey</b> (a kind of thing), <b>keychain</b> (a kind of supporter)<p>Actions: <b>Unlocking keylessly</b>, <b>Locking keylessly</b>, <b>Universal unlocking</b><p>Verbs: to <b>unbolt</b><p>Adjectives: <b>key-accessible</b>, <b>identified</b><p>Use options: <b>sequential action</b><p><p><hr><p>
+<p>
+ Locksmith adds implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys. There are five parts of Locksmith.
+<p>
+ First, Locksmith will try opening all doors the player tries to pass through; try closing all lockables before locking them; and try unlocking all locked items before opening them. Other characters will follow the same rules.
+<p>
+ By default, these actions are described as other automatic actions usually are in Inform: the player sees something like &quot;(first unlocking...)&quot; before he opens the door. The &quot;Use sequential action&quot; mode is provided for the case where we would prefer to see &quot;You unlock the door.&quot; instead.
+<p>
+ If the player tries to open a door but does not have the right key, he receives a key-refusal message, such as &quot;You lack a key that fits the red chest.&quot; We can override this by writing other &quot;to say key-refusal for...&quot; phrases, like this:
+<p>
+<blockquote><font color="#000080"> To say key-refusal for (locked-thing - a container):<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You will be unable to see the contents of [the locked-thing] until you find the appropriate key.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To say key-refusal for (locked-thing - the red chest):<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The red chest resists all your attempts because you do not have the magic orb.&quot;</font></blockquote>
+<p>
+ Second, Locksmith tries to provide an intelligent default if no key is specified, so that &gt;LOCK DOOR will work if the player is holding the correct key.
+<p>
+ Third, Locksmith introduces a kind called the passkey. The passkey is a key which will name itself in inventory listings after use. Once the passkey has been identified, the game also automates taking the key before using it on the door it matches. Keys the player has never successfully identified, or keys not defined as belonging to the passkey kind, will not behave this way. Passkeys are also renamed if the player has seen another character use them successfully.
+<p>
+ The &quot;unbolts&quot; relation is used to keep track of what the player knows about keys. We will probably not need to do this in most cases, but it is possible to change this manually during play to give the player new knowledge (or ignorance) about the functions of keys.
+<p>
+ Passkeys can also be used with the keychain kind. Keychains are portable supporters which can have passkeys (but only passkeys) put on them. Keys on a keychain can be used as though they were in the player's hand, and will not be automatically removed for locking and unlocking actions.
+<p>
+ Finally, Locksmith provides the debugging command 'unlockall', only identified in debugging compilations of the game. If during play we type UNLOCKALL, all locks in the game will magically spring open.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Locksmith.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Locksmith.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Latches</font></b></a><br>Adding one lock in the game that is managed by latch rather than by a key.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ Suppose that most of the doors in our game are locked with normal keys, but one is the kind that simply latches. We can handle this with a specific before rule that fires prior to the more general before rules in Locksmith. We also want to treat LOCK X differently from LOCK X WITH..., so we will treat locking and locking keylessly with separate rules. Locking keylessly is the action invoked if the player types only LOCK X.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2445(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]John Malkovich[=0x0027=]s Toilet[=0x0022=][=0x000A=][=0x000A=]Include Locksmith by Emily Short.[=0x000A=][=0x000A=]The Bathroom is a room.[=0x000A=][=0x000A=]The bathroom door is a door. It is north of the Bathroom and south of the Bedroom. It is lockable and locked.[=0x000A=][=0x000A=]Before unlocking keylessly the bathroom door:[=0x000A=][=0x0009=]if the bathroom door is unlocked, say [=0x0022=][The bathroom door] is already unlocked.[=0x0022=] instead;[=0x000A=][=0x0009=]try turning the latch instead.[=0x000A=][=0x000A=]Before locking keylessly the bathroom door:[=0x000A=][=0x0009=]if the bathroom door is locked, say [=0x0022=][The bathroom door] is already secure.[=0x0022=] instead;[=0x000A=][=0x0009=]try turning the latch instead.[=0x000A=][=0x000A=]Before locking the bathroom door with something:[=0x000A=][=0x0009=]say [=0x0022=]The bathroom door locks with a latch, not with a key.[=0x0022=] instead.[=0x000A=][=0x000A=]Before unlocking the bathroom door with something:[=0x000A=][=0x0009=]say [=0x0022=]The bathroom door locks with a latch, not with a key.[=0x0022=] instead.[=0x000A=][=0x000A=]The latch is part of the bathroom door. [=0x0022=]A turnable tab that locks the door.[=0x0022=] Understand [=0x0022=]knob[=0x0022=] as the latch. The description of the bathroom door is [=0x0022=]Uninteresting save for the latch.[=0x0022=][=0x000A=][=0x000A=]Instead of turning the latch:[=0x000A=][=0x0009=]if the bathroom door is locked begin;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=]Click! You turn the latch, and the door is unlocked[if the door is open] and open[end if].[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]now the bathroom door is unlocked;[=0x000A=][=0x0009=]otherwise;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=]Click! You turn the latch, and the door is locked[if the door is open], but open; the lock will catch as soon as you shut the door[end if].[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]now the bathroom door is locked;[=0x000A=][=0x0009=]end if.[=0x000A=][=0x000A=]The little black oval door is a door. It is west of the Bathroom and east of Oblivion. It is lockable and locked. The description of the oval door is [=0x0022=]It is in the wall of the shower area, and opens who knows where. You are sure it was not there yesterday.[=0x0022=][=0x000A=][=0x000A=]The onyx key unlocks the oval door. It is in the Bedroom. [=0x0022=]On the floor, jagged black in the square of sunlight, is [an onyx key].[=0x0022=][=0x000A=][=0x000A=]Test me with [=0x0022=]x bathroom door / unlock oval door / unlock bathroom door / g / go through bathroom door / get key / lock bathroom door / close bathroom door / s / lock bathroom door with onyx key / w[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2445()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;John Malkovich's Toilet&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Locksmith by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Bathroom is a room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The bathroom door is a door. It is north of the Bathroom and south of the Bedroom. It is lockable and locked.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before unlocking keylessly the bathroom door:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the bathroom door is unlocked, say &quot;[The bathroom door] is already unlocked.&quot; instead;<br>&nbsp;&nbsp;&nbsp;&nbsp; try turning the latch instead.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before locking keylessly the bathroom door:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the bathroom door is locked, say &quot;[The bathroom door] is already secure.&quot; instead;<br>&nbsp;&nbsp;&nbsp;&nbsp; try turning the latch instead.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before locking the bathroom door with something:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The bathroom door locks with a latch, not with a key.&quot; instead.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before unlocking the bathroom door with something:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The bathroom door locks with a latch, not with a key.&quot; instead.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The latch is part of the bathroom door. &quot;A turnable tab that locks the door.&quot; Understand &quot;knob&quot; as the latch. The description of the bathroom door is &quot;Uninteresting save for the latch.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of turning the latch:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the bathroom door is locked begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Click! You turn the latch, and the door is unlocked[if the door is open] and open[end if].&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the bathroom door is unlocked;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Click! You turn the latch, and the door is locked[if the door is open], but open; the lock will catch as soon as you shut the door[end if].&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the bathroom door is locked;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The little black oval door is a door. It is west of the Bathroom and east of Oblivion. It is lockable and locked. The description of the oval door is &quot;It is in the wall of the shower area, and opens who knows where. You are sure it was not there yesterday.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The onyx key unlocks the oval door. It is in the Bedroom. &quot;On the floor, jagged black in the square of sunlight, is [an onyx key].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;x bathroom door / unlock oval door / unlock bathroom door / g / go through bathroom door / get key / lock bathroom door / close bathroom door / s / lock bathroom door with onyx key / w&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Locksmith-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Locksmith-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Tobacco</font></b></a><br>Passkeys that open more than one thing each.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Locksmith-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Locksmith-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Rekeying</font></b></a><br>Modifying the way passkey descriptions work.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Locksmith-eg4.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Locksmith-eg4.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Watchtower</font></b></a><br>Using sequential actions to make the player's activities more equal with those of another character.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

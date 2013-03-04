@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1027(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Complex Listing by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1027()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Complex Listing<font color="#404040"> by </font>Emily Short</b><p><small><p>Extension built in to Inform</small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Basic listing features</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: Preparing a list</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 1.2: Ordering the list</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 1.3: Printing the list</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Chapter 2: Customizing Complex Listing</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 2.1: The concept of list styles</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 2.2: Pre-defined list styles</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 2.3: Delimiting the list in our own way</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec9><font color="#000000">Section 2.4: Say list of... and Empty out... phrases</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Complex Listing-eg1.html#eg1"><font color="#000000">A: Which of These Things Is Not Like the Others?</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Complex Listing-eg2.html#eg2"><font color="#000000">B: Taxidermy</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Complex Listing-eg3.html#eg3"><font color="#000000">C: Split Lark</font></a><br><p><hr><p><p><hr><p>
+<p>
+ Complex Listing provides two significant abilities: the ability to change the way a list is delimited (that is, to use semi-colons, sentence fragments, dashes, or othermore exotic techniques, instead of the usual commas with a final &quot;and&quot;); and the ability to determine an ordering for the list according to criteria of our choosing.
+<p>
+ (Because Complex Listing is relatively powerful, the complete description of what it does may be a bit daunting, especially for less experienced users. It may be more congenial to skip down to the examples and then return to the full instructions later.)
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Basic listing features</b></font>
+<p>
+ There are three stages to setting up and printing a complex list: marking the items we are going to include; arranging the list in order; and printing the list.
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: Preparing a list</b></font>
+<p>
+ First we must
+<p>
+<blockquote><font color="#000080"> prepare a list of (whatever criteria)</font></blockquote>
+<p>
+ For instance, we might say
+<p>
+<blockquote><font color="#000080"> prepare a list of furry animals which are visible.</font></blockquote>
+<p>
+ This marks the items that are going to be in our list. If we prefer, we may also do this task by hand by changing the desired items to &quot;marked for special listing&quot; (and undesired items to &quot;unmarked for special listing&quot;). If we do the task by hand, we must finish with
+<p>
+<blockquote><font color="#000080"> register things marked for listing.</font></blockquote>
+<p>
+ This sets up a table, called the Table of Scored Listing, which contains all the items that we are going to describe in our list, in two columns: output (the thing that is going to be named) and assigned score (the value we've given this item to order it with respect to everything else). (In versions prior to version three, it was necessary to register things marked for listing even after preparing a list. This is no longer the case.)
+<p>
+ Things marked for listing are registered automatically if we say &quot;prepare a list of...&quot;.
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 1.2: Ordering the list</b></font>
+<p>
+ At this point we may optionally choose to arrange the list in order in some way. One approach is to write our own phrase to go through the Table of Scored Listing and assign scores to each item.
+<p>
+ For instance, we might write a phrase to order the Table of Scored Listing according to the monetary value of items, their current relevance to the plot, their size, etc., etc., etc. -- it can be anything we want to include for the purpose of adding nuance to the descriptive prose. We can already
+<p>
+<blockquote><font color="#000080"> order list by length.</font></blockquote>
+<p>
+ to arrange according to the number of letters in the name of the item. (This is built into the extension not because it is inherently more interesting than all the other ordering principles we might apply, but because it is mildly annoying to program, so it seemed best to provide it pre-written.)
+<p>
+ The list arranging activity automatically sorts the Table according to its assigned score entry, but like all activities this can be overwritten if we would rather do something else; so that one could instruct the list arranging activity to sort the table randomly or in inverse order, if so desired.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 1.3: Printing the list</b></font>
+<p>
+ Now we're ready to use the list, which we may do by saying &quot;[prepared list]&quot;. At that point the items in the list will be printed in the order we have established (without any article, matching the behavior of &quot;[list]&quot;), and the table cleared. Failing to prepare the table properly before listing it may cause bugs, though if it finds itself entirely empty it will say &quot;nothing&quot; rather than giving run-time errors. There are the following variants as well:
+<p>
+<blockquote><font color="#000080"> say &quot;[the prepared list].&quot;<br> say &quot;[a prepared list].&quot;</font></blockquote>
+<p>
+ which tell Inform to use definite or indefinite articles; and
+<p>
+<blockquote><font color="#000080"> say &quot;[is-are the prepared list].&quot;<br> say &quot;[is-are a prepared list].&quot;<br> say &quot;[is-are prepared list].&quot;</font></blockquote>
+<p>
+ which add the appropriate verb, just as with regular list-saying.
+<p>
+<p><hr><p><a name=docsec5><b><font color="#800000">Chapter 2: Customizing Complex Listing</b></font>
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 2.1: The concept of list styles</b></font>
+<p>
+ This is also the juncture at which we may change the delimiters of the text. Complex Listing has a Table of List Style Assignments which lists different ways in which a list may be configured, and it may be reasonable simply to show what this looks like:
+<p>
+<blockquote><font color="#000080"> Table of List Style Assignments</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> list style</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> first delimiter</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> second delimiter</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> alternate second delimiter</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> indefinite name phrase</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> definite name phrase</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> sequential</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;, &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[if the serial comma option is active],[end if] and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[a current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[the current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> disjunctive</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;, &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[if the serial comma option is active],[end if] or &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; or &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[a current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[the current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> semi-colon</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[a current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[the current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> comma</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;, &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;, &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[a current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[the current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> null</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> hyperconnective</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot; and &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[a current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[the current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> fragmentary</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;. &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;. &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;. &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[A current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[The current listed object]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> enumerated</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;; &quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;([current enumeration]) [a current listed object]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;([current enumeration]) [the current listed object]&quot;</font></font></td></tr></table></blockquote>
+<p>
+ The first delimiter appears between all but the last pair of items in a list. The second delimiter appears between the last pair of items in a list of three or more things; and the alternate second delimiter appears between the last pair in a list of exactly two things. (This is because we may want &quot;the fish and the donkey&quot; but &quot;the cat, the fish, and the donkey&quot;.)
+<p>
+ The indefinite name phrase instructs Inform in how to say the name of the object if there's an indefinite article, and the definite name phrase if there's a definite article. Notice that this is not wholly consistent, because, for instance, in fragmentary-style listing each item receives its own sentence fragment and a capitalized definite article, rather than the usual uncapitalized one.
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 2.2: Pre-defined list styles</b></font>
+<p>
+ &quot;Sequential&quot; is the default mode of listing and conforms with Inform's usual &quot;thing, thing, thing[,] and thing&quot; list style. It obeys the serial comma use option just as ordinary listing does. If no delimiter is specified, the list will be written in this manner. &quot;Disjunctive&quot; style, though not very flashy, is likely to be the most useful alternate mode, since it replaces the usual &quot;and&quot; with an &quot;or&quot;, appropriate for offering the player options or asking him questions. Most of the others are perhaps self-explanatory. &quot;Enumerated&quot; presents a list with each element numbered, and &quot;[current enumeration]&quot; may be used elsewhere to indicate the number of the item currently being listed.
+<p>
+ To pick a special delimiter, we use phrases like
+<p>
+<blockquote><font color="#000080"> say &quot; [the prepared list delimited in comma style].&quot;<br> say &quot; [a prepared list delimited in hyperconnective style].&quot;</font></blockquote>
+<p>
+ and we may also add our own variations simply by continuing the table in our own code.
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 2.3: Delimiting the list in our own way</b></font>
+<p>
+ Of course, there are times when even this does not give adequate flexibility. This whole process is carried out by the &quot;delimiting a list&quot; activity, and if we want, we can write our own rules for delimiting a list. The current version looks like this:
+<p>
+<blockquote><font color="#000080"> Rule for delimiting a list (this is the standard delimiting rule):<br>&nbsp;&nbsp;&nbsp;&nbsp; choose row with list style of current list style in the Table of List Style Assignments;<br>&nbsp;&nbsp;&nbsp;&nbsp; if current listing index is 1<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if current listing total &gt; 2, say &quot;[second delimiter entry]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; otherwise say &quot;[alternate second delimiter entry]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if current listing index &gt; 0, say &quot;[first delimiter entry]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if.</font></blockquote>
+<p>
+ But if we liked we could replace this with more complicated logic to apply under some circumstances; for instance, instructions to group items in different numbers of combinations so that we generate lists like &quot;a chicken, a horse, a duck; a red hen; a heron.&quot; This gets increasingly detailed and picky, but provides significant leverage towards writing routines that will generate human-like prose.
+<p>
+<p><a name=docsec9><b><font color="#000000">Section 2.4: Say list of... and Empty out... phrases</b></font>
+<p>
+ In the providing these functions, Complex Listing also defines some other phrases that the author may find useful even when not actually saying prepared lists.
+<p>
+<blockquote><font color="#000080"> say list of (any table name)</font></blockquote>
+<p>
+ will do the printing-and-delimiting on any table name containing an output column, in case we want to write lists of objects from some other table. And then
+<p>
+<blockquote><font color="#000080"> empty out (any table name)</font></blockquote>
+<p>
+ strips blank every entry of every row of that table, and should not be used casually.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Complex Listing.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Complex Listing.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Which of These Things Is Not Like the Others?</font></b></a><br>Arranging items in room descriptions so that the most unusual objects are always at the back of the list.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ A common descriptive strategy in listing numerous objects is to save the most astonishing or interesting items for last. In this example, we arrange it so that the most peculiar items in a room are always included at the end of the list, no matter in what order they have been taken or dropped.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1028(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Which of These Things is Not Like the Others?[=0x0022=][=0x000A=][=0x000A=]Include Complex Listing by Emily Short.[=0x000A=][=0x000A=]Use the serial comma.[=0x000A=][=0x000A=]Rule for writing a paragraph about something:[=0x000A=][=0x0009=]prepare a list of the unmentioned other things in the location;[=0x000A=][=0x0009=]set off the odd things;[=0x000A=][=0x0009=]say [=0x0022=]You can see here [a prepared list].[=0x0022=][=0x000A=][=0x000A=]Definition: a thing is other if it is not the player.[=0x000A=][=0x000A=]To set off the odd things:[=0x000A=][=0x0009=]repeat through the Table of Scored Listing[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]if the output entry is at home, now the assigned score entry is 0;[=0x000A=][=0x0009=][=0x0009=]otherwise now the assigned score entry is 1;[=0x000A=][=0x0009=][=0x0009=]if the output entry is the skull, now the assigned score entry is 10;[=0x000A=][=0x0009=]end repeat.[=0x000A=][=0x000A=]Definition: a thing is at home if the location of it suits it. Definition: a thing is astonishing if it is not at home.[=0x000A=][=0x000A=]Suitability relates one room to various things. The verb to suit (it suits, they suit, it suited, it is suited) implies the suitability relation.[=0x000A=][=0x000A=]The Schoolroom is a room. The pencil, the paper, the eraser, and the clipboard are things in the Schoolroom. The Schoolroom suits the pencil, the paper, the eraser, the clipboard, and the social studies textbook.[=0x000A=][=0x000A=]The social studies textbook is in the Hall. The Hall is west of the Schoolroom. The poster of the principal is in the Hall. The Hall suits the poster and the discarded pass.[=0x000A=][=0x000A=]The Cafeteria is west of the Hall. The lunch tray, the carton of chocolate milk, and the discarded pass are in the Cafeteria. The Cafeteria suits the tray and the milk.[=0x000A=][=0x000A=]The polished skull is in the Cafeteria.[=0x000A=][=0x000A=]Test me with [=0x0022=]get all / w / drop all / look / get all / w / drop all / look[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1028()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Which of These Things is Not Like the Others?&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Complex Listing by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Use the serial comma.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Rule for writing a paragraph about something:<br>&nbsp;&nbsp;&nbsp;&nbsp; prepare a list of the unmentioned other things in the location;<br>&nbsp;&nbsp;&nbsp;&nbsp; set off the odd things;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You can see here [a prepared list].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Definition: a thing is other if it is not the player.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To set off the odd things:<br>&nbsp;&nbsp;&nbsp;&nbsp; repeat through the Table of Scored Listing<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the output entry is at home, now the assigned score entry is 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; otherwise now the assigned score entry is 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the output entry is the skull, now the assigned score entry is 10;<br>&nbsp;&nbsp;&nbsp;&nbsp; end repeat.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Definition: a thing is at home if the location of it suits it. Definition: a thing is astonishing if it is not at home.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Suitability relates one room to various things. The verb to suit (it suits, they suit, it suited, it is suited) implies the suitability relation.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Schoolroom is a room. The pencil, the paper, the eraser, and the clipboard are things in the Schoolroom. The Schoolroom suits the pencil, the paper, the eraser, the clipboard, and the social studies textbook.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The social studies textbook is in the Hall. The Hall is west of the Schoolroom. The poster of the principal is in the Hall. The Hall suits the poster and the discarded pass.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Cafeteria is west of the Hall. The lunch tray, the carton of chocolate milk, and the discarded pass are in the Cafeteria. The Cafeteria suits the tray and the milk.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The polished skull is in the Cafeteria.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;get all / w / drop all / look / get all / w / drop all / look&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Complex Listing-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Complex Listing-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Taxidermy</font></b></a><br>Arranging a list so that the items in the list are presented in order from shortest name to longest name, and separated by commas with no &quot;and&quot;.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Complex Listing-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Complex Listing-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Split Lark</font></b></a><br>Adding a delimiter so that items in a list can be set off from one another with dashes.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

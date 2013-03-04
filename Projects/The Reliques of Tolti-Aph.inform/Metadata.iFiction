@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>1355C3FE-D67B-4987-9655-DBD5F3F0070C</ifid>
+            <format>zcode</format>
+        </identification>
+        <bibliographic>
+            <title>The Reliques of Tolti-Aph</title>
+            <author>Graham Nelson</author>
+            <headline>A W&amp;W Scenario</headline>
+            <genre>Fantasy</genre>
+            <firstpublished>2005</firstpublished>
+            <description>It used to be said that there are two kinds of magic-user: those who have been to Tolti-Aph, and charlatans. It used to be generally understood that the attempt to prove oneself in the unforgiving society of Tolti-Aph was a bid for rapid level advancement or else romantic, thin-young-mage-in-midnight-black-robes death. The closer you get to the wilderness island vaguely marked 'Tholtaff' on the agate globe in your great-great-grandfather's study, the better the alternative sounds: settling down in some coastal village, perhaps, a little weathermongering, some polymancy, and helping out with the nets after a bad storm. Retire at maybe level 3, with most of your experience points gained from observing rare fish-based poisons carry off those villagers careless about gutting. Publish an awesomely tedious monograph on the correct usage of the 'untangle rigging' spell. You know, the good life.</description>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <resources>
+            <auxiliary>
+                <leafname>Collegio.pdf</leafname>
+                <description>Collegio magazine</description>
+            </auxiliary>
+        </resources>
+        <cover>
+            <format>jpg</format>
+            <height>960</height>
+            <width>960</width>
+        </cover>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2013-02-28</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6G60</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6G60</generatorversion>
+            <originated>2013-02-28</originated>
+        </colophon>
+        <zcode>
+            <serial>130228</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6G60</compiler>
+            <coverpicture>1</coverpicture>
+        </zcode>
+    </story>
+</ifindex>

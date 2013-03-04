@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1071(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Rideable Vehicles by Graham Nelson.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1071()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Rideable Vehicles<font color="#404040"> by </font>Graham Nelson</b><p><small><p>Extension built in to Inform</small><p><p><hr><p>
+<p>
+ Inform's built-in &quot;vehicle&quot; kind assumes that the vehicle is a container, which is fine for cars or hot-air balloons, but not so good for a pony or a four-wheeled lawnmower, which one rides rather than gets inside. Rideable Vehicles is an extension which creates two more kinds: &quot;rideable animal&quot; (good for the pony) and &quot;rideable vehicle&quot; (good for the lawnmower).
+<p>
+<blockquote><font color="#000080"> The pony is a rideable animal in the Forest Clearing.<br> The lawnmover is a rideable vehicle in the Garden Shed.</font></blockquote>
+<p>
+ This means that three different kinds of thing can be used as a means of travel, which might make it awkward to write a general rule about them, so we also define the adjective &quot;vehicular&quot; for any thing of any of these kinds.
+<p>
+<blockquote><font color="#000080"> The Transport Museum is a room. &quot;The Museum is filled with means of transport old and new, including [list of vehicular things in the Transport Museum].&quot;</font></blockquote>
+<p>
+ A new action called &quot;mounting&quot; is created, and a new command &quot;mount&quot; (or &quot;ride&quot;) is added for the player to use. Thus:
+<p>
+<blockquote><font color="#000080"> Instead of mounting the pony, say &quot;The pony snorts and backs off.&quot;</font></blockquote>
+<p>
+ results in
+<p>
+<blockquote><font color="#000080"> &gt;ride pony<br> The pony snorts and backs off.</font></blockquote>
+<p>
+ And a corresponding &quot;dismounting&quot; action handles the command &quot;dismount&quot;.
+<p>
+<blockquote><font color="#000080"> &gt;dismount<br> You get off the pony.</font></blockquote>
+<p>
+ Moreover, commands such as &quot;get off the pony&quot; or &quot;get on the lawnmower&quot; are converted into these new actions instead, so that rules like the following will always work, no matter what command is tried:
+<p>
+<blockquote><font color="#000080"> Instead of mounting the tricycle when the transport pass is not carried by the player:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The tricycle can only be ridden by those with a transport pass.&quot;</font></blockquote>
+<p>
+ Lastly, a special rule means that &quot;pony, go east&quot; is recognised when the player is riding the pony. (This works for rideable animals, but not rideable vehicles.)
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Rideable Vehicles-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Rideable Vehicles-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Vehicle Testing Center</font></b></a><br>An assortment of rideable and other vehicles, with restrictions about which rooms can be entered with what rides.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1021(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Basic Screen Effects by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1021()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Basic Screen Effects<font color="#404040"> by </font>Emily Short</b><p><small><p>Extension built in to Inform</small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Pauses, screen-clearing, and specially-placed text</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: Clearing the screen</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 1.2: Waiting for key-presses; quitting suddenly</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 1.3: Showing the current quotation</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 1.4: Centering text on-screen</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 1.5: Customizing the status line</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Chapter 2: Color effects (available on the Z-machine only)</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 2.1: Changing the background color</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec9><font color="#000000">Section 2.2: Changing the font color</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Basic Screen Effects-eg1.html#eg1"><font color="#000000">A: The High Note</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Basic Screen Effects-eg2.html#eg2"><font color="#000000">B: Pillaged Village</font></a><br><p><hr><p><p><hr><p>
+<p>
+ Basic Screen Effects implements the following effects: pauses to wait for a keypress from the player; clearing the screen; changing the color of the foreground font; and changing the color of the background. Color changes function only on the Z-machine.
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Pauses, screen-clearing, and specially-placed text</b></font>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: Clearing the screen</b></font>
+<p>
+ The following phrases are defined:
+<p>
+ To clear the entire screen of everything it contains, including the status line,
+<p>
+<blockquote><font color="#000080"> clear the screen.</font></blockquote>
+<p>
+ To clear only one section of the screen, we also have:
+<p>
+<blockquote><font color="#000080"> clear only the main screen.<br> clear only the status line.</font></blockquote>
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 1.2: Waiting for key-presses; quitting suddenly</b></font>
+<p>
+ To produce a pause until the player types any key:
+<p>
+<blockquote><font color="#000080"> wait for any key.</font></blockquote>
+<p>
+ To produce a pause until the player types SPACE, ignoring all other keys:
+<p>
+<blockquote><font color="#000080"> wait for the SPACE key.</font></blockquote>
+<p>
+ To give the player a message saying to press SPACE to continue, wait for a keypress, and then clear the screen before continuing the action:
+<p>
+<blockquote><font color="#000080"> pause the game.</font></blockquote>
+<p>
+ In extreme cases, we may want to end the game without allowing the player an opportunity to RESTART, RESTORE, or QUIT; to this end:
+<p>
+<blockquote><font color="#000080"> stop game abruptly.</font></blockquote>
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 1.3: Showing the current quotation</b></font>
+<p>
+ Show the current quotation displays whatever the author has selected with &quot;display the boxed quotation...&quot;. Ordinarily boxed quotations appear when the prompt is printed, but this allows the author to show a boxed quote at another time. To achieve a splash-screen before the game proper begins, we could do something like this:
+<p>
+<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; display the boxed quotation<br>&nbsp;&nbsp;&nbsp;&nbsp; &quot;What's this room? I've forgotten my compass.	Well, this'll be south-south-west parlour by living room.	-- Philadelphia Story&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; show the current quotation;<br>&nbsp;&nbsp;&nbsp;&nbsp; pause the game.</font></blockquote>
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 1.4: Centering text on-screen</b></font>
+<p>
+ Similarly, we can display a phrase centered in the middle of the screen but without the background-coloration of the boxed quotation, like this:
+<p>
+<blockquote><font color="#000080"> center &quot;The Merchant of Venice&quot;;</font></blockquote>
+<p>
+ Centering text puts the text on its own new line, since it would not make much sense otherwise. Note that centered text will always be set to fixed-width; font stylings such as bold and italic will not work. (If they did, they would throw off the centering; the screen model is insufficiently sophisticated to deal with centering non-fixed-width letters.)
+<p>
+ If we want to make our own calculations using this information, the width of the screen can be checked at any time, like so:
+<p>
+<blockquote><font color="#000080"> if the screen width is less than 75, say &quot;The map will not display properly until you widen your screen.&quot; instead.</font></blockquote>
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 1.5: Customizing the status line</b></font>
+<p>
+ We can also use a variation of the center command to position text in the status line. To produce a Trinity-style status line with the location, centered:
+<p>
+<blockquote><font color="#000080"> Rule for constructing the status line:<br>&nbsp;&nbsp;&nbsp;&nbsp; center &quot;[location]&quot; at row 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds.</font></blockquote>
+<p>
+ For status lines of more than one row, we can create a table representing the overall appearance of the desired status line and then set that table as our status bar table. The following would build a two-line status bar with all sorts of information in it. (For a more practical demonstration involving a three-line compass rose, see the example below.)
+<p>
+<blockquote><font color="#000080"> Table of Fancy Status</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> left</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> central</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> right</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot; [location]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[time of day]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[score]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot; [hair color of the suspect]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[eye color of the suspect]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[cash]&quot;</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Rule for constructing the status line:<br>&nbsp;&nbsp;&nbsp;&nbsp; fill status bar with Table of Fancy Status;<br>&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds.</font></blockquote>
+<p>
+ A status bar table must always have left, central, and right columns, and we must provide the rule for constructing the status line. Otherwise, Inform will use the default status line behavior. The position of the right hand side is set to 14 spaces from the end by default (matching Inform's default status line), but it is possible to change this by altering the value of the variable called right alignment depth; so we might for instance say
+<p>
+<blockquote><font color="#000080"> When play begins: now right alignment depth is 30.</font></blockquote>
+<p>
+ for the purpose of moving what is printed on the right side inward. Note that right alignment depth will only affect the behavior of status bar tables of the kind described here; it will have no effect on Inform's default handling of the right hand status line variable.
+<p>
+<p><hr><p><a name=docsec7><b><font color="#800000">Chapter 2: Color effects (available on the Z-machine only)</b></font>
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 2.1: Changing the background color</b></font>
+<p>
+ To turn the background black (or red, green, yellow, blue, white, magenta, or cyan):
+<p>
+<blockquote><font color="#000080"> turn the background black.<br> turn the background red.</font></blockquote>
+<p>
+... and so on. This only applies to what is typed from that point in the game onward. If we wish to turn the entire background a new color at once (and this is usually desirable), we should set the background and then clear the screen, so:
+<p>
+<blockquote><font color="#000080"> turn the background black;<br> clear the screen.</font></blockquote>
+<p>
+<p><a name=docsec9><b><font color="#000000">Section 2.2: Changing the font color</b></font>
+<p>
+ Finally, font colors can be changed with say (color) letters, where the same range of colors may be used as for the background. So for instance
+<p>
+<blockquote><font color="#000080"> say &quot;There is a [red letters]piping hot[default letters] pie on the table.&quot;</font></blockquote>
+<p>
+ We should be careful with color effects. Some older interpreters do not deal well with color, and part of the audience plays interactive fiction on black and white devices or via a screenreader. The phrase &quot;say default letters&quot; restores whatever background and foreground are normal on this system. It is not safe to assume that the player is necessarily using one particular color scheme; black-on-white, white-on-black, and white-on-blue are all relatively common.
+<p>
+ Finally, as hinted by the section title, these color effects only work when compiling to the Z-machine. Glulx has a different and not exactly symmetrical way of handling fonts and colors, which takes a bit more setting up; if we want color effects for Glulx, we should look at the extension Glulx Text Effects, also included with Inform.
+<p>
+ Thanks to Eric Eve for the biplatform patches to this extension.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Basic Screen Effects.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Basic Screen Effects.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The High Note</font></b></a><br>Faking the player typing a specific command at the prompt.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ A gimmick used occasionally in IF is to offer the player a command prompt, but then to force a specific command -- that is, whatever keystrokes the player makes, to print the command we want him to type, and then carry on with the game as though he had done so. The trick is that we're not really offering a command line at all; we just print the prompt, wait for a keystroke, print the first letter of our command, wait for another keystroke, print the next letter, and so on, until the player has hit enough keys to have &quot;typed&quot; the command we wanted him to type.
+<p>
+ This is an easily overused effect, but here is how we might do it, using Basic Screen Effects:
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1022(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]The High Note[=0x0022=][=0x000A=][=0x000A=]The Edge of the Stage is a room.[=0x000A=][=0x000A=]When play begins:[=0x000A=][=0x0009=]say [=0x0022=]You stand in the footlights, looking out over the assembled multitude, dimly recognizing the Grand Duke seated in his box, and the Grand Duke[=0x0027=]s mistress in hers; and try to remember (through two bottles of brandy and an ill-advised champagne) how your part begins. You[=0x0027=]ve relied often enough on sheer instinct to carry you through; but this time might just be the time it fails... [line break][=0x0022=];[=0x000A=][=0x0009=]fake command;[=0x000A=][=0x0009=]say [=0x0022=]Yes: the high C . It begins there...[=0x0022=];[=0x000A=][=0x0009=]pause the game.[=0x000A=][=0x000A=]Include Basic Screen Effects by Emily Short.[=0x000A=][=0x000A=]To fake command:[=0x000A=][=0x0009=]say [=0x0022=][line break][command prompt] [bold type][=0x0022=];[=0x000A=][=0x0009=]wait for any key;[=0x000A=][=0x0009=]say [=0x0022=]s[=0x0022=];[=0x000A=][=0x0009=]wait for any key;[=0x000A=][=0x0009=]say [=0x0022=]i[=0x0022=];[=0x000A=][=0x0009=]wait for any key;[=0x000A=][=0x0009=]say [=0x0022=]n[=0x0022=];[=0x000A=][=0x0009=]wait for any key;[=0x000A=][=0x0009=]say [=0x0022=]g[=0x0022=];[=0x000A=][=0x0009=]wait for any key;[=0x000A=][=0x0009=]say roman type;[=0x000A=][=0x0009=]say line break;[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1022()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;The High Note&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Edge of the Stage is a room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You stand in the footlights, looking out over the assembled multitude, dimly recognizing the Grand Duke seated in his box, and the Grand Duke's mistress in hers; and try to remember (through two bottles of brandy and an ill-advised champagne) how your part begins. You've relied often enough on sheer instinct to carry you through; but this time might just be the time it fails... [line break]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; fake command;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Yes: the high C . It begins there...&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; pause the game.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Basic Screen Effects by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To fake command:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[line break][command prompt] [bold type]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; wait for any key;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;s&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; wait for any key;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;i&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; wait for any key;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;n&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; wait for any key;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;g&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; wait for any key;<br>&nbsp;&nbsp;&nbsp;&nbsp; say roman type;<br>&nbsp;&nbsp;&nbsp;&nbsp; say line break;</font></blockquote>
+<p>
+ We could rig this up more elegantly, if we were going to do it a lot, with tables of characters to print or something along those lines; but this shows clearly how the trick works.
+<p>
+ The example is included because several authors have expressed interest in doing this, but it's worth being a little cautious about -- the more games use such a ploy, the less surprising and interesting the gimmick becomes for the player.
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Basic Screen Effects-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Basic Screen Effects-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Pillaged Village</font></b></a><br>A status bar showing unvisited rooms in a colored compass rose.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

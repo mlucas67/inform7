@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02E1DA68" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x02E1DC98"/>
+  <item nodeId="node-0x02E1DA68">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">The Grand Tour&#x000A;A short I7 demonstration by Marshall Lucas&#x000A;Release 1 / Serial number 130228 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Stateroom&#x000A;Staterooms aboard a spaceship, even one as luxurious as the Thaleia, are tight, cramped affairs, and this one is no exception. There is barely enough room for you and the furniture. The door to the hallway is locked tight for now. East is your bathroom.&#x000A;&#x000A;You can see a leaflet and a bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02E1D678"/>
+      <child nodeId="node-0x02E1D608"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1D678">
+    <command xml:space="preserve">get in bed</command>
+    <result xml:space="preserve">You get onto the bed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1D598"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1D598">
+    <command xml:space="preserve">get off bed</command>
+    <result xml:space="preserve">You get off the bed.&#x000A;&#x000A;Stateroom&#x000A;Staterooms aboard a spaceship, even one as luxurious as the Thaleia, are tight, cramped affairs, and this one is no exception. There is barely enough room for you and the furniture. The door to the hallway is locked tight for now. East is your bathroom.&#x000A;&#x000A;You can see a leaflet and a bed here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1D838"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1D838">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Bathroom&#x000A;Like your stateroom in smallness, only moreso. There is a mirror on one wall.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1D7C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1D7C8">
+    <command xml:space="preserve">look mirror</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1D918"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1D918">
+    <command xml:space="preserve">look in mirror</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E1D608">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Bathroom&#x000A;Like your stateroom in smallness, only moreso. There is a mirror on one wall.&#x000A;&#x000A;Opposite the mirror is the shower, which is closed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1D9F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1D9F8">
+    <command xml:space="preserve">look in mirror</command>
+    <result xml:space="preserve">You find nothing of interest.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1DBB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1DBB8">
+    <command xml:space="preserve">examine mirror</command>
+    <result xml:space="preserve">You look tired after your long shuttle flight to the Thaleia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1DC28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1DC28">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E1DC98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E1DC98">
+    <command xml:space="preserve">open shower</command>
+    <result xml:space="preserve">That's not something you can open.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>
