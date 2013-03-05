@@ -8,16 +8,17 @@
         <bibliographic>
             <title>The Walking Dead - Days Gone By</title>
             <author>Marshall Lucas</author>
-            <headline>An Interactive Fiction</headline>
-            <genre>Post-Apocalyptic Fiction</genre>
+            <headline>The Walking Dead - Days Gone By</headline>
+            <genre>Apocalyptic and Post-Apocalyptic Fiction</genre>
             <firstpublished>2013</firstpublished>
+            <description>You groggily awaken to the sight of your best friend Shane bringing you flowers. You recall the incident that put you here, in the hospital, when you were . . . what, what is that? You fully awaken in your empty hospital room. A small boquet of dying flowers is on the stand next to your bed. You try to call the nurse, but no one answers. The only thing you know for certain at the moment is that your are alive and your name is 'Rick Grimes.' Aside from that, everything is quite foggy and it is eerily quiet.</description>
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
         <releases>
             <attached>
                 <release>
-                    <releasedate>2013-03-04</releasedate>
+                    <releasedate>2013-03-05</releasedate>
                     <version>1</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>6G60</compilerversion>
@@ -27,10 +28,10 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>6G60</generatorversion>
-            <originated>2013-03-04</originated>
+            <originated>2013-03-05</originated>
         </colophon>
         <zcode>
-            <serial>130304</serial>
+            <serial>130305</serial>
             <release>1</release>
             <compiler>Inform 7 build 6G60</compiler>
         </zcode>

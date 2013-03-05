@@ -1,6 +1,6 @@
 "The Walking Dead - Days Gone By" by Marshall Lucas
 
-The story genre is "Post-Apocalyptic Fiction".  The release number is 1.  The story creation year is 2013.
+The story genre is "Apocalyptic and Post-Apocalyptic Fiction".  The release number is 1.  The story headline is "The Walking Dead - Days Gone By".  The story description is "You groggily awaken to the sight of your best friend Shane bringing you flowers.  You recall the incident that put you here, in the hospital, when you were . . . what, what is that?  You fully awaken in your empty hospital room.  A small boquet of dying flowers is on the stand next to your bed.  You try to call the nurse, but no one answers.  The only thing you know for certain at the moment is that your are alive and your name is 'Rick Grimes.'  Aside from that, everything is quite foggy and it is eerily quiet."  The story creation year is 2013.
 
 Release along with a solution, source text, a website.
 
@@ -25,11 +25,6 @@ Understand "knock on [something]" or "knock [something]" as attacking.  Understa
 Before printing the name of an open door (called target) when looking or going: 
 	if the target is a staircase, do nothing;
 	otherwise say "open ".
-
-After opening a door (called D):
-	repeat with zombie running through walkers in the back side of D:
-		now the zombie is Targeted;
-		now the Destination of the zombie is front side of D.
 
 Instead of looking under something which is carried by the player:
 	say "Since you are holding [the noun], it stands to reason that nothing of interest could be concealed beneath."
@@ -69,7 +64,9 @@ Section 3 - Walkers
 
 Include Patrollers by Michael Callaghan
 
-A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.  Reporting is Collective.  The StartTurn of a walker is 1.
+Freshness is a kind of value.  The Freshnesses are Fresh, DayOld, Stale, Rotted and Immoble.
+
+A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The Drive of a walker is usually 60.  The description of a walker is "It looks pale, slightly slouched forward and has bulging yellow eyes.  It looks at you as if you where it's next meal!"
 
 After Patrolling something (called the Bod):
 	if the Bod is Off Patrol:
@@ -78,11 +75,37 @@ After Patrolling something (called the Bod):
 		
 After Patrolling something (called the Bod):
 	if the location of the Bod is the location of the Player:
-		now the Bod is Following.
+		now the Bod is Following;
+		now the StartTurn of the Bod is the turn count + 1.
+
+Before Patrolling something (called the Bod):
+	if the Freshness of the Bod is:
+		-- Fresh: now the Drive of the Bod is 80;
+		-- DayOld: now the Drive of the Bod is 60;
+		-- Stale: now the Drive of the Bod is 40;
+		-- Rotted: now the Drive of the Bod is 20;
+		-- Immoble: now the Drive of the Bod is 0.
+		
+After Patrolling something (called the Bod):
+	if the Bod is Following:
+		if the location of the Bod is not the location of the Player:
+			now the Bod is Targeted;
+			now the Destination of the Bod is the location of the Player.
+		
+After opening a door (called D):
+	repeat with zombie running through walkers in the back side of D:
+		now the zombie is Targeted;
+		now the Destination of the zombie is front side of D.
+		
+After going through a door:
+	repeat with zombie running through walker in room:
+		now the zombie is Following.
 
 Part 2 - The World
 
 Chapter 1 - The Hospital
+
+Harrison Memorial Hospital is a Region.
 
 The Hospital Room is a room.  A Hospital Bed is a bed in the Hospital Room.
 
@@ -92,8 +115,16 @@ The Hospital Room Door is a door.  It is west of the Hospital Room and east of H
 
 Hallway1 is a room.
 
-The Walker1 is a walker in Hallway1.  The Walker2 is a walker in Hallway1.
+The Walker1 is a walker in Hallway1.  The Walker2 is a walker in Hallway1.  Walker1 is Rotted.
 
 Hallway2 is a room. Hallway2 is north of Hallway1.
 
 Hallway3 is a room. Hallway3 is north of Hallway2.
+
+Hallway4 is a room. Hallway4 is west of Hallway3.
+
+Hallway5 is a room. Hallway5 is west of Hallway4.
+
+Hallway6 is a room. Hallway6 is south of Hallway5.
+
+Hallway7 is a room.  Hallway7 is south of Hallway6.
