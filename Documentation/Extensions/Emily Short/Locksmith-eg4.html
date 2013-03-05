@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
-function pasteCode2510(code) {
+function pasteCode2512(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('Include Locksmith by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2510()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Locksmith<font color="#404040"> by </font>Emily Short</b><p><small><p>Version 11 built in to Inform</small><p>Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.<p>Kinds: <b>passkey</b> (a kind of thing), <b>keychain</b> (a kind of supporter)<p>Actions: <b>Unlocking keylessly</b>, <b>Locking keylessly</b>, <b>Universal unlocking</b><p>Verbs: to <b>unbolt</b><p>Adjectives: <b>key-accessible</b>, <b>identified</b><p>Use options: <b>sequential action</b><p><p><hr><p>
+<a href="javascript:pasteCode2512()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Locksmith<font color="#404040"> by </font>Emily Short</b><p><small><p>Version 11 built in to Inform</small><p>Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.<p>Kinds: <b>passkey</b> (a kind of thing), <b>keychain</b> (a kind of supporter)<p>Actions: <b>Unlocking keylessly</b>, <b>Locking keylessly</b>, <b>Universal unlocking</b><p>Verbs: to <b>unbolt</b><p>Adjectives: <b>key-accessible</b>, <b>identified</b><p>Use options: <b>sequential action</b><p><p><hr><p>
 <p>
  Locksmith adds implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys. There are five parts of Locksmith.
 <p>
@@ -107,14 +107,14 @@ function pasteCode2510(code) {
  Suppose that instead of the &quot;(first unlocking...)&quot; text, we would like to offer some more interesting flavor text. We might accomplish this by sequential action option is active and then supplying new report rules for specific actions. (Notice that we do not make them After... rules, on the grounds that those would stop the action process. We want to report these actions and allow them to succeed normally.)
 <p>
 <blockquote><font color="#000080"><script language="JavaScript">
-function pasteCode2511(code) {
+function pasteCode2513(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('[=0x0022=]Watchtower[=0x0022=][=0x000A=][=0x000A=]Use sequential action. Include Locksmith by Emily Short.[=0x000A=][=0x000A=]Bridge is a room. [=0x0022=]Beneath this long, narrow bridge is a gully full of ice-water from the mountains above. It runs milky at this time of year, and is not fit to drink. The air off it is bitterly cold. Just north of here is the Roman watchtower, built square and still defensible despite several centuries of neglect.[=0x0022=][=0x000A=][=0x000A=]North of Bridge is the tower door. The tower door is a lockable locked door. It is scenery. Understand [=0x0022=]watchtower[=0x0022=] as the tower door. The tower door is south of the Watchtower. The large iron key unlocks the tower door. The player carries the large iron key.[=0x000A=][=0x000A=]The description of the Watchtower is [=0x0022=]The wooden floor has mostly rotted away, exposing the square pit in which the paymaster used to keep the soldiers[[=0x0027=]] coin. It is possible to move around the perimeter of the room without falling in, however.[=0x0022=][=0x000A=][=0x000A=]Report unlocking something with something when the player is in Bridge:[=0x000A=][=0x0009=]say [=0x0022=]Shivering and fumbling, you manage to unlock [the noun] with [the second noun]. Your fingers are very nearly numb.[=0x0022=] instead.[=0x000A=][=0x000A=]Report unlocking something with something when the player is in Bridge:[=0x000A=][=0x0009=]say [=0x0022=]Shivering and fumbling, you manage to unlock [the noun] with [the second noun]. Your fingers are very nearly numb.[=0x0022=] instead.[=0x000A=][=0x000A=]Report opening the tower door:[=0x000A=][=0x0009=]say [=0x0022=]The tower door resists your first shove or two, but then falls open.[=0x0022=] instead.[=0x000A=][=0x000A=]Leif is a man in the Bridge.[=0x000A=][=0x000A=]A persuasion rule: persuasion succeeds.[=0x000A=][=0x000A=]Report someone trying unlocking a door with something:[=0x000A=][=0x0009=]say [=0x0022=][The person asked] rattles the handle of [the noun] a few times, then thinks to try [the second noun] on it. [=0x0027=]Bit stiff, this.[=0x0027=][=0x0022=] instead.[=0x000A=][=0x000A=]Report someone trying opening the tower door:[=0x000A=][=0x0009=]say [=0x0022=][The person asked] gives [the tower door] several [if the person asked is in the Bridge]shoves[otherwise]firm tugs[end if] before managing to open it.[=0x0022=] instead.[=0x000A=][=0x000A=]Test me with [=0x0022=]drop key / open door / get key / n / s / lock door / drop key / Leif, get key / Leif, n[=0x0022=].[=0x000A=][=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2511()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Watchtower&quot;</font></blockquote>
+<a href="javascript:pasteCode2513()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Watchtower&quot;</font></blockquote>
 <p>
 <blockquote><font color="#000080"> Use sequential action. Include Locksmith by Emily Short.</font></blockquote>
 <p>
@@ -143,14 +143,14 @@ function pasteCode2511(code) {
  Leif will also follow the rules about unlocking and opening doors, and have a few special reports of his own -- though in fact we could also arrange matters so that he is unable to do so, by including the following:
 <p>
 <blockquote><font color="#000080"><script language="JavaScript">
-function pasteCode2512(code) {
+function pasteCode2514(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The intelligently opening doors rule is not listed in any rulebook.[=0x000A=]The intelligently closing doors rule is not listed in any rulebook.[=0x000A=]The intelligently closing keyless doors rule is not listed in any rulebook.[=0x000A=]The intelligently opening containers rule is not listed in any rulebook.[=0x000A=][=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2512()"><img border=0 src=inform:/doc_images/paste.png></a> The intelligently opening doors rule is not listed in any rulebook.<br> The intelligently closing doors rule is not listed in any rulebook.<br> The intelligently closing keyless doors rule is not listed in any rulebook.<br> The intelligently opening containers rule is not listed in any rulebook.</font></blockquote>
+<a href="javascript:pasteCode2514()"><img border=0 src=inform:/doc_images/paste.png></a> The intelligently opening doors rule is not listed in any rulebook.<br> The intelligently closing doors rule is not listed in any rulebook.<br> The intelligently closing keyless doors rule is not listed in any rulebook.<br> The intelligently opening containers rule is not listed in any rulebook.</font></blockquote>
 <p>
 ... and now he will be too dim to handle the keys himself.
 <p>

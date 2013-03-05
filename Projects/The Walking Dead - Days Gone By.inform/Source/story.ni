@@ -8,6 +8,10 @@ Index map with room-shape set to "square" and room-size set to 60 and room-name-
 
 Include Locksmith by Emily Short.
 
+Include Modified Exit by Emily Short.
+
+Include Exit Lister by Gavin Lambert.
+
 Use full-length room descriptions, American dialect, no scoring, and the serial comma. Use memory economy. Use MAX_SYMBOLS of 7000. 
 
 Part 1 - Adjustments to the World Model
@@ -35,13 +39,15 @@ Instead of looking under something which is worn by the player:
 Instead of looking under a door:
 	say "[The noun] meets the floor with very little space to spare."
 
-Section 2 - Smells
-
-Section 3 - Sounds
-
-Section 4 - Rooms
+Section 2 - Rooms
 
 A room can be indoors or outdoors.
+
+Section 3 - Sights
+
+Section 4 - Sounds
+
+Section 5 - Smells
 
 Chapter 2 - New Kinds
 
@@ -66,7 +72,16 @@ Include Patrollers by Michael Callaghan
 
 Freshness is a kind of value.  The Freshnesses are Fresh, DayOld, Stale, Rotted and Immoble.
 
-A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The Drive of a walker is usually 60.  The description of a walker is "It looks pale, slightly slouched forward and has bulging yellow eyes.  It looks at you as if you where it's next meal!"
+A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The Drive of a walker is usually 60.  
+
+Instead of examining a walker (called W):
+	if the Freshness of W is:
+		-- Fresh: say "It looks pale, slightly slouched forward and has bulging yellow eyes.";
+		-- DayOld: say "It is ashen and pale, with a significant hunch and dark yellow-brown eyes.";
+		-- Stale: say "It is decaying even as you look at it, it can barely walk or stand up at all.  It's eyes are a deep golden-brown.";
+		-- Rotted: say "It is missing various body parts.  It's eyes are a murky grey-brown.";
+		-- otherwise: say "It is lying on the ground unable to move much at all.  It looks as if it has been dead for years.";
+	say " It looks at you as if you were it's next meal!"
 
 After Patrolling something (called the Bod):
 	if the Bod is Off Patrol:
@@ -100,8 +115,15 @@ After opening a door (called D):
 After going through a door:
 	repeat with zombie running through walker in room:
 		now the zombie is Following.
+		
+Section 4 - Actions
+
+Include Facing by Emily Short.
 
 Part 2 - The World
+
+When play begins:
+	mention doors.
 
 Chapter 1 - The Hospital
 
@@ -109,7 +131,7 @@ Harrison Memorial Hospital is a Region.
 
 The Hospital Room is a room.  A Hospital Bed is a bed in the Hospital Room.
 
-The player is on the Hospital Bed.
+The player is on the Hospital Bed.  The player is reclining.
 
 The Hospital Room Door is a door.  It is west of the Hospital Room and east of Hallway1.
 

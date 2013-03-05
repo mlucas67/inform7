@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2518(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Exit Lister by Gavin Lambert.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2518()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Exit Lister<font color="#404040"> by </font>Gavin Lambert</b><p><small><p>Version 2</small><p>Automatic listing of available exits, with a reasonable dose of customisation built in.<p><i>based on Exit Lister by Andre Kosmos</i><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: About</font></a></b><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Chapter 2: Reference</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 2.1: New commands</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 2.2: Properties and Text</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 2.3: Advanced</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Chapter 3: Integration</font></a></b><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Chapter 4: Change Log</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 4.1: Changes from version 1 to version 2</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Exit Lister-eg1.html#eg1"><font color="#000000">A: Test Game for Exit Lister</font></a><br><p><hr><p>Values that vary: <b>List exits</b>, <b>Mentioning doors</b>, <b>Room memory</b>, <b>Darkness memory</b><p>Actions: <b>Listing exits</b>, <b>Turning exits on</b>, <b>Turning exits off</b><p>Adjectives: <b>exit-listable</b>, <b>obvious</b><p>Properties: <b>passing text</b>, <b>closed text</b>, <b>obvious</b><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: About</b></font>
+<p>
+ This extension is based on Exit Lister by Andre Kosmos. I've tried to keep the author-facing interface compatible while reworking the internal design and adding some extra features.
+<p>
+ This gives you a list of available exits at the end of the room description. There are options to mention doors that are in your way, to mention rooms you have already visited, and how much info to reveal in dark rooms.
+<p>
+ For suggestions and feedback, Gavin Lambert can be contacted via &quot;http://www.mirality.co.nz/&quot;.
+<p>
+<p><hr><p><a name=docsec2><b><font color="#800000">Chapter 2: Reference</b></font>
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 2.1: New commands</b></font>
+<p>
+... for the player
+<p>
+<blockquote><font color="#000080"> 'EXITS' ------- this gives a list of the available exits.<br> 'EXITS ON' ---- after this command there will be a list of available exits at the end of the room description. (default setting)<br> 'EXITS OFF' --- after this command the list of exits will no longer appear at the end of the room description.</font></blockquote>
+<p>
+... for the author: (note: these are phrases, and must appear inside a rule; eg. &quot;when play begins&quot;)
+<p>
+<blockquote><font color="#000080"> 'mention doors'<br>&nbsp;&nbsp;&nbsp;&nbsp; after this command the exit lister will mention if there is a door in the way of an exit. (default setting)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 'don't mention doors'<br>&nbsp;&nbsp;&nbsp;&nbsp; after this command doors will no longer be mentioned in the exit list.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 'mention visited rooms'<br>&nbsp;&nbsp;&nbsp;&nbsp; after this command exits leading to a visited room will mention this room. (default setting)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 'don't mention visited rooms'<br>&nbsp;&nbsp;&nbsp;&nbsp; after this command exits leading to a visited room will no longer mention this room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 'mention visited rooms in darkness'<br>&nbsp;&nbsp;&nbsp;&nbsp; after this command exits leading to a visited room will still be mentioned when in darkness. (default setting)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 'don't mention visited rooms in darkness'<br>&nbsp;&nbsp;&nbsp;&nbsp; after this command no exits will be mentioned when in darkness.</font></blockquote>
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 2.2: Properties and Text</b></font>
+<p>
+ Doors have a new property called passing text. The default is &quot;through&quot;. Some suggestions for other types of doors are: &quot;over&quot; for bridges, &quot;climbing&quot; for ropes and ladders.<blockquote><font color="#000080"> The passing text for the Wooden Bridge is &quot;over&quot;.</font></blockquote>
+<p>
+ Doors have a new property called closed text. The default is &quot;[closed door]&quot;, to make it use the common definition from previous versions of this extension, described below. This can be overridden on a case by case basis, eg:<blockquote><font color="#000080"> The closed text for the brown door is &quot;(barred)&quot;.</font></blockquote>
+<p>
+ If the closed text for a door is not defined, closed doors are mentioned with the text &quot;(closed)&quot; by default, but you can write your own text with:<blockquote><font color="#000080"> To say closed door: say &quot;(if you manage to open it)&quot;.</font></blockquote>
+<p>
+ If you don't want to mention the fact that doors are closed (unless you've defined a &quot;closed text&quot; for it) you can use:<blockquote><font color="#000080"> To say closed door: do nothing instead.</font></blockquote>
+<p>
+ You can also change the text shown when no obvious exits are visible (which doesn't necessarily mean no exits are present):<blockquote><font color="#000080"> To say no obvious exits: say &quot;There doesn't seem to be anywhere you can go.&quot;</font></blockquote>
+<p>
+ In addition, you can override the normal description by using the &quot;listing exits&quot; activity. For example:<blockquote><font color="#000080"> Rule for listing exits while in Fog Bank: say &quot;It's too foggy to see.&quot;</font></blockquote>
+<p>
+ Doors can be made &quot;not obvious&quot;. This will cause them to be hidden from exit listings (and they will stay that way even after use unless you later mark them as &quot;obvious&quot;).<blockquote><font color="#000080"> Hidden Trapdoor is a door. It is not obvious.</font></blockquote>
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 2.3: Advanced</b></font>
+<p>
+ For more complicated cases, you can also define a rule:<blockquote><font color="#000080"> A door obviousness rule for the Concealed Trapdoor:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the Secret Passage is not visited, rule fails.</font></blockquote>
+<p>
+ This also works for exits, by checking against where they go to:<blockquote><font color="#000080"> An exit obviousness rule for the Hidden Chamber:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the Hidden Chamber is not visited, rule fails.</font></blockquote>
+<p>
+ Note that it is best to only use &quot;rule fails&quot; and &quot;make no decision&quot; -- this permits other rules (such as the standard &quot;darkness hides exits rule&quot;) to also hide the door/exit.
+<p>
+ Also, while it's a little odd, you can choose to avoid describing specific exits like so (this will still display the direction, but won't display the name of the door or where it leads to):<blockquote><font color="#000080"> After printing the name of east while listing exits:<br>&nbsp;&nbsp;&nbsp;&nbsp; if in the Garden, do nothing instead.</font></blockquote>
+<p>
+ The standard &quot;mention / don't mention visited rooms in darkness&quot; controls let you decide if you want to tell the player the way to get out (ie. the way they came in) while hiding other paths (although bear in mind that by default Inform doesn't stop them actually using those other paths), or whether you want to hide all the exits and report that there are no obvious exits. Note that only the room's visited flag is checked; in the Test Game example, the path up out of darkness to the Main Road is listed because the player has been to the Main Road, even though they haven't used that specific exit before.
+<p>
+ In addition, there are a couple of other potentially useful alternatives. One is to use a technique shown above to hide the message entirely (or to display a different message from normal):<blockquote><font color="#000080"> Rule for listing exits while in darkness: do nothing instead.</font></blockquote>
+<p>
+ Another is to remove darkness handling entirely and to show all exits. This breaks realism, so probably won't be common, but the option is there:<blockquote><font color="#000080"> The darkness hides exits rule is not listed in any rulebook.</font></blockquote>
+<p>
+ One final option would be to override all normal handling (including testing for darkness) for a single exit -- perhaps you have a self-lit door (or with light seeping through the cracks), giving enough light to see the door but not its surroundings:<blockquote><font color="#000080"> A door obviousness rule for the Glowing Door:<br>&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds.</font></blockquote>
+<p>
+<p><hr><p><a name=docsec6><b><font color="#800000">Chapter 3: Integration</b></font>
+<p>
+ If the &quot;Secret Doors by Andrew Owen&quot; extension is in use (this is optional), then an unrevealed secret door is automatically unobvious as well.
+<p>
+<p><hr><p><a name=docsec7><b><font color="#800000">Chapter 4: Change Log</b></font>
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 4.1: Changes from version 1 to version 2</b></font>
+<p>
+ Replaced &quot;object-based-rulebook&quot; with &quot;object-based rulebook&quot;, which seems to make recent versions of I7 happier.
+<p>
+ Replaced custom &quot;yes_no_flag&quot; variable kind with the built-in &quot;truth state&quot; (added in 5G67), to reduce clutter.
+<p>
+ Added &quot;closed text&quot; property to doors.
+<p>
+ When printing the names of exit destinations, the definite article is used (if you've used any article when defining the place in your source text).
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Exit Lister-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Exit Lister-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Test Game for Exit Lister</font></b></a><br><p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

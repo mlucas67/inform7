@@ -4,7 +4,7 @@
   <activeNode nodeId="node-0x02C73C70"/>
   <item nodeId="node-0x02C73C70">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">The Walking Dead - Days Gone By&#x000A;The Walking Dead - Days Gone By by Marshall Lucas&#x000A;Release 1 / Serial number 130305 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The Walking Dead - Days Gone By&#x000A;The Walking Dead - Days Gone By by Marshall Lucas&#x000A;Release 1 / Serial number 130305 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;You can go west through the Hospital Room Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
