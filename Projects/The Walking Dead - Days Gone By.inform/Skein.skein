@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02D3F170" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x0269A230" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x057B2D08"/>
-  <item nodeId="node-0x02D3F170">
+  <activeNode nodeId="node-0x026A6528"/>
+  <item nodeId="node-0x0269A230">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">The Walking Dead - Days Gone By&#x000A;An Interactive Fiction by Marshall Lucas&#x000A;Release 1 / Serial number 130304 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -10,11 +10,11 @@
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02D4C128"/>
-      <child nodeId="node-0x02D3F250"/>
+      <child nodeId="node-0x0269A2A0"/>
+      <child nodeId="node-0x026A5FE8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C128">
+  <item nodeId="node-0x0269A2A0">
     <command xml:space="preserve">debug</command>
     <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -22,10 +22,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C198"/>
+      <child nodeId="node-0x0269A7B8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C198">
+  <item nodeId="node-0x0269A7B8">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -33,10 +33,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C208"/>
+      <child nodeId="node-0x0269A8B8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C208">
+  <item nodeId="node-0x0269A8B8">
     <command xml:space="preserve">examine room</command>
     <result xml:space="preserve">You see nothing special about the Hospital Room Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -44,10 +44,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C278"/>
+      <child nodeId="node-0x0269ADD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C278">
+  <item nodeId="node-0x0269ADD0">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -55,10 +55,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C2E8"/>
+      <child nodeId="node-0x0269B2E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C2E8">
+  <item nodeId="node-0x0269B2E8">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -66,10 +66,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C358"/>
+      <child nodeId="node-0x0269B800"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C358">
+  <item nodeId="node-0x0269B800">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -77,10 +77,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C3C8"/>
+      <child nodeId="node-0x0269B870"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C3C8">
+  <item nodeId="node-0x0269B870">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -88,10 +88,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D4C438"/>
+      <child nodeId="node-0x0269B8E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D4C438">
+  <item nodeId="node-0x0269B8E0">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -99,10 +99,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C420"/>
+      <child nodeId="node-0x0269B9E0"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C420">
+  <item nodeId="node-0x0269B9E0">
     <command xml:space="preserve">examine room</command>
     <result xml:space="preserve">You see nothing special about the Hospital Room Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -110,10 +110,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C490"/>
+      <child nodeId="node-0x0269BA50"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C490">
+  <item nodeId="node-0x0269BA50">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -121,10 +121,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C500"/>
+      <child nodeId="node-0x0269E7B8"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C500">
+  <item nodeId="node-0x0269E7B8">
     <command xml:space="preserve">actions</command>
     <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -132,10 +132,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C570"/>
+      <child nodeId="node-0x0269E828"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C570">
+  <item nodeId="node-0x0269E828">
     <command xml:space="preserve">rules</command>
     <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -143,10 +143,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C5E0"/>
+      <child nodeId="node-0x0269E898"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C5E0">
+  <item nodeId="node-0x0269E898">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[Rule "(rule at address 11987)" applies.]&#x000A;[looking]&#x000A;[Rule "(rule at address 13835)" applies.]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;[Rule "(rule at address 13865)" applies.]&#x000A;[Rule "(rule at address 13898)" applies.]&#x000A;[Rule "(rule at address 12873)" applies.]&#x000A;[Rule "(rule at address 12883)" applies.]&#x000A;[Rule "(rule at address 12893)" applies.]&#x000A;[Rule "(rule at address 12903)" applies.]&#x000A;[Rule "(rule at address 12913)" applies.]&#x000A;[Rule "(rule at address 12935)" applies.]&#x000A;[Rule "(rule at address 12981)" applies.]&#x000A;[Rule "(rule at address 12873)" applies.]&#x000A;[Rule "(rule at address 12883)" applies.]&#x000A;[Rule "(rule at address 12893)" applies.]&#x000A;[Rule "(rule at address 12903)" applies.]&#x000A;[Rule "(rule at address 12913)" applies.]&#x000A;[Rule "(rule at address 12935)" applies.]&#x000A;[Rule "(rule at address 12981)" applies.]&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;[Rule "(rule at address 12873)" applies.]&#x000A;[Rule "(rule at address 12883)" applies.]&#x000A;[Rule "(rule at address 12893)" applies.]&#x000A;[Rule "(rule at address 12903)" applies.]&#x000A;[Rule "(rule at address 12913)" applies.]&#x000A;[Rule "(rule at address 12935)" applies.]&#x000A;[Rule "(rule at address 12981)" applies.]&#x000A;[Rule "(rule at address 13917)" applies.]&#x000A;[Rule "(rule at address 13928)" applies.]&#x000A;[looking - succeeded]&#x000A;&#x000A;[Rule "(rule at address 15136)" applies.]&#x000A;[Rule "(rule at address 15151)" applies.]&#x000A;[Rule "(rule at address 15191)" applies.]&#x000A;[Rule "(rule at address 15220)" applies.]&#x000A;[Rule "(rule at address 15314)" applies.]&#x000A;[Rule "(rule at address 15341)" applies.]&#x000A;[Rule "(rule at address 15369)" applies.]&#x000A;[Rule "(rule at address 15429)" applies.]&#x000A;[Rule "(rule at address 15546)" applies.]&#x000A;[Rule "(rule at address 15629)" applies.]&#x000A;[Rule "(rule at address 15682)" applies.]&#x000A;[Rule "(rule at address 15773)" applies.]&#x000A;[Rule "(rule at address 15787)" applies.]&#x000A;[Rule "(rule at address 15798)" applies.]&#x000A;[Rule "(rule at address 15136)" applies.]&#x000A;[Rule "(rule at address 15151)" applies.]&#x000A;[Rule "(rule at address 15191)" applies.]&#x000A;[Rule "(rule at address 15220)" applies.]&#x000A;[Rule "(rule at address 15314)" applies.]&#x000A;[Rule "(rule at address 15341)" applies.]&#x000A;[Rule "(rule at address 15369)" applies.]&#x000A;[Rule "(rule at address 15429)" applies.]&#x000A;[Rule "(rule at address 15546)" applies.]&#x000A;[Rule "(rule at address 15629)" applies.]&#x000A;[Rule "(rule at address 15682)" applies.]&#x000A;[Rule "(rule at address 15773)" applies.]&#x000A;[Rule "(rule at address 15787)" applies.]&#x000A;[Rule "(rule at address 15798)" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -154,10 +154,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C650"/>
+      <child nodeId="node-0x0269E908"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C650">
+  <item nodeId="node-0x0269E908">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[Rule "(rule at address 11987)" applies.]&#x000A;[looking]&#x000A;[Rule "(rule at address 13835)" applies.]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;[Rule "(rule at address 13865)" applies.]&#x000A;[Rule "(rule at address 13898)" applies.]&#x000A;[Rule "(rule at address 12873)" applies.]&#x000A;[Rule "(rule at address 12883)" applies.]&#x000A;[Rule "(rule at address 12893)" applies.]&#x000A;[Rule "(rule at address 12903)" applies.]&#x000A;[Rule "(rule at address 12913)" applies.]&#x000A;[Rule "(rule at address 12935)" applies.]&#x000A;[Rule "(rule at address 12981)" applies.]&#x000A;[Rule "(rule at address 12873)" applies.]&#x000A;[Rule "(rule at address 12883)" applies.]&#x000A;[Rule "(rule at address 12893)" applies.]&#x000A;[Rule "(rule at address 12903)" applies.]&#x000A;[Rule "(rule at address 12913)" applies.]&#x000A;[Rule "(rule at address 12935)" applies.]&#x000A;[Rule "(rule at address 12981)" applies.]&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;[Rule "(rule at address 12873)" applies.]&#x000A;[Rule "(rule at address 12883)" applies.]&#x000A;[Rule "(rule at address 12893)" applies.]&#x000A;[Rule "(rule at address 12903)" applies.]&#x000A;[Rule "(rule at address 12913)" applies.]&#x000A;[Rule "(rule at address 12935)" applies.]&#x000A;[Rule "(rule at address 12981)" applies.]&#x000A;[Rule "(rule at address 13917)" applies.]&#x000A;[Rule "(rule at address 13928)" applies.]&#x000A;[looking - succeeded]&#x000A;&#x000A;[Rule "(rule at address 15136)" applies.]&#x000A;[Rule "(rule at address 15151)" applies.]&#x000A;[Rule "(rule at address 15191)" applies.]&#x000A;[Rule "(rule at address 15220)" applies.]&#x000A;[Rule "(rule at address 15314)" applies.]&#x000A;[Rule "(rule at address 15341)" applies.]&#x000A;[Rule "(rule at address 15369)" applies.]&#x000A;[Rule "(rule at address 15429)" applies.]&#x000A;[Rule "(rule at address 15546)" applies.]&#x000A;[Rule "(rule at address 15629)" applies.]&#x000A;[Rule "(rule at address 15682)" applies.]&#x000A;[Rule "(rule at address 15773)" applies.]&#x000A;[Rule "(rule at address 15787)" applies.]&#x000A;[Rule "(rule at address 15798)" applies.]&#x000A;[Rule "(rule at address 15136)" applies.]&#x000A;[Rule "(rule at address 15151)" applies.]&#x000A;[Rule "(rule at address 15191)" applies.]&#x000A;[Rule "(rule at address 15220)" applies.]&#x000A;[Rule "(rule at address 15314)" applies.]&#x000A;[Rule "(rule at address 15341)" applies.]&#x000A;[Rule "(rule at address 15369)" applies.]&#x000A;[Rule "(rule at address 15429)" applies.]&#x000A;[Rule "(rule at address 15546)" applies.]&#x000A;[Rule "(rule at address 15629)" applies.]&#x000A;[Rule "(rule at address 15682)" applies.]&#x000A;[Rule "(rule at address 15773)" applies.]&#x000A;[Rule "(rule at address 15787)" applies.]&#x000A;[Rule "(rule at address 15798)" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -165,10 +165,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C6C0"/>
+      <child nodeId="node-0x0269E978"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C6C0">
+  <item nodeId="node-0x0269E978">
     <command xml:space="preserve">rules</command>
     <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -176,10 +176,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C730"/>
+      <child nodeId="node-0x0269E9E8"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C730">
+  <item nodeId="node-0x0269E9E8">
     <command xml:space="preserve">rules off</command>
     <result xml:space="preserve">Rules tracing now switched off. Type "rules" to switch it on again.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -187,10 +187,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C7A0"/>
+      <child nodeId="node-0x0269EA58"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C7A0">
+  <item nodeId="node-0x0269EA58">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[looking]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;[looking - succeeded]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -198,10 +198,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C810"/>
+      <child nodeId="node-0x0269EAC8"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C810">
+  <item nodeId="node-0x0269EAC8">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[looking]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;[looking - succeeded]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -209,10 +209,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C880"/>
+      <child nodeId="node-0x0269EB38"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C880">
+  <item nodeId="node-0x0269EB38">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[looking]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;[looking - succeeded]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -220,10 +220,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0572C8F0"/>
+      <child nodeId="node-0x0269EBA8"/>
     </children>
   </item>
-  <item nodeId="node-0x0572C8F0">
+  <item nodeId="node-0x0269EBA8">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[looking]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;[looking - succeeded]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -231,10 +231,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3EFB0"/>
+      <child nodeId="node-0x0269EC18"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3EFB0">
+  <item nodeId="node-0x0269EC18">
     <command xml:space="preserve">scope</command>
     <result xml:space="preserve">1: a Hospital Room Door (50)&#x000A;2: a Hospital Bed (48)&#x000A;3: yourself (49)&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -242,10 +242,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F330"/>
+      <child nodeId="node-0x0269EC88"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F330">
+  <item nodeId="node-0x0269EC88">
     <command xml:space="preserve">actions off</command>
     <result xml:space="preserve">Actions listing off.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -253,10 +253,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F100"/>
+      <child nodeId="node-0x0269ECF8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F100">
+  <item nodeId="node-0x0269ECF8">
     <command xml:space="preserve">scenes</command>
     <result xml:space="preserve">Scene 'Entire Game' playing (for 8 mins now)&#x000A;(Scene monitoring now switched on. Type "scenes off" to switch it off again.)&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -264,10 +264,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F950"/>
+      <child nodeId="node-0x0269ED68"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F950">
+  <item nodeId="node-0x0269ED68">
     <command xml:space="preserve">showme walker2</command>
     <result xml:space="preserve">Walker2 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker2"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -275,10 +275,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FB10"/>
+      <child nodeId="node-0x0269EDD8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FB10">
+  <item nodeId="node-0x0269EDD8">
     <command xml:space="preserve">jump</command>
     <result xml:space="preserve">You jump on the spot, fruitlessly.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -286,10 +286,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FE90"/>
+      <child nodeId="node-0x0269EE48"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FE90">
+  <item nodeId="node-0x0269EE48">
     <command xml:space="preserve">showme walker2</command>
     <result xml:space="preserve">Walker2 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker2"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -297,10 +297,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FB80"/>
+      <child nodeId="node-0x0269EEB8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FB80">
+  <item nodeId="node-0x0269EEB8">
     <command xml:space="preserve">showme turn</command>
     <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -308,10 +308,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FBF0"/>
+      <child nodeId="node-0x0269EF28"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FBF0">
+  <item nodeId="node-0x0269EF28">
     <command xml:space="preserve">showme turn count</command>
     <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -319,10 +319,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FC60"/>
+      <child nodeId="node-0x026A33C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FC60">
+  <item nodeId="node-0x026A33C0">
     <command xml:space="preserve">trace 1</command>
     <result xml:space="preserve">[Parser tracing set to level 1.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -330,10 +330,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FCD0"/>
+      <child nodeId="node-0x026A3430"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FCD0">
+  <item nodeId="node-0x026A3430">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[Parsing for the verb 'l' (6 lines)]&#x000A;[line 0 * -&gt; Look]&#x000A;[Line successfully parsed]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -341,10 +341,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FD40"/>
+      <child nodeId="node-0x026A34A0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FD40">
+  <item nodeId="node-0x026A34A0">
     <command xml:space="preserve">trace 2</command>
     <result xml:space="preserve">[Parsing for the verb 'trace' (4 lines)]&#x000A;[line 0 * -&gt; TraceOn]&#x000A;[line 1 * number -&gt; TraceLevel]&#x000A;[Line successfully parsed]&#x000A;[Parser tracing set to level 2.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -352,10 +352,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FDB0"/>
+      <child nodeId="node-0x026A3510"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FDB0">
+  <item nodeId="node-0x026A3510">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[ "l" l ]&#x000A;[Parsing for the verb 'l' (6 lines)]&#x000A;&#x000A;[line 0 * -&gt; Look]&#x000A; [line 0 token 1 word 2 : END]&#x000A;[Line successfully parsed]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -363,10 +363,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FE20"/>
+      <child nodeId="node-0x026A3580"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FE20">
+  <item nodeId="node-0x026A3580">
     <command xml:space="preserve">trace 6</command>
     <result xml:space="preserve">[ "trace" trace / "6" ? ]&#x000A;[Parsing for the verb 'trace' (4 lines)]&#x000A;&#x000A;[line 0 * -&gt; TraceOn]&#x000A; [line 0 token 1 word 2 : END]&#x000A;&#x000A;[line 1 * number -&gt; TraceLevel]&#x000A; [line 1 token 1 word 2 : number]&#x000A; [line 1 token 2 word 3 : END]&#x000A;[Line successfully parsed]&#x000A;[Parser tracing set to level 6.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -374,10 +374,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F9C0"/>
+      <child nodeId="node-0x026A35F0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F9C0">
+  <item nodeId="node-0x026A35F0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[ "l" l ]&#x000A;[Parsing for the verb 'l' (6 lines)]&#x000A;&#x000A;[line 0 * -&gt; Look]&#x000A; [line 0 token 1 word 2 : END]&#x000A;[Line successfully parsed]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -385,10 +385,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FA30"/>
+      <child nodeId="node-0x026A3660"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FA30">
+  <item nodeId="node-0x026A3660">
     <command xml:space="preserve">trace 1</command>
     <result xml:space="preserve">[ "trace" trace / "1" ? ]&#x000A;[Parsing for the verb 'trace' (4 lines)]&#x000A;&#x000A;[line 0 * -&gt; TraceOn]&#x000A; [line 0 token 1 word 2 : END]&#x000A;&#x000A;[line 1 * number -&gt; TraceLevel]&#x000A; [line 1 token 1 word 2 : number]&#x000A;  [Read number as 1]&#x000A;  [token resulted in success]&#x000A; [line 1 token 2 word 3 : END]&#x000A;[Line successfully parsed]&#x000A;[Parser tracing set to level 1.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -396,10 +396,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3FAA0"/>
+      <child nodeId="node-0x026A36D0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3FAA0">
+  <item nodeId="node-0x026A36D0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">[Parsing for the verb 'l' (6 lines)]&#x000A;[line 0 * -&gt; Look]&#x000A;[Line successfully parsed]&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -407,10 +407,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F870"/>
+      <child nodeId="node-0x026A3740"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F870">
+  <item nodeId="node-0x026A3740">
     <command xml:space="preserve">trace 0</command>
     <result xml:space="preserve">[Parsing for the verb 'trace' (4 lines)]&#x000A;[line 0 * -&gt; TraceOn]&#x000A;[line 1 * number -&gt; TraceLevel]&#x000A;[Line successfully parsed]&#x000A;[Parser tracing set to level 0.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -418,10 +418,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F800"/>
+      <child nodeId="node-0x026A37B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F800">
+  <item nodeId="node-0x026A37B0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -429,10 +429,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F8E0"/>
+      <child nodeId="node-0x026A3820"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F8E0">
+  <item nodeId="node-0x026A3820">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -440,10 +440,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F4F0"/>
+      <child nodeId="node-0x026A3890"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F4F0">
+  <item nodeId="node-0x026A3890">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">That's already open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -451,10 +451,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F480"/>
+      <child nodeId="node-0x026A3900"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F480">
+  <item nodeId="node-0x026A3900">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -462,10 +462,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F410"/>
+      <child nodeId="node-0x026A3970"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F410">
+  <item nodeId="node-0x026A3970">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -473,10 +473,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F560"/>
+      <child nodeId="node-0x026A39E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F560">
+  <item nodeId="node-0x026A39E0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -484,10 +484,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F5D0"/>
+      <child nodeId="node-0x026A3A50"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F5D0">
+  <item nodeId="node-0x026A3A50">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -495,10 +495,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F640"/>
+      <child nodeId="node-0x026A3AC0"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F640">
+  <item nodeId="node-0x026A3AC0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -506,10 +506,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F6B0"/>
+      <child nodeId="node-0x026A3B30"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F6B0">
+  <item nodeId="node-0x026A3B30">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -517,10 +517,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F720"/>
+      <child nodeId="node-0x026A5F78"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F720">
+  <item nodeId="node-0x026A5F78">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Targeted&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -528,7 +528,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02D3F250">
+  <item nodeId="node-0x026A5FE8">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -536,10 +536,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F2C0"/>
+      <child nodeId="node-0x026A6058"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F2C0">
+  <item nodeId="node-0x026A6058">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -547,10 +547,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02D3F1E0"/>
+      <child nodeId="node-0x026A60C8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D3F1E0">
+  <item nodeId="node-0x026A60C8">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -558,10 +558,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2918"/>
+      <child nodeId="node-0x026A6138"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2918">
+  <item nodeId="node-0x026A6138">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -569,10 +569,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B29F8"/>
+      <child nodeId="node-0x026A61A8"/>
     </children>
   </item>
-  <item nodeId="node-0x057B29F8">
+  <item nodeId="node-0x026A61A8">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -580,10 +580,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2A68"/>
+      <child nodeId="node-0x026A6218"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2A68">
+  <item nodeId="node-0x026A6218">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -591,10 +591,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2AD8"/>
+      <child nodeId="node-0x026A6288"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2AD8">
+  <item nodeId="node-0x026A6288">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -602,10 +602,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2988"/>
+      <child nodeId="node-0x026A62F8"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2988">
+  <item nodeId="node-0x026A62F8">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -613,10 +613,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2B48"/>
+      <child nodeId="node-0x026A6368"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2B48">
+  <item nodeId="node-0x026A6368">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - walker&#x000A;location: in Hallway1&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 100&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Aimless&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -624,10 +624,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2BB8"/>
+      <child nodeId="node-0x026A63D8"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2BB8">
+  <item nodeId="node-0x026A63D8">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">A herd of walkers has arrived.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -635,10 +635,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2C28"/>
+      <child nodeId="node-0x026A6448"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2C28">
+  <item nodeId="node-0x026A6448">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hospital Room (on the Hospital Bed)&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -646,10 +646,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2C98"/>
+      <child nodeId="node-0x026A64B8"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2C98">
+  <item nodeId="node-0x026A64B8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first getting off the Hospital Bed)&#x000A;&#x000A;Hallway1&#x000A;You can see an open Hospital Room Door and a Walker2 here.&#x000A;&#x000A;A herd of walkers has arrived.&#x000A;A herd of walkers has departed.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -657,10 +657,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x057B2D08"/>
+      <child nodeId="node-0x026A6528"/>
     </children>
   </item>
-  <item nodeId="node-0x057B2D08">
+  <item nodeId="node-0x026A6528">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hallway1&#x000A;You can see a Walker1 and an open Hospital Room Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
