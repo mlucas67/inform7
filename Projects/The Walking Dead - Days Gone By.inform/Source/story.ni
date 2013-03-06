@@ -8,8 +8,6 @@ Index map with room-shape set to "square" and room-size set to 60 and room-name-
 
 Include Locksmith by Emily Short.
 
-Include Modified Exit by Emily Short.
-
 Include Exit Lister by Gavin Lambert.
 
 Use full-length room descriptions, American dialect, no scoring, and the serial comma. Use memory economy. Use MAX_SYMBOLS of 7000. 
@@ -25,10 +23,6 @@ Section 1 - Doors
 Instead of attacking a closed door: say "[The noun] reverberates but does not open."
 
 Understand "knock on [something]" or "knock [something]" as attacking.  Understand the commands "bang" and "tap" and "rap" as "knock".
-
-Before printing the name of an open door (called target) when looking or going: 
-	if the target is a staircase, do nothing;
-	otherwise say "open ".
 
 Instead of looking under something which is carried by the player:
 	say "Since you are holding [the noun], it stands to reason that nothing of interest could be concealed beneath."
@@ -49,6 +43,25 @@ Section 4 - Sounds
 
 Section 5 - Smells
 
+A thing has a text called odor.
+
+A room has a text called odor.
+
+The block smelling rule is not listed in the check smelling rulebook.
+
+The last carry out smelling rule:
+	say "[if the odor of the noun is not empty][the noun] smells like [the odor of the noun][paragraph break][otherwise]You smell nothing unexpected.[end if]".
+	
+Report someone smelling:
+	say "[The person asked] smells [the noun]".
+
+Instead of smelling in the presence of a walker:
+	say "It smells like rotting flesh in here".
+
+Section 6 - Vehicles
+
+Include Rideable Vehicles by Graham Nelson.
+
 Chapter 2 - New Kinds
 
 Include Postures by Emily Short.
@@ -59,20 +72,17 @@ A bed is a kind of supporter.  A bed is usually enterable.  Every bed allows sea
 
 Section 2 - Doors
 
-A staircase is a kind of door. A staircase is usually open. A staircase is seldom openable. Understand "stairs" or "stair" or "staircase" as a staircase. Understand "upstairs" or "downstairs" as a staircase.
-
-Instead of climbing a staircase:
-	try entering the noun. 
-	
-Understand the commands "ascend" and "descend" as climb. Understand "go down [staircase]" as climbing. Understand "go up [staircase]" as climbing.
-
 Section 3 - Walkers
 
 Include Patrollers by Michael Callaghan
 
-Freshness is a kind of value.  The Freshnesses are Fresh, DayOld, Stale, Rotted and Immoble.
+Freshness is a kind of value.  The Freshnesses are Fresh, DayOld, Stale, Rotted and Immobile.
 
-A walker is a kind of Patroller.  The MovementType of a walker is usually Aimless.  A walker is usually On Patrol.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The Drive of a walker is usually 60.  
+A walker is a kind of Patroller.  A walker is usually Aimless.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The odor of a walker is usually "rotting flesh." The Drive of a walker is usually 60.  The description of a walker is usually "[printed name of the noun] (walker)"
+
+A roamer is a kind of walker.  A roamer is usually Aimless.  A roamer is usually On Patrol.
+
+A lurker is a kind of walker.  A lurker is usually Off Patrol.
 
 Instead of examining a walker (called W):
 	if the Freshness of W is:
@@ -99,7 +109,10 @@ Before Patrolling something (called the Bod):
 		-- DayOld: now the Drive of the Bod is 60;
 		-- Stale: now the Drive of the Bod is 40;
 		-- Rotted: now the Drive of the Bod is 20;
-		-- Immoble: now the Drive of the Bod is 0.
+		-- Immobile: 
+			now the Drive of the Bod is 0; 
+			now the Bod is Off Patrol;
+			stop the action.
 		
 After Patrolling something (called the Bod):
 	if the Bod is Following:
@@ -112,9 +125,13 @@ After opening a door (called D):
 		now the zombie is Targeted;
 		now the Destination of the zombie is front side of D.
 		
-After going through a door:
-	repeat with zombie running through walker in room:
-		now the zombie is Following.
+After going:
+	try looking;
+	if a walker is in the room: 
+		say "It smells like rotten flesh in here.";
+	repeat with zombie running through walkers in room:
+		now the zombie is Following;
+		now the zombie is On Patrol.
 		
 Section 4 - Actions
 
@@ -129,24 +146,73 @@ Chapter 1 - The Hospital
 
 Harrison Memorial Hospital is a Region.
 
-The Hospital Room is a room.  A Hospital Bed is a bed in the Hospital Room.
+The Hospital Room is a room in Harrison Memorial Hospital.  A Hospital Bed is a bed in the Hospital Room.
 
 The player is on the Hospital Bed.  The player is reclining.
 
 The Hospital Room Door is a door.  It is west of the Hospital Room and east of Hallway1.
 
-Hallway1 is a room.
+Hallway1 is a room in Harrison Memorial Hospital.  The printed name of Hallway1 is "Hallway".  Hallway1 is west of the Hospital Room Door.
 
-The Walker1 is a walker in Hallway1.  The Walker2 is a walker in Hallway1.  Walker1 is Rotted.
+The Walker1 is a lurker in Hallway1.  The Walker2 is a roamer in Hallway1.  Walker1 is Rotted.
 
-Hallway2 is a room. Hallway2 is north of Hallway1.
+Hallway2 is a room in Harrison Memorial Hospital.  The printed name of Hallway2 is "Hallway". Hallway2 is north of Hallway1.
 
-Hallway3 is a room. Hallway3 is north of Hallway2.
+Hallway3 is a room in Harrison Memorial Hospital.  The printed name of Hallway3 is "Hallway". Hallway3 is north of Hallway2.
 
-Hallway4 is a room. Hallway4 is west of Hallway3.
+The Cafeteria Door is a locked door.  It is north of Hallway3 and south of the Hospital Cafeteria.  "On the cafeteria door are hastily painted words."
 
-Hallway5 is a room. Hallway5 is west of Hallway4.
+Instead of examining the Cafeteria Door:
+	say "Someone has chained the doors shut and painted the words 'Do not open! Dead inside!' on the front of it."
+	
+Before opening the Cafeteria Door:
+	say "As you reach for the door a decayed looking arm shoots out to try and grab you from between the double doors.  You stumble backwards, startled, just in time.  'What is going on here?' you wonder."
 
-Hallway6 is a room. Hallway6 is south of Hallway5.
+Hospital Cafeteria is a room in Harrison Memorial Hospital.  The Hospital Cafeteria is north of the Cafeteria Door.  
 
-Hallway7 is a room.  Hallway7 is south of Hallway6.
+Top Stairwell Door is a door.  It is west of Hallway3 and east of the Top of the Stairwell.  The printed name of Top Stairwell Door is "Stairwell Door".
+
+Top of the Stairwell is a room.  It is west of the Top Stairwell Door and up from Bottom of the Stairwell.
+
+Bottom of the Stairwell is a room.  It is down from Top of the Stairwell and south of the Bottom Stairwell Door.  The printed name of Bottom Stairwell Door is "Stairwell Door".
+
+Bottom Stairwell Door is a door.  It is north of the Bottom of the Stairwell and south of CynthianaRoom1.
+
+Chapter 2 - Cynthiana, Kentucky
+
+CynthianaRoom1 is a room.  The printed name of CynthianaRoom1 is "Millersburg Pike".  CynthianaRoom1 is southeast of CynthianaRoom2.
+
+A rideable vehicle called a Bicycle is in CynthianaRoom1.
+
+A walker called the Dead Bicycle Rider is in CynthianaRoom1.  The Dead Bicycle Rider is immobile.  The Dead Bicycle Rider is Off Patrol.
+
+CynthianaRoom2 is a room.  The printed name of CynthianaRoom2 is "E. Pine St & Highland Ave".  CynthianaRoom2 is southeast of CynthianaRoom7, northwest of CynthianaRoom1, northeast of CynthianaRoom3.
+CynthianaRoom3 is a room.  The printed name of CynthianaRoom3 is "E. Bridge St & Highland Ave".  CynthianaRoom3 is southwest of CynthianaRoom2, southeast of CynthianaRoom8.
+CynthianaRoom4 is a room.  The printed name of CynthianaRoom4 is "Oddville Pike & Cs 1060".  CynthianaRoom4 is northwest of CynthianaRoom5, northeast of CynthianaRoom9.
+CynthianaRoom5 is a room.  The printed name of CynthianaRoom5 is "Wilson Ave & Cs 1060".  CynthianaRoom5 is north of CynthianaRoom6, east of CynthianaRoom10, southeast of CynthianaRoom4.
+CynthianaRoom6 is a room.  The printed name of CynthianaRoom6 is "E. Pleasant St & N. Elmarch Ave".  CynthianaRoom6 is south of CynthianaRoom5, north of CynthianaRoom7, east of CynthianaRoom14.
+CynthianaRoom7 is a room.  The printed name of CynthianaRoom7 is "E. Pike St & N. Elmarch Ave".  CynthianaRoom7 is south of CynthianaRoom6, north of CynthianaRoom8, southeast of CynthianaRoom19, northwest of CynthianaRoom2.
+CynthianaRoom8 is a room.  The printed name of CynthianaRoom8 is "E. Bridge St & N. Elmarch Ave".  CynthianaRoom8 is south of CynthianaRoom7, southeast of CynthianaRoom20, northwest of CynthianaRoom3.
+CynthianaRoom9 is a room.  The printed name of CynthianaRoom9 is "Oddville Pike & Marshall Ave".  CynthianaRoom9 is north of CynthianaRoom10, southwest of CynthianaRoom4, northeast of CynthianaRoom11.
+CynthianaRoom10 is a room.  The printed name of CynthianaRoom10 is "Wilson Ave & Marshall Ave".  CynthianaRoom10 is south of CynthianaRoom9, west of CynthianaRoom5, east of CynthianaRoom12.
+CynthianaRoom11 is a room.  The printed name of CynthianaRoom11 is "Oddville Pike & Vine St".  CynthianaRoom11 is north of CynthianaRoom12, east of CynthianaRoom15, southwest of CynthianaRoom9.
+CynthianaRoom12 is a room.  The printed name of CynthianaRoom12 is "Wilson Ave & Vine St".  CynthianaRoom12 is south of CynthianaRoom11, west of CynthianaRoom10, east of CynthianaRoom13.
+CynthianaRoom13 is a room.  The printed name of CynthianaRoom13 is "Wilson Ave & St. Clair St".  CynthianaRoom13 is north of CynthianaRoom14, west of CynthianaRoom12, east of CynthianaRoom16.
+CynthianaRoom14 is a room.  The printed name of CynthianaRoom14 is "E. Pleasant St & St. Clair St".  CynthianaRoom14 is south of CynthianaRoom13, west of CynthianaRoom6, east of CynthianaRoom18.
+CynthianaRoom15 is a room.  The printed name of CynthianaRoom15 is "Oddville Pike & Miller St".  CynthianaRoom15 is north of CynthianaRoom16, west of CynthianaRoom11, southeast of CynthianaRoom21, northeast of CynthianaRoom22.
+CynthianaRoom16 is a room.  The printed name of CynthianaRoom16 is "Wilson Ave & Miller St".  CynthianaRoom16 is south of CynthianaRoom15, north of CynthianaRoom17, west of CynthianaRoom13, northeast of CynthianaRoom27.
+CynthianaRoom17 is a room.  The printed name of CynthianaRoom17 is "Bull Dog Alley & N. Miller St".  CynthianaRoom17 is south of CynthianaRoom16, north of CynthianaRoom18, east of CynthianaRoom28.
+CynthianaRoom18 is a room.  The printed name of CynthianaRoom18 is "E. Pleasant St & N. Miller St".  CynthianaRoom18 is south of CynthianaRoom17, north of CynthianaRoom19, west of CynthianaRoom14, east of CynthianaRoom29.
+CynthianaRoom19 is a room.  The printed name of CynthianaRoom19 is "E. Pike St & S. Miller St".  CynthianaRoom19 is south of CynthianaRoom18, north of CynthianaRoom20, east of CynthianaRoom23, northwest of CynthianaRoom7.
+CynthianaRoom20 is a room.  The printed name of CynthianaRoom20 is "E. Bridge St & S. Miller St".  CynthianaRoom20 is south of CynthianaRoom19, east of CynthianaRoom24, northwest of CynthianaRoom8.
+CynthianaRoom21 is a room.  The printed name of CynthianaRoom21 is "E. Pearl St & Reynolds Ave".  CynthianaRoom21 is north of CynthianaRoom22, northwest of CynthianaRoom15, northeast of CynthianaRoom25.
+CynthianaRoom22 is a room.  The printed name of CynthianaRoom22 is "Oddville Pike & Reynolds Ave".  CynthianaRoom22 is south of CynthianaRoom21, southwest of CynthianaRoom15, northeast of CynthianaRoom26.
+CynthianaRoom23 is a room.  The printed name of CynthianaRoom23 is "E. Pike St & Clifton Rd".  CynthianaRoom23 is north of CynthianaRoom24, west of CynthianaRoom19, east of CynthianaRoom30.
+CynthianaRoom24 is a room.  The printed name of CynthianaRoom24 is "Co Rd 2358 & Clifton Rd".  CynthianaRoom24 is south of CynthianaRoom23, west of CynthianaRoom20, east of CynthianaRoom31.
+CynthianaRoom25 is a room.  The printed name of CynthianaRoom25 is "E. Pearl St & Church St".  CynthianaRoom25 is north of CynthianaRoom26, southwest of CynthianaRoom21.
+CynthianaRoom26 is a room.  The printed name of CynthianaRoom26 is "Oddville Pike & Church St".  CynthianaRoom26 is south of CynthianaRoom25, north of CynthianaRoom27, southwest of CynthianaRoom22.
+CynthianaRoom27 is a room.  The printed name of CynthianaRoom27 is "Wilson Ave & Church St".  CynthianaRoom27 is south of CynthianaRoom26, north of CynthianaRoom28, southwest of CynthianaRoom16.
+CynthianaRoom28 is a room.  The printed name of CynthianaRoom28 is "Bull Dog Alley & Church St".  CynthianaRoom28 is south of CynthianaRoom27, north of CynthianaRoom29, west of CynthianaRoom17.
+CynthianaRoom29 is a room.  The printed name of CynthianaRoom29 is "E. Pleasant St & Church St".  CynthianaRoom29 is south of CynthianaRoom28, north of CynthianaRoom30, west of CynthianaRoom18.
+CynthianaRoom30 is a room.  The printed name of CynthianaRoom30 is "E. Pike St & S. Church St".  CynthianaRoom30 is south of CynthianaRoom29, north of CynthianaRoom31, west of CynthianaRoom23.
+CynthianaRoom31 is a room.  The printed name of CynthianaRoom31 is "Co Rd 2358 & S. Church St".  CynthianaRoom31 is south of CynthianaRoom30, west of CynthianaRoom24.

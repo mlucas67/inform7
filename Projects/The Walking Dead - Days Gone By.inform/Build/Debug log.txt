@@ -6,7 +6,7 @@ Inform called as: C:\Program Files (x86)\Inform 7\Compilers\ni -rules C:\Program
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 1000 words long.
+I've now read your source text, which is 2237 words long.
 
 
 -----------------------------------------------------
@@ -15,9 +15,9 @@ Phase II ... Semantic analysis Ia
 
 I've also read Standard Rules by Graham Nelson, which is 39455 words long.
 I've also read Locksmith by Emily Short, which is 4280 words long.
-I've also read Modified Exit by Emily Short, which is 1668 words long.
 I've also read Exit Lister by Gavin Lambert, which is 2509 words long.
 I've also read Plurality by Emily Short, which is 3141 words long.
+I've also read Rideable Vehicles by Graham Nelson, which is 1790 words long.
 I've also read Postures by Emily Short, which is 2184 words long.
 I've also read Patrollers by Michael Callaghan, which is 8491 words long.
 I've also read Facing by Emily Short, which is 1623 words long.
@@ -160,7 +160,7 @@ Providing for a total heap of 8192, given requirement of 8192
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 144 files written as streams.
+Total of 146 files written as streams.
 
 That concludes the debugging log from this run of Inform.
 Its contents were as follows, and can be changed by placing

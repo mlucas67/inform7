@@ -207,103 +207,99 @@ actors who are currently on top of a supporter: perhaps standing on a platform,
 but maybe only sitting on a chair or even lying down in bed. Unlike the similar
 exiting action, getting off takes a noun: the platform, chair, bed or what
 have you.<p><hr><p><b>Typed commands leading to this action</b><p>
-<p class="hangingin2">&quot;get off/down [something]&quot;</p><p class="hangingin2">&quot;exit [thing]&quot;&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Modified%20Exit.html' title="Modified Exit by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</p><p class="hangingin2">&quot;get out of [thing]&quot;&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Modified%20Exit.html' title="Modified Exit by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</p><p><b>Rules controlling this action</b><p>
-<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<font color="#800000">new can't get off things rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1711(code) {
-    var myProject = external.Project;
-
-    myProject.selectView('source');
-    myProject.pasteCode('new can[=0x0027=]t get off things rule');
-}
-</script>
-<a href="javascript:pasteCode1711()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1712(code) {
-    var myProject = external.Project;
-
-    myProject.selectView('source');
-    myProject.pasteCode('The new can[=0x0027=]t get off things rule is not listed in the check getting off rulebook.[=0x000A=]');
-}
-</script>
-<a href="javascript:pasteCode1712()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Modified%20Exit.html' title="Modified Exit by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<p class="hangingin2">&quot;get off/down [something]&quot;</p><p><b>Rules controlling this action</b><p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor getting off a rideable animal (called the steed)</i>&nbsp;&nbsp;&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><i>NB:</i> the new can't get off things rule is listed instead of the can't get off things rule in the check getting off rules&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Modified%20Exit.html' title="Modified Exit by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</small><br>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor getting off a rideable vehicle (called the conveyance)</i>&nbsp;&nbsp;&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor getting off</i>&nbsp;&nbsp;<font color="#800000">can't get off things rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2035(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('can[=0x0027=]t get off things rule');
+}
+</script>
+<a href="javascript:pasteCode2035()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2036(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The can[=0x0027=]t get off things rule is not listed in the check getting off rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2036()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 <br><p class="hangingin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor getting off</i>&nbsp;&nbsp;<font color="#800000">standard getting off rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1713(code) {
+function pasteCode2037(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('standard getting off rule');
 }
 </script>
-<a href="javascript:pasteCode1713()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1714(code) {
+<a href="javascript:pasteCode2037()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2038(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The standard getting off rule is not listed in the carry out getting off rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1714()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+<a href="javascript:pasteCode2038()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 <p class="hangingin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor exiting</i>&nbsp;&nbsp;<font color="#800000">departure-posture rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1715(code) {
+function pasteCode2039(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('departure-posture rule');
 }
 </script>
-<a href="javascript:pasteCode1715()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1716(code) {
+<a href="javascript:pasteCode2039()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2040(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The departure-posture rule is not listed in the carry out getting off rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1716()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a href="javascript:pasteCode2040()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><i>NB:</i> the departure-posture rule is listed after the standard getting off rule in the carry out getting off rulebook&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </small><br>
 <br><p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor getting off</i>&nbsp;&nbsp;<font color="#800000">standard report getting off rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1717(code) {
+function pasteCode2041(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('standard report getting off rule');
 }
 </script>
-<a href="javascript:pasteCode1717()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1718(code) {
+<a href="javascript:pasteCode2041()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2042(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The standard report getting off rule is not listed in the report getting off rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1718()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
-<p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<font color="#800000">new describe room stood up into rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1719(code) {
+<a href="javascript:pasteCode2042()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+<p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor getting off</i>&nbsp;&nbsp;<font color="#800000">describe room stood up into rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2043(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
-    myProject.pasteCode('new describe room stood up into rule');
+    myProject.pasteCode('describe room stood up into rule');
 }
 </script>
-<a href="javascript:pasteCode1719()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1720(code) {
+<a href="javascript:pasteCode2043()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2044(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
-    myProject.pasteCode('The new describe room stood up into rule is not listed in the report getting off rulebook.[=0x000A=]');
+    myProject.pasteCode('The describe room stood up into rule is not listed in the report getting off rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1720()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Modified%20Exit.html' title="Modified Exit by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><i>NB:</i> the new describe room stood up into rule is listed instead of the describe room stood up into rule in the report getting off rules&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Modified%20Exit.html' title="Modified Exit by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</small><br>
+<a href="javascript:pasteCode2044()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 <br><p>
 <!--CONTENT ENDS-->
 </font></body></html>
