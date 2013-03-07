@@ -213,74 +213,110 @@ if you write a rule such as 'Instead of removing the key, ...' then it
 won't apply if the player simply types TAKE KEY instead. The safe way to
 do this is to write a rule about taking, which covers all possibilities.<p><hr><p><b>Typed commands leading to this action</b><p>
 <p class="hangingin2">&quot;take [things inside] from [something]&quot;</p><p class="hangingin2">&quot;take [things inside] off [something]&quot;</p><p class="hangingin2">&quot;get [things inside] from [something]&quot;</p><p class="hangingin2">&quot;remove [things inside] from [something]&quot;</p><p><b>Rules controlling this action</b><p>
-<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor taking</i>&nbsp;&nbsp;<font color="#800000">can't take component parts rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1895(code) {
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything except searching or examining to a person (called the corpse)</i>&nbsp;&nbsp;<font color="#800000">respect the dead rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode1908(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('respect the dead rule');
+}
+</script>
+<a href="javascript:pasteCode1908()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode1909(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The respect the dead rule is not listed in the before rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1909()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>anyone trying doing anything</i>&nbsp;&nbsp;<font color="#800000">dead men tell no tales rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode1910(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('dead men tell no tales rule');
+}
+</script>
+<a href="javascript:pasteCode1910()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode1911(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The dead men tell no tales rule is not listed in the before rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1911()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor taking</i>&nbsp;&nbsp;<font color="#800000">can't take component parts rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode1912(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('can[=0x0027=]t take component parts rule');
 }
 </script>
-<a href="javascript:pasteCode1895()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1896(code) {
+<a href="javascript:pasteCode1912()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode1913(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The can[=0x0027=]t take component parts rule is not listed in the check removing it from rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1896()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+<a href="javascript:pasteCode1913()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 <p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor removing something from</i>&nbsp;&nbsp;<font color="#800000">can't remove what's not inside rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1897(code) {
+function pasteCode1914(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('can[=0x0027=]t remove what[=0x0027=]s not inside rule');
 }
 </script>
-<a href="javascript:pasteCode1897()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1898(code) {
+<a href="javascript:pasteCode1914()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode1915(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The can[=0x0027=]t remove what[=0x0027=]s not inside rule is not listed in the check removing it from rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1898()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+<a href="javascript:pasteCode1915()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 <p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor removing something from</i>&nbsp;&nbsp;<font color="#800000">can't remove from people rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1899(code) {
+function pasteCode1916(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('can[=0x0027=]t remove from people rule');
 }
 </script>
-<a href="javascript:pasteCode1899()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1900(code) {
+<a href="javascript:pasteCode1916()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode1917(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The can[=0x0027=]t remove from people rule is not listed in the check removing it from rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1900()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+<a href="javascript:pasteCode1917()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 <p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor removing something from</i>&nbsp;&nbsp;<font color="#800000">convert remove to take rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode1901(code) {
+function pasteCode1918(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('convert remove to take rule');
 }
 </script>
-<a href="javascript:pasteCode1901()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode1902(code) {
+<a href="javascript:pasteCode1918()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode1919(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The convert remove to take rule is not listed in the check removing it from rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode1902()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+<a href="javascript:pasteCode1919()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><i>NB:</i> the can't take component parts rule is listed before the can't remove what's not inside rule in the check removing it from rules</small><br>
 <br><p>
 <!--CONTENT ENDS-->

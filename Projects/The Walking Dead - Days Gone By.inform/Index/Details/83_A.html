@@ -201,15 +201,305 @@
 <p class="tightin1">A single action in detail.<br><i>About the action rulebooks&nbsp;&nbsp;<a href=inform:/doc188.html><img border=0 src=inform:/help.png></a></i></p>
 </font></td></tr></table></font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p><p>
 <!--NAVIGATION ENDS-->
-<p><b>Actions defined by the extension Exit Lister by Gavin Lambert</b><br><b>Listing exits</b>&nbsp;<a href='inform://Extensions/Extensions/Gavin%20Lambert/Exit%20Lister.html' title="Exit Lister by Gavin Lambert" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=83_A.html><img border=0 src=inform:/Beneath.png></a>, <font color="#800000">Turning exits on</font>&nbsp;<a href='inform://Extensions/Extensions/Gavin%20Lambert/Exit%20Lister.html' title="Exit Lister by Gavin Lambert" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=84_A.html><img border=0 src=inform:/Beneath.png></a>, <font color="#800000">Turning exits off</font>&nbsp;<a href='inform://Extensions/Extensions/Gavin%20Lambert/Exit%20Lister.html' title="Exit Lister by Gavin Lambert" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=85_A.html><img border=0 src=inform:/Beneath.png></a><p><hr><p><b>Listing exits </b>&nbsp;<a href='inform://Extensions/Extensions/Gavin%20Lambert/Exit%20Lister.html' title="Exit Lister by Gavin Lambert" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-<a name=A83_listing_exits></a> (<i>past tense</i> listed exits)<br>
+<p><b>Actions defined by the extension Armed by David Ratliff</b><br><b>Shooting it with</b>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+&nbsp;<a href=83_A.html><img border=0 src=inform:/Beneath.png></a>, Stabbing it with&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+&nbsp;<a href=84_A.html><img border=0 src=inform:/Beneath.png></a><p><hr><p><b>Shooting <font color="#000080">something</font> with <font color="#000080">something</font> </b>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a name=A83_shooting_it_with></a> (<i>past tense</i> shot it with)<br>
 <p><hr><p><b>Typed commands leading to this action</b><p>
-<p class="hangingin2">&quot;exits&quot;&nbsp;<a href='inform://Extensions/Extensions/Gavin%20Lambert/Exit%20Lister.html' title="Exit Lister by Gavin Lambert" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</p><p><b>Rules controlling this action</b><p>
-<p class="hangingin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;(carry out the listing exits activity)&nbsp;<a href='inform://Extensions/Extensions/Gavin%20Lambert/Exit%20Lister.html' title="Exit Lister by Gavin Lambert" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<p class="hangingin2">&quot;shoot [something] with [something]&quot;&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p><p><b>Named values belonging to this action</b><p>
+damage taken&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+ - <i>number</i><br>
+<p><b>Rules controlling this action</b><p>
+<p class="hangingin2">set action variables for&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor shooting something (called target) with something (called the boomstick)</i>&nbsp;&nbsp;&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything except searching or examining to a person (called the corpse)</i>&nbsp;&nbsp;<font color="#800000">respect the dead rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2676(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('respect the dead rule');
+}
+</script>
+<a href="javascript:pasteCode2676()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2677(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The respect the dead rule is not listed in the before rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2677()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>anyone trying doing anything</i>&nbsp;&nbsp;<font color="#800000">dead men tell no tales rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2678(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('dead men tell no tales rule');
+}
+</script>
+<a href="javascript:pasteCode2678()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2679(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The dead men tell no tales rule is not listed in the before rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2679()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">others must have a projectile to shoot rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2680(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('others must have a projectile to shoot rule');
+}
+</script>
+<a href="javascript:pasteCode2680()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2681(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The others must have a projectile to shoot rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2681()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">others can only shoot with a projectile rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2682(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('others can only shoot with a projectile rule');
+}
+</script>
+<a href="javascript:pasteCode2682()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2683(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The others can only shoot with a projectile rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2683()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">others can't shoot something with itself rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2684(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('others can[=0x0027=]t shoot something with itself rule');
+}
+</script>
+<a href="javascript:pasteCode2684()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2685(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The others can[=0x0027=]t shoot something with itself rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2685()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">other people suicide rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2686(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('other people suicide rule');
+}
+</script>
+<a href="javascript:pasteCode2686()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2687(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The other people suicide rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2687()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">you must have a projectile to shoot rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2688(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('you must have a projectile to shoot rule');
+}
+</script>
+<a href="javascript:pasteCode2688()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2689(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The you must have a projectile to shoot rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2689()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">you can only shoot with a projectile rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2690(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('you can only shoot with a projectile rule');
+}
+</script>
+<a href="javascript:pasteCode2690()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2691(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The you can only shoot with a projectile rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2691()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">you can't shoot something with itself rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2692(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('you can[=0x0027=]t shoot something with itself rule');
+}
+</script>
+<a href="javascript:pasteCode2692()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2693(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The you can[=0x0027=]t shoot something with itself rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2693()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">suicide rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2694(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('suicide rule');
+}
+</script>
+<a href="javascript:pasteCode2694()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2695(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The suicide rule is not listed in the check shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2695()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor shooting something (called the target) with something</i>&nbsp;&nbsp;<font color="#800000">standard carry out shooting rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2696(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('standard carry out shooting rule');
+}
+</script>
+<a href="javascript:pasteCode2696()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2697(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The standard carry out shooting rule is not listed in the carry out shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2697()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">shot to death rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2698(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('shot to death rule');
+}
+</script>
+<a href="javascript:pasteCode2698()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2699(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The shot to death rule is not listed in the after rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2699()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">report another shooting a person rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2700(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('report another shooting a person rule');
+}
+</script>
+<a href="javascript:pasteCode2700()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2701(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The report another shooting a person rule is not listed in the report shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2701()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>someone shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">report another shooting a non-person rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2702(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('report another shooting a non-person rule');
+}
+</script>
+<a href="javascript:pasteCode2702()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2703(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The report another shooting a non-person rule is not listed in the report shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2703()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">report shooting people rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2704(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('report shooting people rule');
+}
+</script>
+<a href="javascript:pasteCode2704()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2705(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The report shooting people rule is not listed in the report shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2705()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>shooting something (called the target) with something (called the boomstick)</i>&nbsp;&nbsp;<font color="#800000">report shooting non-people rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2706(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('report shooting non-people rule');
+}
+</script>
+<a href="javascript:pasteCode2706()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2707(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The report shooting non-people rule is not listed in the report shooting it with rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2707()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
 <br><p>
 <!--CONTENT ENDS-->

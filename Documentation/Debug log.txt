@@ -1,6 +1,8 @@
 Debugging log of Inform 7
 Inform called as: C:\Program Files (x86)\Inform 7\Compilers\ni -rules C:\Program Files (x86)\Inform 7\Inform7\Extensions -census 
+I've also read Armed by David Ratliff, which is 1427 words long.
 I've also read Facing by Emily Short, which is 879 words long.
+I've also read Location Images by Emily Short, which is 154 words long.
 I've also read Modified Exit by Emily Short, which is 824 words long.
 I've also read Postures by Emily Short, which is 597 words long.
 I've also read Simple Graphical Window by Emily Short, which is 1417 words long.
@@ -8,6 +10,9 @@ I've also read Exit Lister by Gavin Lambert, which is 1830 words long.
 I've also read Graphic Links by Jeff Sheets, which is 318 words long.
 I've also read Exit Descriptions by Matthew Fletcher, which is 129 words long.
 I've also read Patrollers by Michael Callaghan, which is 5514 words long.
+I've also read Default Messages by Ron Newcomb, which is 6680 words long.
+I've also read Inform ATTACK Core by Victor Gijsbers, which is 0 words long.
+I've also read Inform ATTACK by Victor Gijsbers, which is 0 words long.
 I've also read English by David Fisher, which is 0 words long.
 I've also read Basic Help Menu by Emily Short, which is 452 words long.
 I've also read Basic Screen Effects by Emily Short, which is 1716 words long.

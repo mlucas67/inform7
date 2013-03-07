@@ -3,154 +3,154 @@
 <plist version="1.0"><dict>
     <key>Application Version</key><string>6G60</string>
     <key>0</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>"The Walking Dead - Days Gone By" by Marshall Lucas</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
     <key>1</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>15</integer>
         <key>Title</key><string>Part 1 - Adjustments to the World Model</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>2</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>17</integer>
         <key>Title</key><string>Chapter 1 - Modifying Existing Kinds</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>3</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>23</integer>
         <key>Title</key><string>Section 1 - Doors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>4</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>38</integer>
         <key>Title</key><string>Section 2 - Rooms</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>5</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>42</integer>
         <key>Title</key><string>Section 3 - Sights</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>6</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>44</integer>
         <key>Title</key><string>Section 4 - Sounds</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>7</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>46</integer>
         <key>Title</key><string>Section 5 - Smells</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>8</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>63</integer>
         <key>Title</key><string>Section 6 - Vehicles</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>9</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>67</integer>
         <key>Title</key><string>Section 7 - Clothes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>10</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>72</integer>
         <key>Title</key><string>Section 8 - Player</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>11</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>77</integer>
         <key>Title</key><string>Chapter 2 - New Kinds</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>12</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>81</integer>
         <key>Title</key><string>Section 1 - Objects</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>13</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>90</integer>
         <key>Title</key><string>Section 2 - Doors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>14</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>92</integer>
         <key>Title</key><string>Section 3 - Walkers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>15</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>151</integer>
         <key>Title</key><string>Section 4 - People</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>16</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
-        <key>Line</key><integer>155</integer>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Line</key><integer>157</integer>
         <key>Title</key><string>Section 5 - Clothes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>17</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
-        <key>Line</key><integer>157</integer>
-        <key>Title</key><string>Section 6 - Actions</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Line</key><integer>161</integer>
+        <key>Title</key><string>Section 6 - Weapons</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>18</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
-        <key>Line</key><integer>161</integer>
-        <key>Title</key><string>Chapter 3 - New Verbs</string>
-        <key>Level</key><integer>4</integer>
-        <key>Indentation</key><integer>2</integer>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Line</key><integer>165</integer>
+        <key>Title</key><string>Section 7 - Actions</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>3</integer>
     </dict>
     <key>19</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
-        <key>Line</key><integer>173</integer>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Line</key><integer>171</integer>
         <key>Title</key><string>Part 2 - The World</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>20</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
-        <key>Line</key><integer>178</integer>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Line</key><integer>176</integer>
         <key>Title</key><string>Chapter 1 - The Hospital</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>21</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\GitHub\inform7\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Projects\The Walking Dead - Days Gone By.inform\Source\story.ni</string>
         <key>Line</key><integer>220</integer>
         <key>Title</key><string>Chapter 2 - Cynthiana, Kentucky</string>
         <key>Level</key><integer>4</integer>
@@ -1109,412 +1109,454 @@
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>158</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\david ratliff\armed.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>Version 3 of Armed by David Ratliff begins here</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>159</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\david ratliff\armed.i7x</string>
+        <key>Line</key><integer>5</integer>
+        <key>Title</key><string>Section 1 - The Breath of Life</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>160</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\david ratliff\armed.i7x</string>
+        <key>Line</key><integer>25</integer>
+        <key>Title</key><string>Section 2 - Rules and Kinds</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>161</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\david ratliff\armed.i7x</string>
+        <key>Line</key><integer>105</integer>
+        <key>Title</key><string>Section 3 - Shooting</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>162</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\david ratliff\armed.i7x</string>
+        <key>Line</key><integer>201</integer>
+        <key>Title</key><string>Section 4 - Stabbing</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>163</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\david ratliff\armed.i7x</string>
+        <key>Line</key><integer>298</integer>
+        <key>Title</key><string>Section 5 - Revenge</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>164</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 2 of Exit Lister by Gavin Lambert begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>159</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
+    <key>165</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
         <key>Line</key><integer>7</integer>
         <key>Title</key><string>Section 1 - Text</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>160</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
+    <key>166</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
         <key>Line</key><integer>17</integer>
         <key>Title</key><string>Section 2 - Preferences</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>161</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
+    <key>167</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
         <key>Line</key><integer>31</integer>
         <key>Title</key><string>Section 3 - Listing Exits</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>162</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
+    <key>168</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
         <key>Line</key><integer>77</integer>
         <key>Title</key><string>Section 4 - Player Rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>163</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
+    <key>169</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\gavin lambert\exit lister.i7x</string>
         <key>Line</key><integer>96</integer>
         <key>Title</key><string>Section 5 - Secret Doors (for use with Secret Doors by Andrew Owen)</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>164</key><dict>
+    <key>170</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 9 of Plurality by Emily Short begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>165</key><dict>
+    <key>171</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>7</integer>
         <key>Title</key><string>Section 1 - Tracking Last Item</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>166</key><dict>
+    <key>172</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>32</integer>
         <key>Title</key><string>Section 2 - Verbs</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>167</key><dict>
+    <key>173</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>120</integer>
         <key>Title</key><string>Section 3 - Pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>168</key><dict>
+    <key>174</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>502</integer>
         <key>Title</key><string>Section 4 - Enumeration</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>169</key><dict>
+    <key>175</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Inform7\Extensions\graham nelson\rideable vehicles.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 3 of Rideable Vehicles by Graham Nelson begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>170</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>176</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Postures by Emily Short begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>171</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>177</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>5</integer>
         <key>Title</key><string>Section 1 - The Concenpt</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>172</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>178</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>11</integer>
         <key>Title</key><string>Section 2 - Posture Permission</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>173</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>179</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>17</integer>
         <key>Title</key><string>Section 3 - Rooms and Postures</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>174</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>180</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>21</integer>
         <key>Title</key><string>Section 4 - Sitting, Lying, and Standing On Commands</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>175</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>181</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>51</integer>
         <key>Title</key><string>Section 5 - Sitting, Lying, and Standing with Default Objects</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>176</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>182</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>137</integer>
         <key>Title</key><string>Section 6 - Disambiguating Postures</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>177</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>183</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>157</integer>
         <key>Title</key><string>Section 7 - Taking Position Action</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>178</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>184</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>192</integer>
         <key>Title</key><string>Section 8 - Posture Changes Automatically When Moving</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>179</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\postures.i7x</string>
+    <key>185</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\postures.i7x</string>
         <key>Line</key><integer>215</integer>
         <key>Title</key><string>Section 9 - Convert Exits when sitting or lying in a room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>180</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>186</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 11 of Patrollers by Michael Callaghan begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>181</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>187</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>5</integer>
         <key>Title</key><string>Chapter 1 - Define a Patroller</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>182</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>188</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>7</integer>
         <key>Title</key><string>Section 1.1 - The Patroller Kind</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>183</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>189</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>13</integer>
         <key>Title</key><string>Section 1.2 - Define whether the Patroller is On Patrol or Off Patrol</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>184</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>190</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>19</integer>
         <key>Title</key><string>Section 1.3 - Specify how a Patroller's route is defined</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>185</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>191</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>31</integer>
         <key>Title</key><string>Section 1.4 - Define the types of route that a Patroller can follow</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>186</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>192</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>42</integer>
         <key>Title</key><string>Section 1.5 - Specify where the Patroller's route is defined (relevant unless the Route is Aimless or Targeted)</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>187</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>193</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>47</integer>
         <key>Title</key><string>Section 1.6 - Specify dummy tables for the Patroller 's route</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>188</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>194</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>59</integer>
         <key>Title</key><string>Section 1.7 - Define a destination for Targeted Patrollers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>189</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>195</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>63</integer>
         <key>Title</key><string>Section 1.8 - Define a value to determine if a Patroller is on the outward or inward journey for TwoWay and TwoWayRepeated Routes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>190</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>196</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>69</integer>
         <key>Title</key><string>Section 1.9 - Define values to determine the length of the Patroller's route and the position of the Patroller along that route</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>191</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>197</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>74</integer>
         <key>Title</key><string>Section 1.10 - Define the probability that a Patroller will move on any given turn as a percentage</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>192</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>198</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>78</integer>
         <key>Title</key><string>Section 1.11 - Define the door opening capability of the Patroller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>193</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>199</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>91</integer>
         <key>Title</key><string>Section 1.12 - Define the door reclosing capability of the Patroller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>194</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>200</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>100</integer>
         <key>Title</key><string>Section 1.13 - Define the frequency of the patroller's movement</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>195</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>201</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>106</integer>
         <key>Title</key><string>Section 1.14 - Define the start turn when the patroller becomes On Patrol</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>196</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>202</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>110</integer>
         <key>Title</key><string>Section 1.15 - Define if rooms are ordinarily accessible to a patroller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>197</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>203</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>115</integer>
         <key>Title</key><string>Section 1.16 - Reporting movements of patrollers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>198</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>204</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>123</integer>
         <key>Title</key><string>Section 1.17 - Flag to trap best route returning nothing as a value</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>199</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>205</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>127</integer>
         <key>Title</key><string>Chapter 2 - Patrolling Activity</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>200</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>206</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>129</integer>
         <key>Title</key><string>Section 2.1 - Initialize Room Led Patrollers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>201</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>207</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>136</integer>
         <key>Title</key><string>Section 2.2 - Initialize Direction Led Patrollers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>202</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>208</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>143</integer>
         <key>Title</key><string>Section 2.3 - Define the in-play movements of a Patroller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>203</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>209</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>158</integer>
         <key>Title</key><string>Chapter 3 - Define rules move moving patrollers</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>204</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>210</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>160</integer>
         <key>Title</key><string>Section 3.1 - Set up the patrolling activity and associated variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>205</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>211</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>170</integer>
         <key>Title</key><string>Section 3.2 - Before rules for the patrolling activity</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>206</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>212</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>291</integer>
         <key>Title</key><string>Section 3.3 - Carry out moving the Patroller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>207</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>213</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>315</integer>
         <key>Title</key><string>Section 3.4 - After moving the Patroller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>208</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>214</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>383</integer>
         <key>Title</key><string>Section 3.5 - Reporting door rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>209</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>215</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>398</integer>
         <key>Title</key><string>Section 3.6 - Reporting movement rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>210</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>216</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>425</integer>
         <key>Title</key><string>Section 3.7 - Activation rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>211</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>217</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>434</integer>
         <key>Title</key><string>Section 3.8 - Rule for deciding if it is the patroller's turn to move</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>212</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>218</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>448</integer>
         <key>Title</key><string>Chapter 4 - Error Checking - Not for release</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>213</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>219</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>450</integer>
         <key>Title</key><string>Section 4.1 - Code for validation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>214</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
+    <key>220</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\michael callaghan\patrollers.i7x</string>
         <key>Line</key><integer>458</integer>
         <key>Title</key><string>Section 4.2 - Validation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>215</key><dict>
-        <key>Filename</key><string>C:\Users\Owner\Documents\Inform\Extensions\emily short\facing.i7x</string>
+    <key>221</key><dict>
+        <key>Filename</key><string>C:\Users\Marshall CTR Lucas\Documents\Inform\Extensions\emily short\facing.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 9 of Facing by Emily Short begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>216</key><dict>
+    <key>222</key><dict>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>scene understood is a scene which varies</string>
         <key>Level</key><integer>0</integer>

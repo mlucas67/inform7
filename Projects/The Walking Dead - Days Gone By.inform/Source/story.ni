@@ -7,7 +7,7 @@ Release along with a solution, source text, a website.
 Index map with room-shape set to "square" and room-size set to 60 and room-name-size set to 9 and room-name-length set to 13 and route-thickness set to 15 and room-outline set to off and map-outline set to off and route-colour set to "White" and room-colour set to "White" and font set to "Trebuchet-MS-Regular" and EPS file.
 
 Include Locksmith by Emily Short.
-
+Include Armed by David Ratliff.
 Include Exit Lister by Gavin Lambert.
 
 Use full-length room descriptions, American dialect, no scoring, and the serial comma. Use memory economy. Use MAX_SYMBOLS of 7000. 
@@ -95,7 +95,7 @@ Include Patrollers by Michael Callaghan
 
 Freshness is a kind of value.  The Freshnesses are Fresh, DayOld, Stale, Rotted and Immobile.
 
-A walker is a kind of Patroller.  A walker is usually Aimless.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The odor of a walker is usually "rotting flesh." The Drive of a walker is usually 60.  The description of a walker is usually "[printed name of the noun] (walker)"
+A walker is a kind of Patroller.  A walker is usually Aimless.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The odor of a walker is usually "rotting flesh." The Drive of a walker is usually 60.  The description of a walker is usually "[printed name of the noun] (walker)."  A walker is usually hostile.  The max health of a walker is 1.
 
 A roamer is a kind of walker.  A roamer is usually Aimless.  A roamer is usually On Patrol.
 
@@ -152,21 +152,19 @@ Section 4 - People
 
 A nurse is a kind of person.
 
+Rule for printing the name of the player: say "Rick Grimes".
+
 Section 5 - Clothes
 
-Section 6 - Actions
+A holster is an open player's holdall.
+
+Section 6 - Weapons
+
+A pistol is a kind of fire arm.
+
+Section 7 - Actions
 
 Include Facing by Emily Short.
-
-Chapter 3 - New Verbs
-
-Calling is an action applying to one thing.
-
-Understand "call [someone]" as calling.
-
-After calling a nurse:
-	say "Nothing happens.";
-	stop the action.
 
 Understand "look out [something]" as examining.
 
@@ -186,6 +184,8 @@ The Hospital Room is a room in Harrison Memorial Hospital.  A Hospital Bed is a 
 The player is on the Hospital Bed.  The player is reclining.  The player is wearing a Hospital Robe and a pair of Boxer Shorts.
 
 The TV is a television in the Hospital Room.
+
+The player is wearing a holster.  The Colt Python is a pistol in the holster.
 
 The Window is a backdrop.  It is in the Hospital Room.  The initial appearance of the window is "Sunlight and fresh air stream in from the open window."  The description of the window is "You can see a good portion of the small town of Cynthiana, Kentucky, where you serve as Deputy Sheriff."
 

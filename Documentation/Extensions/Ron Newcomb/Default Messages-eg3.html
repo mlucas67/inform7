@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1051(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Default Messages by Ron Newcomb.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1051()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Default Messages<font color="#404040"> by </font>Ron Newcomb</b><p><small></small><p><p><hr><p>
+<p>
+ This extension allows the author to replace the many bits of prose that exist inside Inform 7. It is done by continuing a table, Custom Library Messages, like so:<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1052(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table of custom library messages (continued)[=0x000A=]library-action[=0x0009=]library-message-id[=0x0009=]library-message-text[=0x000A=]--[=0x0009=]10[=0x0009=][=0x0022=]I beg your pardon, but I didn[=0x0027=]t catch your drift.[=0x0022=][=0x000A=]going action[=0x0009=]2[=0x0009=][=0x0022=]You can[=0x0027=]t go [noun] from here.[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1052()"><img border=0 src=inform:/doc_images/paste.png></a> Table of custom library messages (continued)<br> library-action library-message-id library-message-text<br> -- 10 &quot;I beg your pardon, but I didn't catch your drift.&quot;<br> going action 2 &quot;You can't go [noun] from here.&quot;</font></blockquote>
+<p>
+ The first column holds the action to which the message applies, or if the message comes from some other place, a blank entry. Because each action has multiple messages (roughly one per rule), the second column holds a number that selects which. An action's messages are typically numbered from 1 on up. To see which number a particular message is, we can be alerted when the message happens.<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1053(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Use library message alerts.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1053()"><img border=0 src=inform:/doc_images/paste.png></a> Use library message alerts.</font></blockquote>
+<p>
+ This gives something like the following transcript.<blockquote><font color="#000080"> &gt; TAKE PILLOW<br> { taking action #1 }</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Taken.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> &gt; TAKE A NAP<br> { library message #30 }</font></blockquote>
+<p>
+<blockquote><font color="#000080"> You can't see any such thing.</font></blockquote>
+<p>
+ We then add to the table as appropriate. If the action within the curly braces is &quot;library message&quot;, then we use the -- blank entry in the action column.<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1054(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table of custom library messages (continued)[=0x000A=]library-action[=0x0009=]library-message-id[=0x0009=]library-message-text[=0x000A=]taking action[=0x0009=]1[=0x0009=][=0x0022=]You[=0x0027=]ve always wanted [a noun].[=0x0022=][=0x000A=]--[=0x0009=]30[=0x0009=][=0x0022=]I don[=0x0027=]t know the word [=0x0027=][the misunderstood word][=0x0027=].[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1054()"><img border=0 src=inform:/doc_images/paste.png></a> Table of custom library messages (continued)<br> library-action library-message-id library-message-text<br> taking action 1 &quot;You've always wanted [a noun].&quot;<br> -- 30 &quot;I don't know the word '[the misunderstood word]'.&quot;</font></blockquote>
+<p>
+ It is worth mentioning that once we replace a default message, the use option will no longer alert us when it's used. Thus, when our first readers give us a transcript of their experience, we can search the transcript for the # hash or } brace characters to quickly find what defaults have not yet been replaced. Furthermore, alerts are always turned off in a release build, just in case the option is long forgotten when it comes time to publish.
+<p>
+ There's a few variables that come in handy for certain messages. &quot;The noun&quot; and &quot;the second noun&quot; are of course available, as is &quot;the number understood&quot; and similar. The others are:<blockquote><font color="#000080"> the person asked -- we cannot use &quot;the actor&quot; within our table, but this is identical.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message verb -- this would be &quot;take&quot; for the taking action, &quot;go&quot; for the going action, etc. (More precisely, it is the entire command predicate typically used in &quot;What do you want to take?&quot;)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message pronoun -- when our reader uses a pronoun, this is the pronoun she used.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> pronoun reference object -- the noun that the above pronoun refers to.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message object, second library message object, library message amount -- effectively synonymous with the noun, the second noun, and the number understood for non-action messages.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message action, library message number -- these are the variables that are compared to our two table columns. The first differs from the library message verb in that it has the present participle (&quot;taking&quot;) rather than the root form (&quot;take&quot;). For actions which take two nouns, the preposition is also included (&quot;giving it to&quot;).</font></blockquote>
+<p>
+ A final note on line breaks: usually the extension guesses correctly, but for those cases where it adds an extra, the say phrase &quot;[ignore library line break]&quot; should cure it. (This can be mixed-n-matched with the normal &quot;[run paragraph on]&quot; if need be.)
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1055(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table of custom library messages (continued)[=0x000A=]library-action[=0x0009=]library-message-id[=0x0009=]library-message-text[=0x000A=]--[=0x0009=]35[=0x0009=][=0x0022=]I see nothing that [=0x0027=][library message pronoun][=0x0027=] could possibly refer to.[=0x0022=][=0x000A=]going action[=0x0009=]2[=0x0009=][=0x0022=]I don[=0x0027=]t think [library message action] [noun] from here is possible.[=0x0022=][=0x000A=]--[=0x0009=]49[=0x0009=][=0x0022=]Which will you [library message verb]?[=0x0022=][=0x000A=]giving it to action[=0x0009=]2[=0x0009=][=0x0022=]You put [the noun] into your other hand.[=0x0022=][=0x000A=]--[=0x0009=]50[=0x0009=][=0x0022=]You[=0x0027=]ve [if library message amount [=0x003E=] 0]gained[otherwise]lost[end if] [library message amount in words] point[s][ignore library line break][=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1055()"><img border=0 src=inform:/doc_images/paste.png></a> Table of custom library messages (continued)<br> library-action library-message-id library-message-text<br> -- 35 &quot;I see nothing that '[library message pronoun]' could possibly refer to.&quot;<br> going action 2 &quot;I don't think [library message action] [noun] from here is possible.&quot;<br> -- 49 &quot;Which will you [library message verb]?&quot;<br> giving it to action 2 &quot;You put [the noun] into your other hand.&quot;<br> -- 50 &quot;You've [if library message amount &gt; 0]gained[otherwise]lost[end if] [library message amount in words] point[s][ignore library line break]&quot;</font></blockquote>
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Poster Shopping</font></b></a><br>A vignette.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">But Then What?</font></b></a><br>Regarding a snafu with the &quot;only understood as far as&quot; error.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Tips &amp; Techniques</font></b></a><br>This appendix contains phrases for miscellaneous tasks: testing and finding messages, finding bits of information, etc.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ This testing command will print the library message for any number given on the command line. For example, entering MISC 9 will print &quot;It is now pitch dark in here!&quot;, or whatever message we've replaced it with.<blockquote><font color="#000080"> Understand &quot;misc [number]&quot; as a mistake (&quot;[miscellaneous library message the number understood][run paragraph on]&quot;).</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To say miscellaneous library message (N - a number):<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  L__M( ##Miscellany, {N} ); -) .</font></blockquote>
+<p>
+ The following will print the names of all the actions as they should appear in the table. This is useful when we can't figure out the exact wording. (Note that one action, &quot;the requesting the story file version action&quot;, has no text of its own to replace, so will never appear in our table.)<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; repeat with X running through all action names:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[X] action.&quot;</font></blockquote>
+<p>
+ A common parser message in games of yore went along the lines of &quot;I don't understand the word 'kludge'.&quot; For this, miscellaneous message #30 could use &quot;[the misunderstood word]&quot;. Try it with &quot;examine lovely me.&quot; Or try it in miscellaneous message #23 with &quot;I don't know a Mr. [misunderstood word].&quot; Test that one with &quot;Elvis, look&quot; after Elvis has left the story. Note that it isn't always set properly, so try many variations just in case.<blockquote><font color="#000080"> To decide which snippet is the misunderstood word:<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  (((wn - 1) * 100) + 1) -) .</font></blockquote>
+<p>
+ Similarly for the &quot;I only understood you as far as examining yourself.&quot; in response to commands like EXAMINE ME CLOSELY NOW comes the rest of the phrase. See the previous example &quot;But Then What?&quot; for its usage.<blockquote><font color="#000080"> To decide which snippet is what was misunderstood:<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  (((wn - 1) * 100) + (WordCount() - 2)) -) .</font></blockquote>
+<p>
+ One more tool for some parser messages is asking whether the misunderstood word is known at all, or is known but not expected at the place where the player used it.<blockquote><font color="#000080"> To decide if the misunderstood word is known at all:<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  (wn--, NextWord() ~= 0) -) .</font></blockquote>
+<p>
+ Related is entering action #2, &quot;That's not something you can enter/stand/sit on.&quot; Regardless whether the player sits on a chair, lies on a bed, climbs into a car, or stands on a stool, the same action, entering, is used. But when the player attempts these actions on something that isn't enterable, it's nice if the refusal message correctly acknowledges which action the player tried. We do this by again quoting the relevant part of the player's command, namely, &quot;[the quoted verb]&quot;. Additionally, the standard message, in order to tack on appropriate prepositions, sends the snippet to a phrase that works much like an After Reading A Command rule. Try that one with &quot;[the quoted verb posture]&quot;.<blockquote><font color="#000080"> To decide which snippet is the quoted verb:<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  ((verb_wordnum * 100) + 1) -) .</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide which text is (quoted word - a snippet) posture:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the quoted word matches &quot;stand&quot;, decide on &quot;stand on&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; if the quoted word matches &quot;sit&quot;, decide on &quot;sit down on&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; if the quoted word matches &quot;lie&quot;, decide on &quot;lie down on&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise decide on &quot;enter&quot;.</font></blockquote>
+<p>
+ Snippets in general are very useful things when used to liven up error messages. For example, replacing the bland &quot;There is no reply.&quot; of the catch-all answering action with &quot;'And [the topic understood] to you too, good sir,' replies [the noun].&quot; goes a long way in sustaining versimilitude. So what, then, is a snippet? It is a run of words, entered by the player, such as &quot;the three words starting at word #4&quot; which picks word #4, word #5, and word #6, including the spaces between.<blockquote><font color="#000080"> To decide which snippet is the (amount - a number) words/word starting with/at word number (position - a number):<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  (({position} * 100) + {amount}) -) .</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide which snippet is the player's first two command words:<br>&nbsp;&nbsp;&nbsp;&nbsp; decide on the two words starting with word number one.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide which number is the position of the verb:<br>&nbsp;&nbsp;&nbsp;&nbsp; (-  (verb_wordnum) -) .</font></blockquote>
+<p>
+ One message, taking action #13, mentions the player putting something into his holdall. While a phrase such as &quot;[a random player's holdall]&quot; would likely suffice when we replace the message, games with more than one holdall might need the following variable.<blockquote><font color="#000080"> The current player's holdall is a player's holdall that varies.<br> The current player's holdall variable translates into I6 as &quot;SACK_OBJECT&quot;.</font></blockquote>
+<p>
+ Several standard messages need to list several objects, notably opening, searching, and looking. While this may be one time where using rule-replacement is the way to go, listing the contents from a say phrase is a generally useful thing to have. And since commas cannot appear in say-phrases, try replacing them with plus signs, such as this doozy from opening action #4: &quot;You open [the noun], revealing [if the number of not undescribed not scenery things in the noun is at least one][list the contents of the noun with the as a sentence list option + the tersely list option + the not listing concealed items list option][otherwise]nothing[end if].&quot;
+<p>
+ We'll even throw in a section heading for free, keeping the contents pane of the index tidy.<blockquote><font color="#000080"> Section - List the Contents of Something, with added options</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To say list the contents of (X - object) with (N - number): (-  WriteListFrom(child({X}), {N}); -) .</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The as a sentence list option is a number that varies. The as a sentence list option variable translates into I6 as &quot;ENGLISH_BIT&quot;.<br> The tersely list option is a number that varies. The tersely list option variable translates into I6 as &quot;TERSE_BIT&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The is-are list option is a number that varies. The is-are list option variable translates into I6 as &quot;ISARE_BIT&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The suppressing all articles list option is a number that varies. The suppressing all articles list option variable translates into I6 as &quot;NOARTICLE_BIT&quot;.<br> The using the definite article list option is a number that varies. The using the definite article list option variable translates into I6 as &quot;DEFART_BIT&quot;.<br> The capitalise first article list option is a number that varies. The capitalise first article list option variable translates into I6 as &quot;CFIRSTART_BIT&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> With newlines list option is a number that varies. The with newlines list option variable translates into I6 as &quot;NEWLINE_BIT&quot;.<br> The indented list option is a number that varies. The indented list option variable translates into I6 as &quot;INDENT_BIT&quot;.<br> With extra indentation list option is a number that varies. The with extra indentation list option variable translates into I6 as &quot;EXTRAINDENT_BIT&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The giving brief inventory information list option is a number that varies. The giving brief inventory information list option variable translates into I6 as &quot;PARTINV_BIT&quot;.<br> The giving inventory information list option is a number that varies. The giving inventory information list option variable translates into I6 as &quot;FULLINV_BIT&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The including contents list option is a number that varies. The including contents list option variable translates into I6 as &quot;RECURSE_BIT&quot;.<br> The including all contents list option is a number that varies. The including all contents list option variable translates into I6 as &quot;ALWAYS_BIT&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The not listing concealed items list option is a number that varies. The not listing concealed items list option variable translates into I6 as &quot;CONCEAL_BIT&quot;.<br> The listing marked items only list option is a number that varies. The listing marked items only list option variable translates into I6 as &quot;WORKFLAG_BIT&quot;.</font></blockquote>
+<p>
+ Finally is a technical trick that could free up enough space for a page or so of prose. This extension works much like Instead Of rules: it gets first chance at any message to be printed, and when it finds a situation to which it applies (i.e., the message to be printed is in the table of custom default messages,) it says its own message &quot;instead&quot;. The original message still sits in memory, taking up space needlessly. But because all the original messages are contained within the same monolithic rule, we cannot de-list that rule. Unless, of course, our table has all messages in it anyway. Even if we have only half the number of messages re-written, copying the remaining ones unaltered to our table could be worth it just to de-list that rule. With this:
+<p>
+<blockquote><font color="#000080"> Include (-   
+	[ LanguageLM; 
+	#ifdef DEBUG;  
+		print &quot;{ &quot;;
+		if (lm_act == ##Miscellany or ##ListMiscellany) print &quot;library message&quot;;
+		else print (SayActionName) lm_act, &quot; action&quot;;
+		print &quot; #&quot;, lm_n, &quot; }&quot;;
+	#endif;
+	];  -)  instead of &quot;Long Texts&quot; in &quot;Language.i6t&quot;.</font></blockquote>
+<p>
+ That gains us back about 10K of memory, which is about 2K words of prose, give or take. (We do leave in an error message in the debug build to flag anything we missed, just in case.)
+<p>
+</font></td></tr></table><p><hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg4.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg4.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Complete Table</font></b></a><br>A fully complete table of library messages. Find a message within, or copy pieces out.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

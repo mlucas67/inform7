@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1034(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Default Messages by Ron Newcomb.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1034()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Default Messages<font color="#404040"> by </font>Ron Newcomb</b><p><small></small><p><p><hr><p>
+<p>
+ This extension allows the author to replace the many bits of prose that exist inside Inform 7. It is done by continuing a table, Custom Library Messages, like so:<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1035(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table of custom library messages (continued)[=0x000A=]library-action[=0x0009=]library-message-id[=0x0009=]library-message-text[=0x000A=]--[=0x0009=]10[=0x0009=][=0x0022=]I beg your pardon, but I didn[=0x0027=]t catch your drift.[=0x0022=][=0x000A=]going action[=0x0009=]2[=0x0009=][=0x0022=]You can[=0x0027=]t go [noun] from here.[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1035()"><img border=0 src=inform:/doc_images/paste.png></a> Table of custom library messages (continued)<br> library-action library-message-id library-message-text<br> -- 10 &quot;I beg your pardon, but I didn't catch your drift.&quot;<br> going action 2 &quot;You can't go [noun] from here.&quot;</font></blockquote>
+<p>
+ The first column holds the action to which the message applies, or if the message comes from some other place, a blank entry. Because each action has multiple messages (roughly one per rule), the second column holds a number that selects which. An action's messages are typically numbered from 1 on up. To see which number a particular message is, we can be alerted when the message happens.<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1036(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Use library message alerts.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1036()"><img border=0 src=inform:/doc_images/paste.png></a> Use library message alerts.</font></blockquote>
+<p>
+ This gives something like the following transcript.<blockquote><font color="#000080"> &gt; TAKE PILLOW<br> { taking action #1 }</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Taken.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> &gt; TAKE A NAP<br> { library message #30 }</font></blockquote>
+<p>
+<blockquote><font color="#000080"> You can't see any such thing.</font></blockquote>
+<p>
+ We then add to the table as appropriate. If the action within the curly braces is &quot;library message&quot;, then we use the -- blank entry in the action column.<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1037(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table of custom library messages (continued)[=0x000A=]library-action[=0x0009=]library-message-id[=0x0009=]library-message-text[=0x000A=]taking action[=0x0009=]1[=0x0009=][=0x0022=]You[=0x0027=]ve always wanted [a noun].[=0x0022=][=0x000A=]--[=0x0009=]30[=0x0009=][=0x0022=]I don[=0x0027=]t know the word [=0x0027=][the misunderstood word][=0x0027=].[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1037()"><img border=0 src=inform:/doc_images/paste.png></a> Table of custom library messages (continued)<br> library-action library-message-id library-message-text<br> taking action 1 &quot;You've always wanted [a noun].&quot;<br> -- 30 &quot;I don't know the word '[the misunderstood word]'.&quot;</font></blockquote>
+<p>
+ It is worth mentioning that once we replace a default message, the use option will no longer alert us when it's used. Thus, when our first readers give us a transcript of their experience, we can search the transcript for the # hash or } brace characters to quickly find what defaults have not yet been replaced. Furthermore, alerts are always turned off in a release build, just in case the option is long forgotten when it comes time to publish.
+<p>
+ There's a few variables that come in handy for certain messages. &quot;The noun&quot; and &quot;the second noun&quot; are of course available, as is &quot;the number understood&quot; and similar. The others are:<blockquote><font color="#000080"> the person asked -- we cannot use &quot;the actor&quot; within our table, but this is identical.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message verb -- this would be &quot;take&quot; for the taking action, &quot;go&quot; for the going action, etc. (More precisely, it is the entire command predicate typically used in &quot;What do you want to take?&quot;)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message pronoun -- when our reader uses a pronoun, this is the pronoun she used.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> pronoun reference object -- the noun that the above pronoun refers to.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message object, second library message object, library message amount -- effectively synonymous with the noun, the second noun, and the number understood for non-action messages.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> library message action, library message number -- these are the variables that are compared to our two table columns. The first differs from the library message verb in that it has the present participle (&quot;taking&quot;) rather than the root form (&quot;take&quot;). For actions which take two nouns, the preposition is also included (&quot;giving it to&quot;).</font></blockquote>
+<p>
+ A final note on line breaks: usually the extension guesses correctly, but for those cases where it adds an extra, the say phrase &quot;[ignore library line break]&quot; should cure it. (This can be mixed-n-matched with the normal &quot;[run paragraph on]&quot; if need be.)
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1038(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table of custom library messages (continued)[=0x000A=]library-action[=0x0009=]library-message-id[=0x0009=]library-message-text[=0x000A=]--[=0x0009=]35[=0x0009=][=0x0022=]I see nothing that [=0x0027=][library message pronoun][=0x0027=] could possibly refer to.[=0x0022=][=0x000A=]going action[=0x0009=]2[=0x0009=][=0x0022=]I don[=0x0027=]t think [library message action] [noun] from here is possible.[=0x0022=][=0x000A=]--[=0x0009=]49[=0x0009=][=0x0022=]Which will you [library message verb]?[=0x0022=][=0x000A=]giving it to action[=0x0009=]2[=0x0009=][=0x0022=]You put [the noun] into your other hand.[=0x0022=][=0x000A=]--[=0x0009=]50[=0x0009=][=0x0022=]You[=0x0027=]ve [if library message amount [=0x003E=] 0]gained[otherwise]lost[end if] [library message amount in words] point[s][ignore library line break][=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1038()"><img border=0 src=inform:/doc_images/paste.png></a> Table of custom library messages (continued)<br> library-action library-message-id library-message-text<br> -- 35 &quot;I see nothing that '[library message pronoun]' could possibly refer to.&quot;<br> going action 2 &quot;I don't think [library message action] [noun] from here is possible.&quot;<br> -- 49 &quot;Which will you [library message verb]?&quot;<br> giving it to action 2 &quot;You put [the noun] into your other hand.&quot;<br> -- 50 &quot;You've [if library message amount &gt; 0]gained[otherwise]lost[end if] [library message amount in words] point[s][ignore library line break]&quot;</font></blockquote>
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Poster Shopping</font></b></a><br>A vignette.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">But Then What?</font></b></a><br>Regarding a snafu with the &quot;only understood as far as&quot; error.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Tips &amp; Techniques</font></b></a><br>This appendix contains phrases for miscellaneous tasks: testing and finding messages, finding bits of information, etc.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Default Messages-eg4.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Default Messages-eg4.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Complete Table</font></b></a><br>A fully complete table of library messages. Find a message within, or copy pieces out.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

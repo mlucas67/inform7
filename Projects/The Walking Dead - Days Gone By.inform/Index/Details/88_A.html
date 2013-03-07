@@ -201,35 +201,175 @@
 <p class="tightin1">A single action in detail.<br><i>About the action rulebooks&nbsp;&nbsp;<a href=inform:/doc188.html><img border=0 src=inform:/help.png></a></i></p>
 </font></td></tr></table></font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p><p>
 <!--NAVIGATION ENDS-->
-<p><b>Actions defined by the extension Postures by Emily Short</b><br><b>Sitting on</b>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=88_A.html><img border=0 src=inform:/Beneath.png></a>, Lying on&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=89_A.html><img border=0 src=inform:/Beneath.png></a>, Standing up on&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=90_A.html><img border=0 src=inform:/Beneath.png></a>, Lying down&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=91_A.html><img border=0 src=inform:/Beneath.png></a>, Sitting down&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=92_A.html><img border=0 src=inform:/Beneath.png></a>, Standing up&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=93_A.html><img border=0 src=inform:/Beneath.png></a>, Taking position&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-&nbsp;<a href=94_A.html><img border=0 src=inform:/Beneath.png></a><p><hr><p><b>Sitting on <font color="#000080">something</font> </b>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-<a name=A88_sitting_on></a> (<i>past tense</i> sitted on)<br>
+<p><b>Actions defined by the extension Rideable Vehicles by Graham Nelson</b><br><b>Mounting</b>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+&nbsp;<a href=88_A.html><img border=0 src=inform:/Beneath.png></a>, Dismounting&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+&nbsp;<a href=89_A.html><img border=0 src=inform:/Beneath.png></a><p><hr><p><b>Mounting <font color="#000080">something</font> </b>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a name=A88_mounting></a> (<i>past tense</i> mounted)<br>
 <p><hr><p><b>Typed commands leading to this action</b><p>
-<p class="hangingin2">&quot;sit on/in [something]&quot;&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<p class="hangingin2">&quot;ride [something]&quot;&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p><p class="hangingin2">&quot;mount [something]&quot;&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p><p><b>Rules controlling this action</b><p>
-<p class="hangingin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor sitting on</i>&nbsp;&nbsp;<font color="#800000">standard carry out sitting on rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode2411(code) {
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything except searching or examining to a person (called the corpse)</i>&nbsp;&nbsp;<font color="#800000">respect the dead rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2744(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
-    myProject.pasteCode('standard carry out sitting on rule');
+    myProject.pasteCode('respect the dead rule');
 }
 </script>
-<a href="javascript:pasteCode2411()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode2412(code) {
+<a href="javascript:pasteCode2744()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2745(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
-    myProject.pasteCode('The standard carry out sitting on rule is not listed in the carry out sitting on rulebook.[=0x000A=]');
+    myProject.pasteCode('The respect the dead rule is not listed in the before rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2412()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Emily%20Short/Postures.html' title="Postures by Emily Short" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a href="javascript:pasteCode2745()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>anyone trying doing anything</i>&nbsp;&nbsp;<font color="#800000">dead men tell no tales rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2746(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('dead men tell no tales rule');
+}
+</script>
+<a href="javascript:pasteCode2746()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2747(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The dead men tell no tales rule is not listed in the before rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2747()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/David%20Ratliff/Armed.html' title="Armed by David Ratliff" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">can't mount when mounted on an animal rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2748(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('can[=0x0027=]t mount when mounted on an animal rule');
+}
+</script>
+<a href="javascript:pasteCode2748()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2749(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The can[=0x0027=]t mount when mounted on an animal rule is not listed in the check mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2749()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">can't mount when mounted on a vehicle rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2750(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('can[=0x0027=]t mount when mounted on a vehicle rule');
+}
+</script>
+<a href="javascript:pasteCode2750()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2751(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The can[=0x0027=]t mount when mounted on a vehicle rule is not listed in the check mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2751()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">can't mount something unrideable rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2752(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('can[=0x0027=]t mount something unrideable rule');
+}
+</script>
+<a href="javascript:pasteCode2752()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2753(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The can[=0x0027=]t mount something unrideable rule is not listed in the check mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2753()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">can't mount something carried rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2754(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('can[=0x0027=]t mount something carried rule');
+}
+</script>
+<a href="javascript:pasteCode2754()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2755(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The can[=0x0027=]t mount something carried rule is not listed in the check mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2755()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">can't mount something unreachable rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2756(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('can[=0x0027=]t mount something unreachable rule');
+}
+</script>
+<a href="javascript:pasteCode2756()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2757(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The can[=0x0027=]t mount something unreachable rule is not listed in the check mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2757()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">standard mounting rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2758(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('standard mounting rule');
+}
+</script>
+<a href="javascript:pasteCode2758()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2759(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The standard mounting rule is not listed in the carry out mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2759()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+</p>
+<br><p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor mounting</i>&nbsp;&nbsp;<font color="#800000">standard report mounting rule</font>&nbsp;&nbsp;<script language="JavaScript">
+function pasteCode2760(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('standard report mounting rule');
+}
+</script>
+<a href="javascript:pasteCode2760()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2761(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The standard report mounting rule is not listed in the report mounting rulebook.[=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2761()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Graham%20Nelson/Rideable%20Vehicles.html' title="Rideable Vehicles by Graham Nelson" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
 <br><p>
 <!--CONTENT ENDS-->
