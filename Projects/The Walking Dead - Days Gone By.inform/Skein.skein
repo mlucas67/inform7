@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02BF3470" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x02927E10" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02C21638"/>
-  <item nodeId="node-0x02BF3470">
+  <activeNode nodeId="node-0x02927E10"/>
+  <item nodeId="node-0x02927E10">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">The Walking Dead - Days Gone By&#x000A;The Walking Dead - Days Gone By by Marshall Lucas&#x000A;Release 1 / Serial number 130306 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;You can go west through the Hospital Room Door (closed) from here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">*** Run-time problem P45: Attempt to change the player to a person off-stage.&#x000A;&#x000A;The Walking Dead - Days Gone By&#x000A;The Walking Dead - Days Gone By by Marshall Lucas&#x000A;Release 1 / Serial number 130306 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;&#x000A;You groggily awaken to the sight of your best friend Shane bringing you flowers.  You recall the incident that put you here, in the hospital, when you were . . . what, what is that?  You fully awaken in your empty hospital room.  A small boquet of dying flowers is on the stand next to your bed.  You try to call the nurse, but no one answers.  The only thing you know for certain at the moment is that your are alive and your name is "Rick Grimes."  Aside from that, everything is quite foggy and it is eerily quiet.&#x000A;&#x000A;Hospital Room (on the Hospital Bed)&#x000A;You can see a Hospital Room Door and a TV here.&#x000A;&#x000A;You can go west through the Hospital Room Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02C06F00"/>
-      <child nodeId="node-0x02BFCB08"/>
-      <child nodeId="node-0x02BFCEF8"/>
-      <child nodeId="node-0x02CBE900"/>
-      <child nodeId="node-0x02CBEA50"/>
+      <child nodeId="node-0x02927F70"/>
+      <child nodeId="node-0x0291C4D8"/>
+      <child nodeId="node-0x0291C7E8"/>
+      <child nodeId="node-0x0291E7C8"/>
+      <child nodeId="node-0x0291E918"/>
     </children>
   </item>
-  <item nodeId="node-0x02C06F00">
+  <item nodeId="node-0x02927F70">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening the Hospital Room Door)&#x000A;You'll have to get off the Hospital Bed first.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -25,11 +25,11 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C07410"/>
-      <child nodeId="node-0x02BFB0B0"/>
+      <child nodeId="node-0x029271B0"/>
+      <child nodeId="node-0x0291C238"/>
     </children>
   </item>
-  <item nodeId="node-0x02C07410">
+  <item nodeId="node-0x029271B0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north and south from here.&#x000A;&#x000A;Walker arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -37,10 +37,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C07658"/>
+      <child nodeId="node-0x029273F8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C07658">
+  <item nodeId="node-0x029273F8">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;On the cafeteria door are hastily painted words.&#x000A;&#x000A;You can also see Stairwell Door here.&#x000A;&#x000A;You can go north through the Cafeteria Door (closed), south to Hallway, and west through Stairwell Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -48,12 +48,12 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C078B0"/>
-      <child nodeId="node-0x02C07D98"/>
-      <child nodeId="node-0x02BF9EA8"/>
+      <child nodeId="node-0x02927650"/>
+      <child nodeId="node-0x02919958"/>
+      <child nodeId="node-0x02919B80"/>
     </children>
   </item>
-  <item nodeId="node-0x02C078B0">
+  <item nodeId="node-0x02927650">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening the Cafeteria Door)&#x000A;As you reach for the door a decayed looking arm shoots out to try and grab you from between the double doors.&#x000A;&#x000A;(first unlocking the Cafeteria Door)&#x000A;You lack a key that fits the Cafeteria Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -61,11 +61,11 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C07A50"/>
-      <child nodeId="node-0x02C07C60"/>
+      <child nodeId="node-0x029276C0"/>
+      <child nodeId="node-0x02919820"/>
     </children>
   </item>
-  <item nodeId="node-0x02C07A50">
+  <item nodeId="node-0x029276C0">
     <command xml:space="preserve">examine door</command>
     <result xml:space="preserve">Someone has chained the doors shut and painted the words "Do not open! Dead inside!" on the front of it.&#x000A;&#x000A;Walker1 and Walker2 arrive.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -73,7 +73,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C07C60">
+  <item nodeId="node-0x02919820">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">As you reach for the door a decayed looking arm shoots out to try and grab you from between the double doors.&#x000A;&#x000A;(first unlocking the Cafeteria Door)&#x000A;You lack a key that fits the Cafeteria Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -81,7 +81,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C07D98">
+  <item nodeId="node-0x02919958">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">(first unlocking the Cafeteria Door)&#x000A;You lack a key that fits the Cafeteria Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -89,10 +89,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C07F38"/>
+      <child nodeId="node-0x02919AF8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C07F38">
+  <item nodeId="node-0x02919AF8">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening the Cafeteria Door)&#x000A;(first unlocking the Cafeteria Door)&#x000A;You lack a key that fits the Cafeteria Door.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -100,7 +100,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BF9EA8">
+  <item nodeId="node-0x02919B80">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening Stairwell Door)&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -108,10 +108,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFA040"/>
+      <child nodeId="node-0x02919BF0"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFA040">
+  <item nodeId="node-0x02919BF0">
     <command xml:space="preserve">d</command>
     <result xml:space="preserve">Bottom of the Stairwell&#x000A;You can see a Stairwell Door here.&#x000A;&#x000A;You can go north through the Stairwell Door (closed) and up from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -119,10 +119,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFA0B0"/>
+      <child nodeId="node-0x02919C60"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFA0B0">
+  <item nodeId="node-0x02919C60">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening the Stairwell Door)&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -130,10 +130,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFA6B8"/>
+      <child nodeId="node-0x02919CD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFA6B8">
+  <item nodeId="node-0x02919CD0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Millersburg Pike&#x000A;You can see an open Stairwell Door, a Bicycle, and the Walker here.&#x000A;&#x000A;You can go northwest and south through the open Stairwell Door to Bottom of the Stairwell from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -141,13 +141,13 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFA818"/>
-      <child nodeId="node-0x02BFAC50"/>
-      <child nodeId="node-0x02BFADA0"/>
-      <child nodeId="node-0x02BFAFD0"/>
+      <child nodeId="node-0x02919D40"/>
+      <child nodeId="node-0x0291A050"/>
+      <child nodeId="node-0x0291A1A0"/>
+      <child nodeId="node-0x0291C158"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFA818">
+  <item nodeId="node-0x02919D40">
     <command xml:space="preserve">nw</command>
     <result xml:space="preserve">E. Pine St &amp; Highland Ave&#x000A;You can go northwest, southeast to Millersburg Pike, and southwest from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -155,10 +155,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFA9B0"/>
+      <child nodeId="node-0x02919DB0"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFA9B0">
+  <item nodeId="node-0x02919DB0">
     <command xml:space="preserve">nw</command>
     <result xml:space="preserve">E. Pike St &amp; N. Elmarch Ave&#x000A;You can go north, northwest, south, and southeast to E. Pine St &amp; Highland Ave from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -166,10 +166,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAA20"/>
+      <child nodeId="node-0x02919E20"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAA20">
+  <item nodeId="node-0x02919E20">
     <command xml:space="preserve">nw</command>
     <result xml:space="preserve">E. Pike St &amp; S. Miller St&#x000A;You can go north, south, southeast to E. Pike St &amp; N. Elmarch Ave, and west from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -177,10 +177,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAA90"/>
+      <child nodeId="node-0x02919E90"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAA90">
+  <item nodeId="node-0x02919E90">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">E. Pike St &amp; Clifton Rd&#x000A;You can go south, east to E. Pike St &amp; S. Miller St, and west from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -188,10 +188,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAB00"/>
+      <child nodeId="node-0x02919F00"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAB00">
+  <item nodeId="node-0x02919F00">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">E. Pike St &amp; S. Church St&#x000A;You can go north, south, and east to E. Pike St &amp; Clifton Rd from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -199,10 +199,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAB70"/>
+      <child nodeId="node-0x02919F70"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAB70">
+  <item nodeId="node-0x02919F70">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -210,10 +210,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFABE0"/>
+      <child nodeId="node-0x02919FE0"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFABE0">
+  <item nodeId="node-0x02919FE0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">E. Pleasant St &amp; Church St&#x000A;You can go north, south to E. Pike St &amp; S. Church St, and east from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -221,7 +221,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BFAC50">
+  <item nodeId="node-0x0291A050">
     <command xml:space="preserve">ride bicycle</command>
     <result xml:space="preserve">You mount the Bicycle.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -229,10 +229,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFACC0"/>
+      <child nodeId="node-0x0291A0C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFACC0">
+  <item nodeId="node-0x0291A0C0">
     <command xml:space="preserve">nw</command>
     <result xml:space="preserve">E. Pine St &amp; Highland Ave (on the Bicycle)&#x000A;You can go northwest, southeast to Millersburg Pike, and southwest from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -240,10 +240,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAD30"/>
+      <child nodeId="node-0x0291A130"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAD30">
+  <item nodeId="node-0x0291A130">
     <command xml:space="preserve">showme Dead Bicycle Rider</command>
     <result xml:space="preserve">Walker - walker&#x000A;location: in Bottom of the Stairwell&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker"&#x000A;printed plural name: "walkers"&#x000A;indefinite article: "the"&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hallway&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 0&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Following&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;Freshness: Immobile&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -251,7 +251,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BFADA0">
+  <item nodeId="node-0x0291A1A0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -259,10 +259,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAE10"/>
+      <child nodeId="node-0x0291A210"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAE10">
+  <item nodeId="node-0x0291A210">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -270,10 +270,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAE80"/>
+      <child nodeId="node-0x0291A280"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAE80">
+  <item nodeId="node-0x0291A280">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Millersburg Pike&#x000A;You can see an open Stairwell Door and a Bicycle here.&#x000A;&#x000A;You can go northwest and south through the open Stairwell Door to Bottom of the Stairwell from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -281,10 +281,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAEF0"/>
+      <child nodeId="node-0x0291A2F0"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAEF0">
+  <item nodeId="node-0x0291A2F0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -292,10 +292,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFAF60"/>
+      <child nodeId="node-0x0291C0E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFAF60">
+  <item nodeId="node-0x0291C0E8">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Bottom of the Stairwell&#x000A;You can see an open Stairwell Door, a Walker, and the Walker here.&#x000A;&#x000A;You can go north through the open Stairwell Door to Millersburg Pike and up from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -303,7 +303,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BFAFD0">
+  <item nodeId="node-0x0291C158">
     <command xml:space="preserve">examine walker</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -311,10 +311,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFB040"/>
+      <child nodeId="node-0x0291C1C8"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFB040">
+  <item nodeId="node-0x0291C1C8">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Millersburg Pike&#x000A;You can see an open Stairwell Door, a Bicycle, and the Walker here.&#x000A;&#x000A;You can go northwest and south through the open Stairwell Door to Bottom of the Stairwell from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -322,7 +322,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BFB0B0">
+  <item nodeId="node-0x0291C238">
     <command xml:space="preserve">stand</command>
     <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Walker2, a Hospital Room Door, and a Hospital Bed here.&#x000A;&#x000A;You can go west through the Hospital Room Door from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -330,10 +330,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFB120"/>
+      <child nodeId="node-0x0291C2A8"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFB120">
+  <item nodeId="node-0x0291C2A8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;It smells like rotting flesh in here&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -341,10 +341,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA5218"/>
+      <child nodeId="node-0x0291C318"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA5218">
+  <item nodeId="node-0x0291C318">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north and south to Hallway from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -352,10 +352,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA5288"/>
+      <child nodeId="node-0x0291C388"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA5288">
+  <item nodeId="node-0x0291C388">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;On the cafeteria door are hastily painted words.&#x000A;&#x000A;You can also see Stairwell Door here.&#x000A;&#x000A;You can go north through the Cafeteria Door (closed), south to Hallway, and west through Stairwell Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -363,10 +363,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA52F8"/>
+      <child nodeId="node-0x0291C3F8"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA52F8">
+  <item nodeId="node-0x0291C3F8">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north to Hallway and south to Hallway from here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -374,10 +374,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA5368"/>
+      <child nodeId="node-0x0291C468"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA5368">
+  <item nodeId="node-0x0291C468">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -385,7 +385,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BFCB08">
+  <item nodeId="node-0x0291C4D8">
     <command xml:space="preserve">get up</command>
     <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;You can go west through the Hospital Room Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -393,10 +393,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFCBE8"/>
+      <child nodeId="node-0x0291C5B8"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFCBE8">
+  <item nodeId="node-0x0291C5B8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening the Hospital Room Door)&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -404,10 +404,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFCC58"/>
+      <child nodeId="node-0x0291C628"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFCC58">
+  <item nodeId="node-0x0291C628">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north and south from here.&#x000A;&#x000A;Walker and Walker arrive.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -415,10 +415,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFCCC8"/>
+      <child nodeId="node-0x0291C698"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFCCC8">
+  <item nodeId="node-0x0291C698">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -426,10 +426,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFCD38"/>
+      <child nodeId="node-0x0291C708"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFCD38">
+  <item nodeId="node-0x0291C708">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -437,10 +437,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFCDA8"/>
+      <child nodeId="node-0x0291C778"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFCDA8">
+  <item nodeId="node-0x0291C778">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -448,7 +448,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02BFCEF8">
+  <item nodeId="node-0x0291C7E8">
     <command xml:space="preserve">smell</command>
     <result xml:space="preserve">You smell nothing unexpected.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -456,10 +456,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFCF68"/>
+      <child nodeId="node-0x0291C858"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFCF68">
+  <item nodeId="node-0x0291C858">
     <command xml:space="preserve">stand</command>
     <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;You can go west through the Hospital Room Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -467,10 +467,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFD048"/>
+      <child nodeId="node-0x0291E368"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFD048">
+  <item nodeId="node-0x0291E368">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -478,10 +478,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFD0B8"/>
+      <child nodeId="node-0x0291E3D8"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFD0B8">
+  <item nodeId="node-0x0291E3D8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -489,10 +489,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFD128"/>
+      <child nodeId="node-0x0291E448"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFD128">
+  <item nodeId="node-0x0291E448">
     <command xml:space="preserve">smell</command>
     <result xml:space="preserve">You smell nothing unexpected.&#x000A;&#x000A;Walker arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -500,10 +500,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFD198"/>
+      <child nodeId="node-0x0291E4B8"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFD198">
+  <item nodeId="node-0x0291E4B8">
     <command xml:space="preserve">smell walker</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -511,10 +511,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFD208"/>
+      <child nodeId="node-0x0291E528"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFD208">
+  <item nodeId="node-0x0291E528">
     <command xml:space="preserve">smell walker1</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -522,10 +522,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02BFD278"/>
+      <child nodeId="node-0x0291E598"/>
     </children>
   </item>
-  <item nodeId="node-0x02BFD278">
+  <item nodeId="node-0x0291E598">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Walker and a Hospital Room Door here.&#x000A;&#x000A;You can go north and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -533,10 +533,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBE740"/>
+      <child nodeId="node-0x0291E608"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBE740">
+  <item nodeId="node-0x0291E608">
     <command xml:space="preserve">smell the walker</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -544,10 +544,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBE7B0"/>
+      <child nodeId="node-0x0291E678"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBE7B0">
+  <item nodeId="node-0x0291E678">
     <command xml:space="preserve">smell walker2</command>
     <result xml:space="preserve">smells like rotting flesh.&#x000A;&#x000A;Walker arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -555,10 +555,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBE820"/>
+      <child nodeId="node-0x0291E6E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBE820">
+  <item nodeId="node-0x0291E6E8">
     <command xml:space="preserve">ask walker1 to smell walker2</command>
     <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -566,10 +566,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBE890"/>
+      <child nodeId="node-0x0291E758"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBE890">
+  <item nodeId="node-0x0291E758">
     <command xml:space="preserve">tell walker1 to smell walker2</command>
     <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -577,7 +577,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02CBE900">
+  <item nodeId="node-0x0291E7C8">
     <command xml:space="preserve">smell room</command>
     <result xml:space="preserve">You smell nothing unexpected.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -585,10 +585,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBE970"/>
+      <child nodeId="node-0x0291E838"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBE970">
+  <item nodeId="node-0x0291E838">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">Walker arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -596,10 +596,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBE9E0"/>
+      <child nodeId="node-0x0291E8A8"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBE9E0">
+  <item nodeId="node-0x0291E8A8">
     <command xml:space="preserve">smell room</command>
     <result xml:space="preserve">It smells like rotting flesh in here&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -607,7 +607,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02CBEA50">
+  <item nodeId="node-0x0291E918">
     <command xml:space="preserve">stand</command>
     <result xml:space="preserve">You get off the Hospital Bed.&#x000A;&#x000A;Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;You can go west through the Hospital Room Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -615,11 +615,11 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEAC0"/>
-      <child nodeId="node-0x02CA4E28"/>
+      <child nodeId="node-0x0291E988"/>
+      <child nodeId="node-0x02928310"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEAC0">
+  <item nodeId="node-0x0291E988">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -627,10 +627,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEB30"/>
+      <child nodeId="node-0x0291E9F8"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEB30">
+  <item nodeId="node-0x0291E9F8">
     <command xml:space="preserve">wait</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -638,10 +638,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEBA0"/>
+      <child nodeId="node-0x0291EA68"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEBA0">
+  <item nodeId="node-0x0291EA68">
     <command xml:space="preserve">wait</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -649,10 +649,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEC10"/>
+      <child nodeId="node-0x0291EAD8"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEC10">
+  <item nodeId="node-0x0291EAD8">
     <command xml:space="preserve">wait</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -660,10 +660,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEC80"/>
+      <child nodeId="node-0x02928000"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEC80">
+  <item nodeId="node-0x02928000">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -671,10 +671,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBECF0"/>
+      <child nodeId="node-0x02928070"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBECF0">
+  <item nodeId="node-0x02928070">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north and south from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -682,10 +682,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBED60"/>
+      <child nodeId="node-0x029280E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBED60">
+  <item nodeId="node-0x029280E0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;On the cafeteria door are hastily painted words.&#x000A;&#x000A;You can also see Stairwell Door here.&#x000A;&#x000A;You can go north through the Cafeteria Door (closed), south to Hallway, and west through Stairwell Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -693,10 +693,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEDD0"/>
+      <child nodeId="node-0x02928150"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEDD0">
+  <item nodeId="node-0x02928150">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening Stairwell Door)&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -704,10 +704,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEE40"/>
+      <child nodeId="node-0x029281C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEE40">
+  <item nodeId="node-0x029281C0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -715,10 +715,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CBEEB0"/>
+      <child nodeId="node-0x02928230"/>
     </children>
   </item>
-  <item nodeId="node-0x02CBEEB0">
+  <item nodeId="node-0x02928230">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north to Hallway and south from here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -726,10 +726,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA4DB8"/>
+      <child nodeId="node-0x029282A0"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA4DB8">
+  <item nodeId="node-0x029282A0">
     <command xml:space="preserve">l walker2</command>
     <result xml:space="preserve">It is ashen and pale, with a significant hunch and dark yellow-brown eyes.&#x000A; It looks at you as if you were it's next meal!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -737,44 +737,45 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02CA4E28">
+  <item nodeId="node-0x02928310">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening the Hospital Room Door)&#x000A;Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA4E98"/>
-      <child nodeId="node-0x02CA5448"/>
+      <child nodeId="node-0x02928380"/>
+      <child nodeId="node-0x0292DAC0"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA4E98">
+  <item nodeId="node-0x02928380">
     <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Hallway&#x000A;You can go north and south to Hallway from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;Walker1 and Walker2 arrive.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Hallway&#x000A;You can go north and south to Hallway from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA4F08"/>
-      <child nodeId="node-0x02CA53D8"/>
+      <child nodeId="node-0x029283F0"/>
+      <child nodeId="node-0x0292DA50"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA4F08">
+  <item nodeId="node-0x029283F0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">Hallway&#x000A;On the cafeteria door are hastily painted words.&#x000A;&#x000A;You can also see Stairwell Door here.&#x000A;&#x000A;You can go north through the Cafeteria Door (closed), south to Hallway, and west through Stairwell Door (closed) from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA4F78"/>
-      <child nodeId="node-0x02C21408"/>
-      <child nodeId="node-0x02C214E8"/>
+      <child nodeId="node-0x02928460"/>
+      <child nodeId="node-0x02928700"/>
+      <child nodeId="node-0x0292A528"/>
+      <child nodeId="node-0x0292A6E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA4F78">
+  <item nodeId="node-0x02928460">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening the Cafeteria Door)&#x000A;As you reach for the door a decayed looking arm shoots out to try and grab you from between the double doors.  You stumble backwards, startled, just in time.  "What is going on here?" you wonder.&#x000A;&#x000A;(first unlocking the Cafeteria Door)&#x000A;You lack a key that fits the Cafeteria Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -782,10 +783,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA4FE8"/>
+      <child nodeId="node-0x029284D0"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA4FE8">
+  <item nodeId="node-0x029284D0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can go north to Hallway and south to Hallway from here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -793,10 +794,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA5058"/>
+      <child nodeId="node-0x02928540"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA5058">
+  <item nodeId="node-0x02928540">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -804,10 +805,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA50C8"/>
+      <child nodeId="node-0x029285B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA50C8">
+  <item nodeId="node-0x029285B0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -815,10 +816,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA5138"/>
+      <child nodeId="node-0x02928620"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA5138">
+  <item nodeId="node-0x02928620">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;You can go west through the Hospital Room Door to Hallway from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -826,10 +827,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA51A8"/>
+      <child nodeId="node-0x02928690"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA51A8">
+  <item nodeId="node-0x02928690">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -837,7 +838,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C21408">
+  <item nodeId="node-0x02928700">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Hallway&#x000A;On the cafeteria door are hastily painted words.&#x000A;&#x000A;You can also see Stairwell Door here.&#x000A;&#x000A;You can go north through the Cafeteria Door (closed), south to Hallway, and west through Stairwell Door (closed) from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -845,10 +846,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C21478"/>
+      <child nodeId="node-0x02928770"/>
     </children>
   </item>
-  <item nodeId="node-0x02C21478">
+  <item nodeId="node-0x02928770">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - lurker&#x000A;location: in Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "lurkers"&#x000A;indefinite article: none&#x000A;description: "Walker1 (walker)"&#x000A;initial appearance: none&#x000A;odor: "rotting flesh."&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 20&#x000A;Turn Frequency: 1&#x000A;StartTurn: 4&#x000A;Status: On Patrol&#x000A;MovementType: Following&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;Freshness: Rotted&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -856,7 +857,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C214E8">
+  <item nodeId="node-0x0292A528">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Walker1 here.&#x000A;&#x000A;You can go north to Hallway and south to Hallway from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -864,10 +865,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C21558"/>
+      <child nodeId="node-0x0292A598"/>
     </children>
   </item>
-  <item nodeId="node-0x02C21558">
+  <item nodeId="node-0x0292A598">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;Walker1 arrives.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -875,10 +876,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C215C8"/>
+      <child nodeId="node-0x0292A608"/>
     </children>
   </item>
-  <item nodeId="node-0x02C215C8">
+  <item nodeId="node-0x0292A608">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">Hospital Room&#x000A;You can see a Hospital Room Door and a Hospital Bed here.&#x000A;&#x000A;You can go west through the Hospital Room Door to Hallway from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -886,10 +887,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C21638"/>
+      <child nodeId="node-0x0292A678"/>
     </children>
   </item>
-  <item nodeId="node-0x02C21638">
+  <item nodeId="node-0x0292A678">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -897,7 +898,158 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02CA53D8">
+  <item nodeId="node-0x0292A6E8">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">Which do you mean, Stairwell Door or the Cafeteria Door?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A758"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A758">
+    <command xml:space="preserve">open cafeteria door</command>
+    <result xml:space="preserve">As you reach for the door a decayed looking arm shoots out to try and grab you from between the double doors.  You stumble backwards, startled, just in time.  "What is going on here?" you wonder.&#x000A;&#x000A;(first unlocking the Cafeteria Door)&#x000A;You lack a key that fits the Cafeteria Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A7C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A7C8">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening Stairwell Door)&#x000A;Top of the Stairwell&#x000A;You can see Stairwell Door here.&#x000A;&#x000A;You can go east through Stairwell Door to Hallway and down from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;Walker2 arrives.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A838"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A838">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A8A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A8A8">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Bottom of the Stairwell&#x000A;You can see a Stairwell Door and the Dead Bicycle Rider here.&#x000A;&#x000A;You can go north through the Stairwell Door and up to the Top of the Stairwell from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A918"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A918">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Bottom of the Stairwell&#x000A;You can see a Stairwell Door and the Dead Bicycle Rider here.&#x000A;&#x000A;You can go north through the Stairwell Door and up to the Top of the Stairwell from here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A988"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A988">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Millersburg Pike&#x000A;You can see a Stairwell Door and a Bicycle here.&#x000A;&#x000A;You can go northwest and south through the Stairwell Door to Bottom of the Stairwell from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292A9F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292A9F8">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Millersburg Pike&#x000A;You can see a Stairwell Door and a Bicycle here.&#x000A;&#x000A;You can go northwest and south through the Stairwell Door to Bottom of the Stairwell from here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292AAD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292AAD8">
+    <command xml:space="preserve">ride bicycle</command>
+    <result xml:space="preserve">You mount the Bicycle.&#x000A;&#x000A;Walker1 arrives.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292AB48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292AB48">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">E. Pine St &amp; Highland Ave (on the Bicycle)&#x000A;You can go northwest, southeast to Millersburg Pike, and southwest from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292ABB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292ABB8">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">E. Pike St &amp; N. Elmarch Ave (on the Bicycle)&#x000A;You can go north, northwest, south, and southeast to E. Pine St &amp; Highland Ave from here.&#x000A;&#x000A;It smells like rotten flesh in here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292AC28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292AC28">
+    <command xml:space="preserve">showme figure</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292AC98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292AC98">
+    <command xml:space="preserve">showme figure of rickinhospitalbed</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0292D9E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0292D9E0">
+    <command xml:space="preserve">showme rickinhospitalbed</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0292DA50">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Hallway&#x000A;You can see a Hospital Room Door and a Walker1 here.&#x000A;&#x000A;You can go north to Hallway and east through the Hospital Room Door to the Hospital Room from here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -905,7 +1057,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02CA5448">
+  <item nodeId="node-0x0292DAC0">
     <command xml:space="preserve">showme walker1</command>
     <result xml:space="preserve">Walker1 - lurker&#x000A;location: in Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker1"&#x000A;printed plural name: "lurkers"&#x000A;indefinite article: none&#x000A;description: "Walker1 (walker)"&#x000A;initial appearance: none&#x000A;odor: "rotting flesh."&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 60&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Following&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;Freshness: Rotted&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -913,23 +1065,12 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02CA54B8"/>
+      <child nodeId="node-0x0292DB30"/>
     </children>
   </item>
-  <item nodeId="node-0x02CA54B8">
+  <item nodeId="node-0x0292DB30">
     <command xml:space="preserve">showme walker2</command>
     <result xml:space="preserve">Walker2 - roamer&#x000A;location: in Hallway&#x000A;singular-named, improper-named; unlit, inedible, portable, ordinarily enumerated; male&#x000A;printed name: "Walker2"&#x000A;printed plural name: "roamers"&#x000A;indefinite article: none&#x000A;description: "Walker2 (walker)"&#x000A;initial appearance: none&#x000A;odor: "rotting flesh."&#x000A;carrying capacity: 100&#x000A;posture: standing&#x000A;RoomTable: Table of NoRooms&#x000A;DirectionTable: Table of NoDirections&#x000A;Destination: Hospital Room&#x000A;PathLength: 1&#x000A;PathStage: 1&#x000A;Drive: 60&#x000A;Turn Frequency: 1&#x000A;StartTurn: 1&#x000A;Status: On Patrol&#x000A;MovementType: Following&#x000A;Route: OneWay&#x000A;RouteLeg: OutwardBound&#x000A;OpeningCapability: None&#x000A;ReclosingCapability: Leave&#x000A;Freshness: DayOld&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x02CA5528"/>
-    </children>
-  </item>
-  <item nodeId="node-0x02CA5528">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Hallway&#x000A;You can go north and south to Hallway from here.&#x000A;&#x000A;You smell nothing unexpected.&#x000A;&#x000A;Walker1 and Walker2 arrive.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>

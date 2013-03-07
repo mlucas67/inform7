@@ -3,7 +3,7 @@
     <story>
         <identification>
             <ifid>A4BE0126-6582-4B45-9AA3-5AB115800239</ifid>
-            <format>zcode</format>
+            <format>glulx</format>
         </identification>
         <bibliographic>
             <title>The Walking Dead - Days Gone By</title>
@@ -30,10 +30,10 @@
             <generatorversion>6G60</generatorversion>
             <originated>2013-03-06</originated>
         </colophon>
-        <zcode>
+        <glulx>
             <serial>130306</serial>
             <release>1</release>
             <compiler>Inform 7 build 6G60</compiler>
-        </zcode>
+        </glulx>
     </story>
 </ifindex>

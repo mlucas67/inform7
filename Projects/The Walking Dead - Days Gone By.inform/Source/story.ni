@@ -18,6 +18,8 @@ Chapter 1 - Modifying Existing Kinds
 
 Include Plurality by Emily Short.
 
+The printed name of the player is "Rick Grimes".
+
 Section 1 - Doors
 
 Instead of attacking a closed door: say "[The noun] reverberates but does not open."
@@ -62,6 +64,16 @@ Section 6 - Vehicles
 
 Include Rideable Vehicles by Graham Nelson.
 
+Section 7 - Clothes
+
+Instead of wearing a thing (called the NewThing) when the player is wearing a thing (called the OldThing):
+	say "You have to take off the [the OldThing] before putting on the [the NewThing]."
+	
+Section 8 - Player
+
+Instead of examining the player:
+	say "You are [the printed name of the player].  You are wearing [list of things worn by the player]."
+
 Chapter 2 - New Kinds
 
 Include Postures by Emily Short.
@@ -69,6 +81,11 @@ Include Postures by Emily Short.
 Section 1 - Objects
 
 A bed is a kind of supporter.  A bed is usually enterable.  Every bed allows seated and reclining.  A bed is usually reclining.
+
+A television is a kind of device.
+
+After switching on the television:
+	say "Nothing happens."
 
 Section 2 - Doors
 
@@ -127,15 +144,31 @@ After opening a door (called D):
 		
 After going:
 	try looking;
-	if a walker is in the room: 
-		say "It smells like rotten flesh in here.";
 	repeat with zombie running through walkers in room:
 		now the zombie is Following;
 		now the zombie is On Patrol.
 		
-Section 4 - Actions
+Section 4 - People
+
+A nurse is a kind of person.
+
+Section 5 - Clothes
+
+Section 6 - Actions
 
 Include Facing by Emily Short.
+
+Chapter 3 - New Verbs
+
+Calling is an action applying to one thing.
+
+Understand "call [someone]" as calling.
+
+After calling a nurse:
+	say "Nothing happens.";
+	stop the action.
+
+Understand "look out [something]" as examining.
 
 Part 2 - The World
 
@@ -144,11 +177,17 @@ When play begins:
 
 Chapter 1 - The Hospital
 
+After printing the banner text, say "[paragraph break][story description][paragraph break]".
+
 Harrison Memorial Hospital is a Region.
 
 The Hospital Room is a room in Harrison Memorial Hospital.  A Hospital Bed is a bed in the Hospital Room.
 
-The player is on the Hospital Bed.  The player is reclining.
+The player is on the Hospital Bed.  The player is reclining.  The player is wearing a Hospital Robe and a pair of Boxer Shorts.
+
+The TV is a television in the Hospital Room.
+
+The Window is a backdrop.  It is in the Hospital Room.  The initial appearance of the window is "Sunlight and fresh air stream in from the open window."  The description of the window is "You can see a good portion of the small town of Cynthiana, Kentucky, where you serve as Deputy Sheriff."
 
 The Hospital Room Door is a door.  It is west of the Hospital Room and east of Hallway1.
 
