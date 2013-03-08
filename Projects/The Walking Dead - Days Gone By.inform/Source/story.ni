@@ -6,6 +6,7 @@ Release along with a solution, source text, a website.
 
 Index map with room-shape set to "square" and room-size set to 60 and room-name-size set to 9 and room-name-length set to 13 and route-thickness set to 15 and room-outline set to off and map-outline set to off and route-colour set to "White" and room-colour set to "White" and font set to "Trebuchet-MS-Regular" and EPS file.
 
+Include Default Messages by Ron Newcomb.
 Include Locksmith by Emily Short.
 Include Armed by David Ratliff.
 Include Exit Lister by Gavin Lambert.
@@ -87,15 +88,27 @@ A television is a kind of device.
 After switching on the television:
 	say "Nothing happens."
 
-Section 2 - Doors
+Section 2 - Weapons
 
-Section 3 - Walkers
+A pistol is a kind of fire arm.
+
+Understand "gun" as fire arm.
+
+Teeth are kind of weapon.
+
+Section 3 - Doors
+
+Section 4 - Walkers
 
 Include Patrollers by Michael Callaghan
 
 Freshness is a kind of value.  The Freshnesses are Fresh, DayOld, Stale, Rotted and Immobile.
 
-A walker is a kind of Patroller.  A walker is usually Aimless.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The odor of a walker is usually "rotting flesh." The Drive of a walker is usually 60.  The description of a walker is usually "[printed name of the noun] (walker)."  A walker is usually hostile.  The max health of a walker is 1.
+A walker is a kind of Patroller.  A walker is usually Aimless.  Reporting is Collective.  The StartTurn of a walker is 1.   A walker has a Freshness.  A walker is usually DayOld.  The odor of a walker is usually "rotting flesh." The Drive of a walker is usually 60.  The description of a walker is usually "[printed name of the noun] (walker)."  A walker is usually hostile.  The max health of a walker is 1.  
+
+Rotten Teeth are a kind of Teeth.  The maximum damage of Rotten Teeth is 10.
+
+Every walker carries one Rotten Teeth.
 
 A roamer is a kind of walker.  A roamer is usually Aimless.  A roamer is usually On Patrol.
 
@@ -148,19 +161,15 @@ After going:
 		now the zombie is Following;
 		now the zombie is On Patrol.
 		
-Section 4 - People
+Section 5- People
 
 A nurse is a kind of person.
 
 Rule for printing the name of the player: say "Rick Grimes".
 
-Section 5 - Clothes
+Section 6 - Clothes
 
 A holster is an open player's holdall.
-
-Section 6 - Weapons
-
-A pistol is a kind of fire arm.
 
 Section 7 - Actions
 
@@ -168,6 +177,112 @@ Include Facing by Emily Short.
 
 Understand "look out [something]" as examining.
 
+Biting it with is an action applying to two visible things. Understand "bite [something] with [something]" as biting it with. The biting it with action has a number called the damage done.
+
+Setting action variables for an actor biting something (called target) with something (called choppers):
+if the target is a person begin;
+if the choppers is a teeth begin;
+change the damage done to a random number between 1 and the maximum damage of the second noun;
+end if;
+end if.
+
+Check biting something (called the target) with something (called the choppers) (this is the you must have a teeth to bite rule):
+	if the player does not carry a teeth begin;
+		say "You need a good set of teeth to bite anything.";
+		stop the action;
+	end if.
+
+Check biting something (called the target) with something (called the choppers) (this is the you can only bite with a teeth rule):
+	if the second noun is not a teeth begin;
+		say "And I suppose you whistle out your back side too?  Why not try biting with your teeth?";
+		stop the action;
+	end if.
+
+Check biting something (called the target) with something (called the choppers) (this is the you can't bite something with itself rule):
+	if the target is the choppers begin;
+		say "You try to bite your own [choppers] . . Wait, you can't bite [the choppers] with itself!";
+		stop the action;
+	end if.
+
+Check biting something (called the target) with something (called the choppers) (this is the biting-harikari rule):
+	if the target is the player, end the game saying "You have bitten yourself to death!  What a strange turn of events.".
+
+Carry out an actor biting something (called the target) with something (this is the standard carry out biting rule):
+	if the target is a person begin;
+		decrease the present health of the target by the damage done;
+		if the target is not the player begin;
+			if the target is docile, change the target to hostile;
+		end if;
+	end if.
+
+Report biting something (called the target) with something (called the choppers) (this is the report biting people rule):
+	if the target is a person begin;
+		if the target is dead begin;
+			say "With one final chomp of your [choppers], [the target] drops to the ground, dead." instead;
+		end if;
+	say "You bite [the target] with your [the choppers]. [The target] yells out in pain.  ([The target][apostrophe]s health: [present health of the target])[line break]";
+	end if.
+
+Report biting something (called the target) with something (called the choppers) (this is the report biting non-people rule):
+	if the target is not a person, say "You bite [the target] with your [the choppers]. Well, I hope that made you feel better. Hopefully biting [the target] won[apostrophe]t attract any unwanted attention.".
+
+Check someone biting something (called the target) with something (called the choppers) (this is the others must have a teeth to bite rule):
+	if the person asked does not carry a teeth begin;
+		say "[The person asked] says 'With what? I don't have any teeth.'";
+		stop the action;
+	end if.
+
+Check someone biting something (called the target) with something (called the choppers) (this is the others can only bite with a teeth rule):
+	if the second noun is not a teeth begin;
+		say "[The person asked] says '[The second noun] would need to be some teeth for that to work.'";
+		stop the action;
+	end if.
+
+Check someone biting something (called the target) with something (called the choppers) (this is the others can't bite something with itself rule):
+	if the target is the choppers begin;
+		say "[The person asked] says 'I can hardly bite [the choppers] with itself!'";
+		stop the action;
+	end if.
+
+Check someone biting something (called the target) with something (called the choppers) (this is the other people biting-harikari rule):
+	if the target is the person asked, say "[The person asked] says 'I don't like the way I taste!'" instead.
+
+Report someone biting something (called the target) with something (called the choppers) (this is the report another biting a person rule):
+	if the target is a person begin;
+		if the target is dead begin;
+			say "[The person asked] bites [the target], who drops to the ground, dead." instead;
+		end if;
+		if the target is not the player begin;
+			say "[The person asked] sinks its [the choppers] into [the target], who screams out in pain. ([The target][apostrophe]s health: [present health of the target])[line break]";
+		end if;
+		if the target is the player begin;
+			say "[The person asked] bites you! (Health: [present health of the player])[line break]";
+		end if;
+	end if.
+
+Report someone biting something (called the target) with something (called the choppers) (this is the report another biting a non-person rule):
+	if the target is not a person, say "In a seemingly random act of violence, [the person asked] bites [the target].".
+
+The fighting back rule is not listed in any rulebook.
+
+Every turn (this is the new fighting back rule):
+	repeat with madman running through walkers in the location of the player begin;
+		if madman is hostile begin;
+			if madman can see the player begin;
+				if madman does not carry a weapon begin;
+					if madman can see a weapon (called tool) which is not carried by anyone begin;
+						say "[Madman] grabs [the tool]!";
+						now tool is carried by madman;
+					end if;
+				end if;
+				if madman carries a projectile (called boomstick), try madman shooting the player with the boomstick;
+				if madman carries a blade (called pigsticker), try madman stabbing the player with the pigsticker;
+				if madman carries a teeth (called choppers), try madman biting the player with the choppers;
+			end if;
+		end if;
+	if madman is dead, change madman to docile;
+	end repeat.
+	
 Part 2 - The World
 
 When play begins:
@@ -185,7 +300,7 @@ The player is on the Hospital Bed.  The player is reclining.  The player is wear
 
 The TV is a television in the Hospital Room.
 
-The player is wearing a holster.  The Colt Python is a pistol in the holster.
+The player is wearing a holster.  The Colt Python is a pistol.  The Colt is in the holster.
 
 The Window is a backdrop.  It is in the Hospital Room.  The initial appearance of the window is "Sunlight and fresh air stream in from the open window."  The description of the window is "You can see a good portion of the small town of Cynthiana, Kentucky, where you serve as Deputy Sheriff."
 

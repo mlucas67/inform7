@@ -28,7 +28,7 @@
 		<key>IFSettingNobbleRng</key>
 		<false/>
 		<key>IFSettingZCodeVersion</key>
-		<integer>256</integer>
+		<integer>8</integer>
 	</dict>
 	<key>IFRandomSettings</key>
 	<dict/>
